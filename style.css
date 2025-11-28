@@ -1,0 +1,23 @@
+body {
+    background-color: powderblue;
+}
+
+nav {
+    background-color: orange;
+}
+
+header, footer {
+    background-color: gold;
+}
+
+section {
+  background: yellow;
+}
+
+aside {
+  background: grey;
+}
+
+article {
+  background: lightgreen;
+}
