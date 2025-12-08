@@ -15,8 +15,25 @@ body {
     min-height: 100vh; /* Mindesthöhe des Viewports */
 }
 
-nav {
+nav details{
     background-color: orange;
+    padding: 0.5rem;
+}
+
+/* Beim Aufklappen: Links nebeneinander */
+nav details[open] .nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 0;
+}
+
+/* Links selbst */
+nav .nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
 
 header, footer {
@@ -39,10 +56,9 @@ main {
 h1, h2, h3, h4 {
     font-weight: bold;
     color: #000000;
-    hyphens: auto;
-    /* Aktiviert die Silbentrennung https://www.mediaevent.de/css3-silbentrennung-hyphens/ */
-    margin-top: 1vh;
-    margin-bottom: 1vh;
+    hyphens: auto; /* Aktiviert die Silbentrennung https://www.mediaevent.de/css3-silbentrennung-hyphens/ */
+    margin: 0;
+    padding: 0.2rem 0;
 }
 
 p{
