@@ -41,6 +41,20 @@ header, footer {
     text-align: center; /* Zentrierter Text */
 }
 
+footer .footer-links {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 0;
+}
+
+footer .footer-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
 #HeadNav {
   position: sticky; /* Bleibt am oberen Rand beim Scrollen kleben */
   top: 0; /* Abstand vom oberen Rand */
