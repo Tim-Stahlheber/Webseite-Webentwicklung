@@ -85,10 +85,10 @@ p{
 
 section {
   flex: 1;
-  padding: 2rem 3rem; /* Innenabstand */
+  padding: 4rem 4rem; /* Innenabstand oben/unten sowie links/rechts*/
   background: yellow;
   border-radius: 1em; 
-  margin: 1rem 1rem; /* top and bottom margin 0.5rem, left and right auto */
+  margin: 1rem 2rem; /* top and bottom margin 0.5rem, left and right auto */
 }
 
 aside {
