@@ -1,94 +1,107 @@
-html{
-  background-color: rgb(7,60,96); /* Hochschulblau */
+html {
+  background-color: rgb(7, 60, 96);           /* Hochschulblau */
 }
 
 body {
-    background-color: rgb(237, 248, 255); /* weiß-bläulicher Hintergrund */
-    font-family: Arial, Helvetica, sans-serif; /* Schriftart */
-    margin: 0 auto; /* Zentrierung */
-    padding: 0; /* Kein Innenabstand */
-    display: flex;             /* Flexbox aktivieren */
-    flex-direction: column;    /* Header, main, Footer vertikal */
-    min-height: 100vh;         /* Mindestens Viewport-Höhe */
-    max-width: 1400px;         /* Maximalbreite */
-    margin-left: auto;
-    margin-right: auto;        /* Horizontale Zentrierung */
+  background-color: rgb(237, 248, 255);       /* weiß-bläulicher Hintergrund */
+  font-family: Arial, Helvetica, sans-serif;    /* Schriftart */
+  margin: 0 auto;            /* Zentrierung */
+  padding: 0;                /* Kein Innenabstand */
+  display: flex;             /* Flexbox aktivieren */
+  flex-direction: column;    /* Header, main, Footer vertikal */
+  min-height: 100vh;         /* Mindestens Viewport-Höhe */
+  max-width: 1400px;         /* Maximalbreite */
+  margin-left: auto;
+  margin-right: auto;        /* Horizontale Zentrierung */
 }
 
-nav details{
-    background-color: orange;
-    padding: 0.5rem;
+nav details {
+  background-color: orange;
+  padding: 0.5rem;
 }
 
 /* Beim Aufklappen: Links nebeneinander */
 nav details[open] .nav-links {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem 0;
 }
 
 /* Links selbst */
 nav .nav-links a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 
-header, footer {
-    background-color: gold;
-    text-align: center; /* Zentrierter Text */
+header,
+footer {
+  background-color: gold;
+  text-align: center;        /* Zentrierter Text */
 }
 
 footer .footer-links {
-    display: flex;
-    justify-content: space-around; 
-    align-items: center;
-    width: 100%;
-    padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem 0;
 }
 
 footer .footer-links a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 
 #HeadNav {
-  position: sticky; /* Bleibt am oberen Rand beim Scrollen kleben */
-  top: 0; /* Abstand vom oberen Rand */
-  z-index: 100; /* Stellt sicher, dass es über den anderen Elementen liegt */
+  position: sticky;         /* Bleibt am oberen Rand beim Scrollen kleben */
+  top: 0;                   /* Abstand vom oberen Rand */
+  z-index: 100;             /* Stellt sicher, dass es über den anderen Elementen liegt */
 }
 
 main {
-    flex: 1;                  /* main füllt den freien Raum zwischen Header und Footer */
-    display: flex;             /* main als Flex-Container */
-    flex-direction: column;    /* sections untereinander */
+  flex: 1;                  /* main füllt den freien Raum zwischen Header und Footer */
+  display: flex;            /* main als Flex-Container */
+  flex-direction: column;   /* sections untereinander */
 }
 
-h1, h2, h3, h4 {
-    font-weight: bold;
-    color: #000000;
-    hyphens: auto; /* Aktiviert die Silbentrennung https://www.mediaevent.de/css3-silbentrennung-hyphens/ */
-    margin: 0;
-    padding: 0.2rem 0;
+h1,
+h2,
+h3,
+h4 {
+  font-weight: bold;
+  color: #000000;
+  hyphens: auto;            /* Aktiviert die Silbentrennung https://www.mediaevent.de/css3-silbentrennung-hyphens/ */
+  margin: 0;
+  padding: 0.2rem 0;
 }
 
-p{
+p {
   line-height: 1.5;
-  text-align: justify; /* Blocksatz */
-  hyphens: auto; 
+  text-align: justify;      /* Blocksatz */
+  hyphens: auto;            /* Aktiviert die Silbentrennung https://www.mediaevent.de/css3-silbentrennung-hyphens/ */
   margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
 
-section {
+a {
+  hyphens: auto;            /* Aktiviert die Silbentrennung https://www.mediaevent.de/css3-silbentrennung-hyphens/ */
+
+}
+
+li {
+  line-height: 1.5;
+}
+
+section.normalBox {
   flex: 1;
-  padding: 4rem 4rem; /* Innenabstand oben/unten sowie links/rechts*/
+  padding: 4rem 4rem;       /* Innenabstand oben/unten sowie links/rechts*/
   background: yellow;
-  border-radius: 1em; 
-  margin: 1rem 2rem; /* top and bottom margin 0.5rem, left and right auto */
+  border-radius: 1em;
+  margin: 1rem 2rem;        /* top and bottom margin 0.5rem, left and right auto */
 }
 
 aside {
@@ -97,4 +110,48 @@ aside {
 
 article {
   background: lightgreen;
+}
+
+/* Datenschutz */
+li .index-link {
+  text-decoration: underline none;
+  color: black;
+}
+
+section.data_acc {
+  flex: 1;
+  margin: 1rem 2rem;        /* top and bottom margin 0.5rem, left and right auto */
+  border-radius: 1em;
+  background: none;
+}
+
+.accordion {
+  background-color: lightgrey;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  border-radius: 1em;
+  text-align: justify;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+  background-color: #555;
+  color: white;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+.panel.open {
+  display: block;
 }
