@@ -2,6 +2,7 @@ html {
   background-color: rgb(7, 60, 96);           /* Hochschulblau */
 }
 
+
 body {
   background-color: rgb(237, 248, 255);       /* weiß-bläulicher Hintergrund */
   font-family: Arial, Helvetica, sans-serif;    /* Schriftart */
@@ -9,10 +10,10 @@ body {
   padding: 0;                /* Kein Innenabstand */
   display: flex;             /* Flexbox aktivieren */
   flex-direction: column;    /* Header, main, Footer vertikal */
-  min-height: 100vh;         /* Mindestens Viewport-Höhe */
+  min-height: 100vh; 
   max-width: 1400px;         /* Maximalbreite */
-  margin-left: auto;
-  margin-right: auto;        /* Horizontale Zentrierung */
+  margin-left: auto;      /*Horizontale Zentrierung */
+  margin-right: auto;     /* Horizontale Zentrierung */
 }
 
 nav details {
@@ -62,6 +63,8 @@ footer .footer-links a {
   z-index: 100;             /* Stellt sicher, dass es über den anderen Elementen liegt */
 }
 
+
+
 main {
   flex: 1;                  /* main füllt den freien Raum zwischen Header und Footer */
   display: flex;            /* main als Flex-Container */
@@ -97,7 +100,6 @@ li {
 }
 
 section.normalBox {
-  flex: 1;
   padding: 4rem 4rem;       /* Innenabstand oben/unten sowie links/rechts*/
   background: yellow;
   border-radius: 1em;
@@ -154,4 +156,42 @@ section.data_acc {
 
 .panel.open {
   display: block;
+}
+
+/* =========================================
+   Große Displays (ab 1400px)
+   =========================================
+/*@media (min-width: 1400px) {
+
+  html {
+    background-color: rgb(237, 248, 255);
+  }
+
+  body {
+    margin-left: auto;      /*Horizontale Zentrierung 
+    margin-right: auto;     /* Horizontale Zentrierung
+  }
+}*/
+
+
+
+/* =========================================
+   Sehr kleine Displays (z. B. < 300px)
+   ========================================= */
+@media (max-width: 500px) {
+
+  section.normalBox,
+  section.data_acc {
+    padding: 2rem 2rem;       /* Innenabstand oben/unten sowie links/rechts*/
+    margin: 0.5rem 1rem;     /* top and bottom margin 0.5rem, left and right auto */
+  }
+
+  .small-screen-warning {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    background-color: gold;
+    color: black;
+    font-weight: bold;
+  }
 }
