@@ -16,28 +16,76 @@ body {
   margin-right: auto;     /* Horizontale Zentrierung */
 }
 
-nav details {
-  background-color: orange;
-  padding: 0.5rem;
+/* HEADER */
+
+header {
+  position: relative; /* wichtig für absolute Positionierung */
+  text-align: center;
+  background-color: gold;
 }
 
-/* Beim Aufklappen: Links nebeneinander */
-nav details[open] .nav-links {
+#nav-toggle {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#nav-toggle summary {
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: bold;
+  list-style: none;
+}
+
+#nav-toggle summary::-webkit-details-marker {
+  display: none;    /* Standard-Dreieck ausblenden */
+}
+
+
+/* NAVIGATION */
+
+#navbar {
+  background-color: orange;
+  width: 100%;
+}
+
+#navlist {
+  list-style: none;              /* Entfernt die Standard-Aufzählungszeichen (Punkte) */
+  margin: 0;                     /* Entfernt den äußeren Abstand um die Liste */
+  padding: 0;                    /* Entfernt den inneren Abstand innerhalb der Liste */
+
+  display: flex;                 /* Macht die Liste zu einem Flex-Container */
+  justify-content: space-around; /* Verteilt die Listenelemente gleichmäßig horizontal mit Abstand dazwischen */
+  align-items: center;           /* Richtet die Listenelemente vertikal mittig aus */
+}
+
+#navlist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
-  padding: 0.5rem 0;
 }
 
-/* Links selbst */
-nav .nav-links a {
+.navitem {
+  margin: 0;
+}
+
+.navitem a {
+  display: block;
+  padding: 0.5rem 1rem;
+
   text-decoration: none;
   color: black;
   font-weight: bold;
 }
 
-header,
+
+/* FOOTER */
+
 footer {
   background-color: gold;
   text-align: center;        /* Zentrierter Text */
@@ -71,10 +119,7 @@ main {
   flex-direction: column;   /* sections untereinander */
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
   font-weight: bold;
   color: #000000;
   hyphens: auto;            /* Aktiviert die Silbentrennung https://www.mediaevent.de/css3-silbentrennung-hyphens/ */
