@@ -10,9 +10,9 @@ body {
   padding: 0;                                   /* Kein Innenabstand */
   display: flex;                                /* Flexbox aktivieren */
   flex-direction: column;                       /* Header, main, Footer vertikal */
-  min-height: 100vh;                            /* Maximalhöhe */
+  min-height: 100vh;                            /* Minimalhöhe */
   max-width: 1400px;                            /* Maximalbreite */
-  margin-left: auto;                            /*Horizontale Zentrierung */
+  margin-left: auto;                            /* Horizontale Zentrierung */
   margin-right: auto;                           /* Horizontale Zentrierung */
 }
 
