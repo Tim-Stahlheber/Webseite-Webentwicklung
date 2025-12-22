@@ -171,7 +171,7 @@ section.normalBox {
     padding: 4rem;
     margin: 1rem auto;     /* oben/unten 1rem, links/rechts automatisch */
     max-width: 1200px;     /* optional: maximale Breite */
-    background: white;
+    background: yellow;
     border-radius: 2em;
 }
 
