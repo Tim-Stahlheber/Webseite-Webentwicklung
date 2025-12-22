@@ -3,6 +3,10 @@ html {
 }
 
 
+/* BODY */
+/* BODY */
+/* BODY */
+
 body {
   background-color: rgb(237, 248, 255);       /* weiß-bläulicher Hintergrund */
   font-family: Arial, Helvetica, sans-serif;    /* Schriftart */
@@ -16,6 +20,9 @@ body {
   margin-right: auto;                           /* Horizontale Zentrierung */
 }
 
+
+/* HEADER */
+/* HEADER */
 /* HEADER */
 
 header {
@@ -47,12 +54,14 @@ header {
 
 
 #HeadNav {
-  position: sticky;         /* Bleibt am oberen Rand beim Scrollen kleben */
-  top: 0;                   /* Abstand vom oberen Rand */
-  z-index: 100;             /* Stellt sicher, dass es über den anderen Elementen liegt */
+  position: sticky;              /* Bleibt am oberen Rand beim Scrollen kleben */
+  top: 0;                        /* Abstand vom oberen Rand */
+  z-index: 100;                  /* Stellt sicher, dass es über den anderen Elementen liegt */
 }
 
 
+/* NAVIGATION */
+/* NAVIGATION */
 /* NAVIGATION */
 
 #navbar {
@@ -99,6 +108,8 @@ header {
 
 
 /* FOOTER */
+/* FOOTER */
+/* FOOTER */
 
 footer {
   background-color: gold;
@@ -120,7 +131,7 @@ footer .footer-links a {
 }
 
 
-
+/*  */
 
 main {
   flex: 1;                  /* main füllt den freien Raum zwischen Header und Footer */
@@ -160,9 +171,11 @@ section.normalBox {
     padding: 4rem;
     margin: 1rem auto;     /* oben/unten 1rem, links/rechts automatisch */
     max-width: 1200px;     /* optional: maximale Breite */
-    background: yellow;
-    border-radius: 1em;
+    background: white;
+    border-radius: 2em;
 }
+
+
 
 
 aside {
@@ -173,7 +186,11 @@ article {
   background: lightgreen;
 }
 
+
 /* RAUM 1 */
+/* RAUM 1 */
+/* RAUM 1 */
+
 .licht-reflexion-flex {
     max-width: 900px;
     margin: 0 auto;
