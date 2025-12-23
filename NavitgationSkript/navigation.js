@@ -5,6 +5,35 @@
 
 
 /**
+ * Fügt Eventlistener für die li Elementer der Navbar hinzu
+ * Das Icon wird beim Hover in der Navigationsleiste um 1.3 vergrößert.
+ * @function
+ * @param {HTMLElement} item - das komplette li Element der Navigationsleiste mit child
+ * @description verwendete Variablen
+ * {HTMLElement} img - das jeweilige img aus dem gerade iterierten `item`
+ * 
+ * @this {HTMLElement} - in diesem Kontext das li Element
+ * 
+ * querySelectorAll nach https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
+ */ 
+document.querySelectorAll('.navitem').forEach(function(item) { 
+    item.addEventListener('mouseover', function() {
+        const img = this.querySelector('img'); 
+        if (img) {
+            img.style.transform = 'scale(1.3)';
+        }
+    });
+
+    item.addEventListener('mouseout', function() {
+        const img = this.querySelector('img'); 
+        if (img) {
+            img.style.transform = 'scale(1)';
+        }
+    });
+});
+
+
+/**
  * HTMLElement für das <details>-Element, das den Button enthält
  * @type {HTMLElement}
  */
