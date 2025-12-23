@@ -169,14 +169,11 @@ li {
 
 section.normalBox {
     padding: 4rem;
-    margin: 1rem auto;     /* oben/unten 1rem, links/rechts automatisch */
-    max-width: 1200px;     /* optional: maximale Breite */
+    margin: 1rem 2rem;     /* oben/unten 1rem, links/rechts 2rem */
+    max-width: 1400px;     /* optional: maximale Breite */
     background: yellow;
     border-radius: 2em;
 }
-
-
-
 
 aside {
   background: grey;
@@ -192,20 +189,20 @@ article {
 /* RAUM 1 */
 
 .licht-reflexion-flex {
-    max-width: 900px;
-    margin: 0 auto;
+    /*max-width: 900px;*/
+    margin: 0.5rem 1rem;
     line-height: 1.6;
     text-align: justify;
 }
 
 .licht-reflexion-flex h2 {
-    clear: both;       /* Überschrift geht über die ganze Breite */
+    /*clear: both; RAUS DAMIT; DA ES KEINE AUSWIRKUNGEN HAT       /* Überschrift geht über die ganze Breite */
     margin-bottom: 1rem;
 }
 
 .licht-reflexion-flex .sonne {
     float: right;      /* Bild rechts vom Text */
-    margin: 0 0 1rem 1rem; /* Abstand links und unten */
+    margin: 0 0 1rem 1rem;  /* Abstand oben & rechts 0, unten & links 1rem */
     width: 200px;      /* feste Breite */
     height: auto;
 }
@@ -227,18 +224,31 @@ article {
 }
 
 .reflexion-demo canvas {
-    max-width: 100%;
-    height: auto;
+    max-width: 100%; /* Maximale Breite des Canvas-Elements auf 100% des Containers setzen */
+    height: auto; /* Damit das Canvas-Element auf kleineren Bildschirmen skaliert */
 }
 
-@media (max-width: 800px) {
-    .reflexion-layout {
-        flex-direction: column;
-    }
+@media (max-width: 1000px) {
+  section.normalBox,
+  section.data_acc {
+    padding: 2rem 2rem;       /* Innenabstand oben/unten sowie links/rechts*/
+    margin: 0.5rem 1rem;     /* top and bottom margin 0.5rem, left and right auto */
+  }    
+  
+  .reflexion-layout {
+    flex-direction: column;
+  }
 
-    .reflexion-demo {
-        width: 100%;
-    }
+  .reflexion-demo {
+    flex: none; /* Entfernt die feste Breite */
+    width: 100%; /* Volle Breite des Containers */
+    max-width: 100%; /* Maximale Breite auf 100% setzen */
+  }
+
+  #reflexionCanvas {
+    width: 100%; /* Canvas-Element nimmt die volle Breite des Containers ein */
+    height: auto; /* Höhe wird automatisch angepasst, um das Seitenverhältnis beizubehalten */
+  }
 }
 
 /* Datenschutz */
@@ -277,14 +287,37 @@ section.data_acc {
 .panel {
   padding: 0 18px;
   display: none;
-  background-color: white;
+  background-color: lightgrey;
   overflow: hidden;
+  border-radius: 1em;
+
 }
 
 .panel.open {
   display: block;
 }
 
+
+/* =========================================
+   Sehr kleine Displays (z. B. < 500px)
+   ========================================= */
+@media (max-width: 500px) {
+
+  section.normalBox,
+  section.data_acc {
+    padding: 2rem;       /* Innenabstand oben/unten sowie links/rechts*/
+    margin: 0.5rem 1rem;     /* top and bottom margin 0.5rem, left and right auto */
+  }
+
+  .small-screen-warning {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    background-color: gold;
+    color: black;
+    font-weight: bold;
+  }
+}
 
 
 /* =========================================
@@ -301,26 +334,3 @@ section.data_acc {
     margin-right: auto;     /* Horizontale Zentrierung
   }
 }*/
-
-
-
-/* =========================================
-   Sehr kleine Displays (z. B. < 300px)
-   ========================================= */
-@media (max-width: 500px) {
-
-  section.normalBox,
-  section.data_acc {
-    padding: 2rem 2rem;       /* Innenabstand oben/unten sowie links/rechts*/
-    margin: 0.5rem 1rem;     /* top and bottom margin 0.5rem, left and right auto */
-  }
-
-  .small-screen-warning {
-    display: block;
-    padding: 1rem;
-    text-align: center;
-    background-color: gold;
-    color: black;
-    font-weight: bold;
-  }
-}
