@@ -198,6 +198,7 @@ article {
 .licht-reflexion-flex h2 {
     /*clear: both; RAUS DAMIT; DA ES KEINE AUSWIRKUNGEN HAT       /* Überschrift geht über die ganze Breite */
     margin-bottom: 1rem;
+    text-align: initial;
 }
 
 .licht-reflexion-flex .sonne {
@@ -228,7 +229,7 @@ article {
     height: auto; /* Damit das Canvas-Element auf kleineren Bildschirmen skaliert */
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1140px) {
   section.normalBox,
   section.data_acc {
     padding: 2rem 2rem;       /* Innenabstand oben/unten sowie links/rechts*/
@@ -242,7 +243,8 @@ article {
   .reflexion-demo {
     flex: none; /* Entfernt die feste Breite */
     width: 100%; /* Volle Breite des Containers */
-    max-width: 100%; /* Maximale Breite auf 100% setzen */
+    max-width: 700px; /* Maximale Breite auf 100% setzen */
+    margin: 0 auto;
   }
 
   #reflexionCanvas {
@@ -316,6 +318,14 @@ section.data_acc {
     background-color: gold;
     color: black;
     font-weight: bold;
+  }
+
+  .licht-reflexion-flex .sonne {
+    float: inline-end;  /* Bild zentriert */
+    margin: 0rem 0rem  1rem 1rem;  /* rem oben, rem rechts, 1rem unten, 1rem links  */ /* Abstand oben & unten 1rem, links & rechts auto */
+    width: 100%;        /* feste Breite */
+    height: auto;       /* automatische Höhe */
+    max-width: 150px;   /* Maximale Breite = 200px */
   }
 }
 
