@@ -97,12 +97,27 @@ header {
 
 
 .navitem a {
-  display: block;                 /* Macht den Link zum Block-Element, damit die gesamte Fläche klickbar ist */
-  padding: 0.5rem 1rem;           /* Innenabstand oben/unten 0.5rem, links/rechts 1rem */
+  display: flex;
+  flex-direction: column;   /* Icon oben, Text unten */
+  align-items: center;      /* horizontal zentriert */
+  gap: 0.4rem;
 
-  text-decoration: none;          /* Entfernt die Unterstreichung des Links */
-  color: black;                 /* Setzt die Textfarbe der Links */
-  font-weight: bold;              /* Macht den Text fett */
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.navIcon {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+    transition: transform 0.3s ease;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
 }
 
 
