@@ -18,6 +18,7 @@
         <!-- JavaScript -->
         <script src="NavitgationSkript/navigation.js" defer></script>
         <script src="RoomOneSkipt/InteraktiveReflextion.js" defer></script>
+        <script src="RoomOneSkipt/ReflexionGame.js" defer></script>
 
     </head>
 
@@ -133,7 +134,7 @@
             <section class="normalBox licht-reflexion-flex">
             <details id="text-toggle">
                 <summary>
-                    <h2>Wie wird Licht reflektiert</h2>
+                    <h2>Wie wird Licht reflektiert?</h2>
                 </summary>      
                 <p>
                     Licht breitet sich geradlinig aus, doch wenn es auf eine Oberfläche trifft, kann es nicht einfach hindurchgehen oder verschwinden. 
@@ -215,18 +216,31 @@
                 <summary>
                     <h1>Gefangen in der Leere</h1>
                 </summary>
-                <p>  
-                    Alarmlichter blinken rot, während die Raumstation langsam rotiert. Auf den Bildschirmen der Brücke flackern Fehlermeldungen auf, 
-                    der Asteroideneinschlag hat mehrere Systeme gleichzeitig beschädigt. Die Hauptenergie ist ausgefallen, automatische Notfallprotokolle wurden aktiviert. 
-                    Ein kurzer Blick aus dem Panoramafenster zeigt die Erde weit unter euch, doch Hilfe ist nicht in Sicht. <br>
-                    Der Bordcomputer meldet sich mit einer verzerrten Stimme und warnt vor beschädigten optischen Steuersystemen auf der Brücke. Um die Raumstation zu retten, 
-                    müsst ihr den Maschinenraum erreichen, doch der Weg dorthin ist blockiert. Die schwere Sicherheitstür, die von der Brücke in den Flur führt, 
-                    hat sich nach dem Einschlag verriegelt, ein integrierter Sicherheitsmechanismus verhindert das Öffnen. Auf dem Kontrollpanel neben der Tür 
-                    erscheint ein Hinweis: „Zugang nur bei korrekt ausgerichtetem Lichtsignal.“ Offenbar wird die Tür durch ein optisches System gesteuert, 
-                    nur wenn ihr den Lichtstrahl richtig lenkt, erkennt die Steuerung das Signal und gibt den Weg in den Flur frei. <br>
-                    Eure Aufgabe ist es nun, euer Wissen über Licht und Spiegel zu nutzen, um den Sicherheitsmechanismus der Tür zu überwinden und den Zugang freizuschalten. 
-                </p>
+                    <div class="reflexion-layout">
+                        <div class="reflexion-text">
+                        <p>  
+                            Alarmlichter blinken rot, während die Raumstation langsam rotiert. Auf den Bildschirmen der Brücke flackern Fehlermeldungen auf, 
+                            der Asteroideneinschlag hat mehrere Systeme gleichzeitig beschädigt. Die Hauptenergie ist ausgefallen, automatische Notfallprotokolle wurden aktiviert. 
+                            Ein kurzer Blick aus dem Panoramafenster zeigt die Erde weit unter euch, doch Hilfe ist nicht in Sicht. <br>
+                            Der Bordcomputer meldet sich mit einer verzerrten Stimme und warnt vor beschädigten optischen Steuersystemen auf der Brücke. Um die Raumstation zu retten, 
+                            müsst ihr den Maschinenraum erreichen, doch der Weg dorthin ist blockiert. Die schwere Sicherheitstür, die von der Brücke in den Flur führt, 
+                            hat sich nach dem Einschlag verriegelt, ein integrierter Sicherheitsmechanismus verhindert das Öffnen. Auf dem Kontrollpanel neben der Tür 
+                            erscheint ein Hinweis: „Zugang nur bei korrekt ausgerichtetem Lichtsignal.“ Offenbar wird die Tür durch ein optisches System gesteuert, 
+                            nur wenn ihr den Lichtstrahl richtig lenkt, erkennt die Steuerung das Signal und gibt den Weg in den Flur frei. <br>
+                            Eure Aufgabe ist es nun, euer Wissen über Licht und Spiegel zu nutzen, um den Sicherheitsmechanismus der Tür zu überwinden und den Zugang freizuschalten. 
+                        </p>
 
+                        <div class="reflexionGame">
+                            <canvas id="gameCanvas" width="900" height="600"></canvas>
+
+                            <div class="gameControls">
+                                <label>Spiegel 1 <input type="range" id="m1" min="-180" max="180" step ="0.2" value="-180"></label>
+                                <label>Spiegel 2 <input type="range" id="m2" min="-180" max="180" step ="0.2" value="-180"></label>
+                                <label>Spiegel 3 <input type="range" id="m3" min="-180" max="180" step ="0.2" value="-180"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </details>
             </section>
         </main>
