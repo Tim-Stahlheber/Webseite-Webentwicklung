@@ -12,7 +12,7 @@ html {
 /* BODY */
 
 body {
-  background-color: rgb(198, 234, 255);       /* weiß-bläulicher Hintergrund */
+  background-color: rgb(198, 234, 255);       /* bläulicher Hintergrund */
   font-family: Arial, Helvetica, sans-serif;    /* Schriftart */
   margin: 0 auto;                               /* Zentrierung */
   padding: 0;                                   /* Kein Innenabstand */
@@ -32,7 +32,7 @@ body {
 header {
   position: relative;                           /* Setzt den Header als Bezugspunkt für absolute Positionierung von Kind-Elementen (z. B. Hamburger) */
   text-align: center;                           /* Zentriert den Text innerhalb des Headers (h1, h2) */
-  background-color: rgb(198, 234, 255);       /* Hintergrundfarbe des Headers */
+  background-color: rgb(198, 234, 255);       /* bläulicher Hintergrund */
 }
 
 
@@ -69,8 +69,8 @@ header {
 /* NAVIGATION */
 
 #navbar {
-  background-color: white;     /* Hintergrundfarbe der Navigationsleiste */
-  width: 100%;                    /* Volle Breite der Seite */
+  background-color: rgb(101, 199, 255);       /* bläulicher Hintergrund */
+  width: 100%;                                  /* Volle Breite der Seite */
 }
 
 
@@ -102,8 +102,8 @@ header {
 
 .navitem a {
   display: flex;
-  flex-direction: column;   /* Icon oben, Text unten */
-  align-items: center;      /* horizontal zentriert */
+  flex-direction: column;         /* Icon oben, Text unten */
+  align-items: center;            /* horizontal zentriert */
   gap: 0.4rem;
 
   padding: 0.5rem 1rem;
