@@ -272,7 +272,11 @@ article {
   }
 }
 
+
 /* Datenschutz */
+/* Datenschutz */
+/* Datenschutz */
+
 li .index-link {
   text-decoration: underline none;
   color: black;
@@ -286,8 +290,8 @@ section.data_acc {
 }
 
 .accordion {
-  background-color: lightgrey;
-  color: #444;
+  background-color: white;
+  color: #000;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -308,7 +312,7 @@ section.data_acc {
 .panel {
   padding: 0 18px;
   display: none;
-  background-color: lightgrey;
+  background-color: white;
   overflow: hidden;
   border-radius: 1em;
 
