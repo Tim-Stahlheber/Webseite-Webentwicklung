@@ -80,16 +80,6 @@ header {
   align-items: center;            /* Richtet die Listenelemente vertikal mittig aus */
 }
 
-#navlist {
-  list-style: none;               /* Entfernt die Standard-Aufzählungszeichen (Punkte) */
-  margin: 0;                      /* Entfernt den äußeren Abstand um die Liste */
-  padding: 0;                     /* Entfernt den inneren Abstand innerhalb der Liste */
-
-  display: flex;                  /* Macht die Liste zu einem Flex-Container */
-  justify-content: space-around;  /* Verteilt die Listenelemente gleichmäßig horizontal mit Abstand dazwischen */
-  align-items: center;            /* Richtet die Listenelemente vertikal mittig aus */
-}
-
 
 .navitem {
   margin: 0;                      /* Entfernt den äußeren Abstand für die einzelnen Listenelemente */
@@ -187,6 +177,20 @@ article {
 /* RAUM 1 */
 /* RAUM 1 */
 /* RAUM 1 */
+
+#text-toggle summary {
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+}
+
+#text-toggle summary::marker {
+  display: none;                  /* Blendet das standardmäßige Dreieck des <summary>-Elements im Browser aus */
+}
+
+#text-toggle summary::-webkit-details-marker {
+  display: none;                  /* Blendet das standardmäßige Dreieck des <summary>-Elements im Browser aus */
+}
 
 .licht-reflexion-flex {
     /*max-width: 900px;*/
