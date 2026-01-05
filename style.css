@@ -1,3 +1,7 @@
+/* HTML */
+/* HTML */
+/* HTML */
+
 html {
   background-color: rgb(7, 60, 96);           /* Hochschulblau */
 }
@@ -8,7 +12,7 @@ html {
 /* BODY */
 
 body {
-  background-color: rgb(237, 248, 255);       /* weiß-bläulicher Hintergrund */
+  background-color: rgb(198, 234, 255);       /* bläulicher Hintergrund */
   font-family: Arial, Helvetica, sans-serif;    /* Schriftart */
   margin: 0 auto;                               /* Zentrierung */
   padding: 0;                                   /* Kein Innenabstand */
@@ -26,9 +30,9 @@ body {
 /* HEADER */
 
 header {
-  position: relative;             /* Setzt den Header als Bezugspunkt für absolute Positionierung von Kind-Elementen (z. B. Hamburger) */
-  text-align: center;             /* Zentriert den Text innerhalb des Headers (h1, h2) */
-  background-color: gold;       /* Hintergrundfarbe des Headers */
+  position: relative;                           /* Setzt den Header als Bezugspunkt für absolute Positionierung von Kind-Elementen (z. B. Hamburger) */
+  text-align: center;                           /* Zentriert den Text innerhalb des Headers (h1, h2) */
+  background-color: rgb(198, 234, 255);       /* bläulicher Hintergrund */
 }
 
 
@@ -65,8 +69,8 @@ header {
 /* NAVIGATION */
 
 #navbar {
-  background-color: orange;     /* Hintergrundfarbe der Navigationsleiste */
-  width: 100%;                    /* Volle Breite der Seite */
+  background-color: rgb(101, 199, 255);       /* bläulicher Hintergrund */
+  width: 100%;                                  /* Volle Breite der Seite */
 }
 
 
@@ -87,14 +91,27 @@ header {
 
 
 .navitem a {
-  display: block;                 /* Macht den Link zum Block-Element, damit die gesamte Fläche klickbar ist */
-  padding: 0.5rem 1rem;           /* Innenabstand oben/unten 0.5rem, links/rechts 1rem */
+  display: flex;
+  flex-direction: column;         /* Icon oben, Text unten */
+  align-items: center;            /* horizontal zentriert */
+  gap: 0.4rem;
 
-  text-decoration: none;          /* Entfernt die Unterstreichung des Links */
-  color: black;                 /* Setzt die Textfarbe der Links */
-  font-weight: bold;              /* Macht den Text fett */
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  text-align: center;
 }
 
+.navIcon {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+    transition: transform 0.3s ease;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
+}
 
 
 /* FOOTER */
@@ -102,7 +119,7 @@ header {
 /* FOOTER */
 
 footer {
-  background-color: gold;
+  background-color: black;
   text-align: center;        /* Zentrierter Text */
 }
 
@@ -116,12 +133,14 @@ footer .footer-links {
 
 footer .footer-links a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-weight: bold;
 }
 
 
-/*  */
+/* MAIN */
+/* MAIN */
+/* MAIN */
 
 main {
   flex: 1;                  /* main füllt den freien Raum zwischen Header und Footer */
@@ -161,7 +180,7 @@ section.normalBox {
     padding: 4rem;
     margin: 1rem 2rem;     /* oben/unten 1rem, links/rechts 2rem */
     max-width: 1400px;     /* optional: maximale Breite */
-    background: yellow;
+    background: white;
     border-radius: 2em;
 }
 
@@ -202,6 +221,7 @@ article {
 .licht-reflexion-flex h2 {
     /*clear: both; RAUS DAMIT; DA ES KEINE AUSWIRKUNGEN HAT       /* Überschrift geht über die ganze Breite */
     margin-bottom: 1rem;
+    text-align: initial;
 }
 
 .licht-reflexion-flex .sonne {
@@ -232,7 +252,7 @@ article {
     height: auto; /* Damit das Canvas-Element auf kleineren Bildschirmen skaliert */
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1140px) {
   section.normalBox,
   section.data_acc {
     padding: 2rem 2rem;       /* Innenabstand oben/unten sowie links/rechts*/
@@ -246,7 +266,8 @@ article {
   .reflexion-demo {
     flex: none; /* Entfernt die feste Breite */
     width: 100%; /* Volle Breite des Containers */
-    max-width: 100%; /* Maximale Breite auf 100% setzen */
+    max-width: 700px; /* Maximale Breite auf 100% setzen */
+    margin: 0 auto;
   }
 
   #reflexionCanvas {
@@ -255,7 +276,11 @@ article {
   }
 }
 
+
 /* Datenschutz */
+/* Datenschutz */
+/* Datenschutz */
+
 li .index-link {
   text-decoration: underline none;
   color: black;
@@ -269,8 +294,8 @@ section.data_acc {
 }
 
 .accordion {
-  background-color: lightgrey;
-  color: #444;
+  background-color: white;
+  color: #000;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -291,7 +316,7 @@ section.data_acc {
 .panel {
   padding: 0 18px;
   display: none;
-  background-color: lightgrey;
+  background-color: white;
   overflow: hidden;
   border-radius: 1em;
 
@@ -321,6 +346,14 @@ section.data_acc {
     color: black;
     font-weight: bold;
   }
+
+  .licht-reflexion-flex .sonne {
+    float: inline-end;  /* Bild zentriert */
+    margin: 0rem 0rem  1rem 1rem;  /* rem oben, rem rechts, 1rem unten, 1rem links  */ /* Abstand oben & unten 1rem, links & rechts auto */
+    width: 100%;        /* feste Breite */
+    height: auto;       /* automatische Höhe */
+    max-width: 150px;   /* Maximale Breite = 200px */
+  }
 }
 
 
@@ -338,3 +371,4 @@ section.data_acc {
     margin-right: auto;     /* Horizontale Zentrierung
   }
 }*/
+
