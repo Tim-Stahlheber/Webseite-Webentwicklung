@@ -276,6 +276,29 @@ article {
   }
 }
 
+/* RAUM 2 */
+/* RAUM 2 */
+/* RAUM 2 */
+
+.licht-brechung-flex {
+    /*max-width: 900px;*/
+    margin: 0.5rem 1rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.licht-brechung-flex h2 {
+    margin-bottom: 1rem;
+    text-align: initial;
+}
+
+.licht-brechung-flex .glas {
+    float: right;               /* Bild rechts vom Text */
+    margin: 0 0 1rem 1rem;      /* Abstand oben & rechts 0, unten & links 1rem */
+    width: 350px;               /* feste Breite */
+    height: auto;
+}
+
 
 /* Datenschutz */
 /* Datenschutz */
