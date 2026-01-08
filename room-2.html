@@ -17,6 +17,7 @@
 
         <!-- JavaScript -->
         <script src="NavitgationSkript/navigation.js" defer></script>
+        <script src="RoomTwoSkript/InteraktiveBrechung.js" defer></script>
 
     </head>
 
@@ -110,6 +111,27 @@
                     Der Lichtstrahl ändert seine Richtung nicht zufällig, sondern immer nach bestimmten Gesetzmäßigkeiten, 
                     die von den beteiligten Materialien abhängen.
                 </p>
+                <h2>Totalreflexion</h2>
+                <p>
+                    Eine besondere Form der Lichtbrechung ist die Totalreflexion.
+                    Sie tritt auf, wenn Licht von einem optisch dichteren Stoff, zum Beispiel von Wasser oder Glas,
+                    in einen optisch dünneren Stoff wie Luft übergehen soll.
+                    Trifft der Lichtstrahl dabei in einem zu großen Winkel auf die Grenzfläche,
+                    kann er nicht mehr in das zweite Material eintreten.
+                    Stattdessen wird das Licht vollständig an der Grenzfläche zurückgeworfen.
+                    Man spricht dann von Totalreflexion. <br>
+
+                    Wichtig ist: Totalreflexion kann <strong>nur</strong> beim Übergang vom dichteren in den dünneren Stoff auftreten
+                    und nur dann, wenn der Einfallswinkel größer ist als ein bestimmter Grenzwert,
+                    der sogenannte <strong>kritische Winkel</strong>.
+                    Bei kleineren Winkeln wird das Licht noch gebrochen,
+                    bei größeren Winkeln wird es vollständig reflektiert. <br>
+                    
+                    Totalreflexion wird technisch gezielt genutzt, zum Beispiel in Glasfaserkabeln,
+                    um Licht über große Entfernungen nahezu verlustfrei zu übertragen,
+                    oder in Prismen, die Licht in optischen Geräten wie Ferngläsern umlenken.
+                </p>
+
 
                 <h2>Definition des Brechungsgesetzes</h2>
                 <div class="reflexion-layout">
@@ -151,8 +173,38 @@
                         </p>
                     </div>
                 </div>
-            </section>
 
+                <h2>Interaktive Lichtbrechung</h2>
+                <div class="reflexion-layout">
+                
+                    <!-- Luft → Wasser -->
+                    <div class="brechung-demo">
+                        <canvas id="brechungCanvasLeft" width="500" height="400"></canvas>
+                        <div class="controls">
+                            <label for="angleInputLeft">
+                                Einfallswinkel: <span id="angleValueLeft">45</span>°
+                            </label>
+                            <input type="range" id="angleInputLeft" min="0" max="89" value="45">
+                        </div>
+                        <p><strong>Luft (n = 1,00) → Wasser (n = 1,33)</strong></p>
+                    </div>
+                
+                    <!-- Wasser → Luft -->
+                    <div class="brechung-demo">
+                        <canvas id="brechungCanvasRight" width="500" height="400"></canvas>
+                        <div class="controls">
+                            <label for="angleInputRight">
+                                Einfallswinkel: <span id="angleValueRight">45</span>°
+                            </label>
+                            <input type="range" id="angleInputRight" min="0" max="89" value="45">
+                        </div>
+                        <p><strong>Wasser (n = 1,33) → Luft (n = 1,00)</strong></p>
+                    </div>
+                
+                </div>
+
+            </section>
+        
             <section class="normalBox">
                 <h2>Escape-Spiel</h2>
                 <p>game shit</p>
