@@ -1,13 +1,8 @@
-// =======================================
-// Interaktive Lichtbrechung – Luft & Wasser mit Reflexion
-// =======================================
-
 document.addEventListener("DOMContentLoaded", () => {
 
     const nLuft = 1.0;
     const nWasser = 1.33;
 
-    // Luft → Wasser
     setupBrechung(
         "brechungCanvasLeft",
         "angleInputLeft",
@@ -16,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
         nWasser
     );
 
-    // Wasser → Luft
     setupBrechung(
         "brechungCanvasRight",
         "angleInputRight",
@@ -51,16 +45,12 @@ function setupBrechung(canvasId, inputId, valueId, n1, n2) {
 
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        // ===================
-        // Medien-Hintergrund
-        // ===================
-        ctx.fillStyle = "#e6f4ff"; // oberes Medium
+        ctx.fillStyle = "#e6f4ff";
         ctx.fillRect(0, 0, canvas.width, cy);
 
-        ctx.fillStyle = "#cceeff"; // unteres Medium
+        ctx.fillStyle = "#cceeff";
         ctx.fillRect(0, cy, canvas.width, canvas.height - cy);
 
-        // Grenzfläche
         ctx.strokeStyle = "black";
         ctx.lineWidth = 2;
         ctx.beginPath();
@@ -68,9 +58,10 @@ function setupBrechung(canvasId, inputId, valueId, n1, n2) {
         ctx.lineTo(canvas.width, cy);
         ctx.stroke();
 
-        // =========
-        // Lot
-        // =========
+        ctx.fillStyle = "black";
+        ctx.font = "14px Arial";
+        ctx.fillText("Grenzfläche", 10, cy - 5);
+
         ctx.strokeStyle = "red";
         ctx.lineWidth = 2;
         ctx.beginPath();
@@ -82,9 +73,6 @@ function setupBrechung(canvasId, inputId, valueId, n1, n2) {
         ctx.font = "14px Arial";
         ctx.fillText("Lot", cx + 6, cy - 130);
 
-        // ===================
-        // Einfallender Strahl (dunkelblau)
-        // ===================
         const rad = angleDeg * Math.PI / 180;
 
         const x1 = cx - Math.sin(rad) * rayLength;
@@ -97,7 +85,6 @@ function setupBrechung(canvasId, inputId, valueId, n1, n2) {
         ctx.lineTo(cx, cy);
         ctx.stroke();
 
-        // Einfallswinkel (dunkelblau)
         ctx.beginPath();
         ctx.arc(
             cx,
@@ -116,9 +103,6 @@ function setupBrechung(canvasId, inputId, valueId, n1, n2) {
             cy + Math.sin(-Math.PI / 2 - rad / 2) * (angleRadius + 10)
         );
 
-        // ===================
-        // Snellius
-        // ===================
         const sinBeta = (n1 / n2) * Math.sin(rad);
         let totalreflexion = false;
         let rad2;
@@ -132,9 +116,6 @@ function setupBrechung(canvasId, inputId, valueId, n1, n2) {
             rad2 = Math.asin(sinBeta);
         }
 
-        // ===================
-        // Gebrochener Strahl (orange)
-        // ===================
         if (!totalreflexion) {
             const x2 = cx + Math.sin(rad2) * rayLength;
             const y2 = cy + Math.cos(rad2) * rayLength;
@@ -146,7 +127,6 @@ function setupBrechung(canvasId, inputId, valueId, n1, n2) {
             ctx.lineTo(x2, y2);
             ctx.stroke();
 
-            // Brechungswinkel (orange)
             ctx.beginPath();
             ctx.arc(
                 cx,
@@ -166,24 +146,16 @@ function setupBrechung(canvasId, inputId, valueId, n1, n2) {
             );
         }
 
-        // ===================
-        // Reflexionsstrahl (hellblau)
-        // ===================
-        const radRef = rad; // Reflexion = Einfallswinkel
+        const radRef = rad;
         ctx.strokeStyle = "lightblue";
         ctx.lineWidth = 3;
-        ctx.setLineDash([5, 3]); // gestrichelter Strahl
+        ctx.setLineDash([5, 3]);
         ctx.beginPath();
         ctx.moveTo(cx, cy);
         ctx.lineTo(cx + Math.sin(radRef) * rayLength, cy - Math.cos(radRef) * rayLength);
         ctx.stroke();
-        ctx.setLineDash([]); // gestrichelte Linie zurücksetzen
+        ctx.setLineDash([]);
 
-        // **Keine Winkelanzeige für hellblauen Reflexionsstrahl**
-
-        // ===================
-        // Medien-Beschriftung
-        // ===================
         ctx.fillStyle = "black";
         ctx.font = "14px Arial";
         ctx.fillText(`n₁ = ${n1}`, 10, 20);

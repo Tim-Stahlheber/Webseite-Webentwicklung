@@ -1,11 +1,3 @@
-/**
- * @file Interaktive Darstellung des Reflexionsgesetzes
- * @author Tim Stahlheber
- */
-
-/**
- * Wird ausgeführt, sobald das DOM vollständig geladen ist
- */
 document.addEventListener("DOMContentLoaded", () => {
 
     const canvas = document.getElementById("reflexionCanvas");
@@ -13,17 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const angleInput = document.getElementById("angleInput");
     const angleValue = document.getElementById("angleValue");
 
-    /**
-     * Mittelpunkt des Auftreffpunkts
-     */
     const hitPoint = {
         x: canvas.width / 2,
         y: canvas.height / 2
     };
 
-    /**
-     * Zeichnet die gesamte Szene neu
-     */
     function drawScene(angle) {
         clearCanvas();
         drawMirror();
@@ -34,17 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
         drawReflectedAngle(angle);
     }
 
-    /**
-     * Weißer Hintergrund
-     */
     function clearCanvas() {
         ctx.fillStyle = "white";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
     }
 
-    /**
-     * Spiegel
-     */
     function drawMirror() {
         ctx.strokeStyle = "black";
         ctx.lineWidth = 4;
@@ -52,11 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
         ctx.moveTo(50, hitPoint.y);
         ctx.lineTo(canvas.width - 50, hitPoint.y);
         ctx.stroke();
+        ctx.fillStyle = "black";
+        ctx.font = "16px Arial";
+        ctx.fillText("Spiegel", canvas.width - 100, hitPoint.y - 10);
     }
 
-    /**
-     * Einfallslot (rot)
-     */
     function drawNormal() {
         ctx.strokeStyle = "red";
         ctx.lineWidth = 2;
@@ -64,47 +44,45 @@ document.addEventListener("DOMContentLoaded", () => {
         ctx.moveTo(hitPoint.x, hitPoint.y - 150);
         ctx.lineTo(hitPoint.x, hitPoint.y + 150);
         ctx.stroke();
+        ctx.fillStyle = "red";
+        ctx.font = "16px Arial";
+        ctx.fillText("Lot", hitPoint.x + 10, hitPoint.y - 140);
     }
 
-    /**
-     * Einfallender Strahl (blau)
-     */
     function drawIncomingRay(angle) {
         const rad = angle * Math.PI / 180;
         const length = 200;
 
-        const x = hitPoint.x - Math.sin(rad) * length;
-        const y = hitPoint.y - Math.cos(rad) * length;
+        const startX = hitPoint.x - Math.sin(rad) * length;
+        const startY = hitPoint.y - Math.cos(rad) * length;
 
         ctx.strokeStyle = "blue";
         ctx.lineWidth = 3;
         ctx.beginPath();
-        ctx.moveTo(x, y);
+        ctx.moveTo(startX, startY);
         ctx.lineTo(hitPoint.x, hitPoint.y);
         ctx.stroke();
+
+        drawArrowMid(startX, startY, hitPoint.x, hitPoint.y, "blue");
     }
 
-    /**
-     * Reflektierter Strahl (grün)
-     */
     function drawReflectedRay(angle) {
         const rad = angle * Math.PI / 180;
         const length = 200;
 
-        const x = hitPoint.x + Math.sin(rad) * length;
-        const y = hitPoint.y - Math.cos(rad) * length;
+        const endX = hitPoint.x + Math.sin(rad) * length;
+        const endY = hitPoint.y - Math.cos(rad) * length;
 
         ctx.strokeStyle = "green";
         ctx.lineWidth = 3;
         ctx.beginPath();
         ctx.moveTo(hitPoint.x, hitPoint.y);
-        ctx.lineTo(x, y);
+        ctx.lineTo(endX, endY);
         ctx.stroke();
+
+        drawArrowMid(hitPoint.x, hitPoint.y, endX, endY, "green");
     }
 
-    /**
-     * Einfallswinkel (grün) + Beschriftung
-     */
     function drawIncomingAngle(angle) {
         const rad = angle * Math.PI / 180;
         const radius = 50;
@@ -121,17 +99,9 @@ document.addEventListener("DOMContentLoaded", () => {
         );
         ctx.stroke();
 
-        drawAngleLabel(
-            angle,
-            -Math.PI / 2 + rad / 2,
-            radius + 15,
-            "green"
-        );
+        drawAngleLabel(angle, -Math.PI / 2 + rad / 2, radius + 15, "green");
     }
 
-    /**
-     * Reflexionswinkel (blau) + Beschriftung
-     */
     function drawReflectedAngle(angle) {
         const rad = angle * Math.PI / 180;
         const radius = 50;
@@ -148,17 +118,9 @@ document.addEventListener("DOMContentLoaded", () => {
         );
         ctx.stroke();
 
-        drawAngleLabel(
-            angle,
-            -Math.PI / 2 - rad / 2,
-            radius + 15,
-            "blue"
-        );
+        drawAngleLabel(angle, -Math.PI / 2 - rad / 2, radius + 15, "blue");
     }
 
-    /**
-     * Zeichnet die Winkelbeschriftung (z. B. "45°")
-     */
     function drawAngleLabel(angle, directionRad, distance, color) {
         const x = hitPoint.x + Math.cos(directionRad) * distance;
         const y = hitPoint.y + Math.sin(directionRad) * distance;
@@ -168,15 +130,33 @@ document.addEventListener("DOMContentLoaded", () => {
         ctx.fillText(`${angle}°`, x - 8, y + 5);
     }
 
-    /**
-     * Slider-Interaktion
-     */
+    function drawArrowMid(x1, y1, x2, y2, color) {
+        const midX = (x1 + x2) / 2;
+        const midY = (y1 + y2) / 2;
+
+        const angle = Math.atan2(y2 - y1, x2 - x1);
+        const size = 18;
+
+        ctx.fillStyle = color;
+        ctx.beginPath();
+        ctx.moveTo(midX, midY);
+        ctx.lineTo(
+            midX - size * Math.cos(angle - Math.PI / 6),
+            midY - size * Math.sin(angle - Math.PI / 6)
+        );
+        ctx.lineTo(
+            midX - size * Math.cos(angle + Math.PI / 6),
+            midY - size * Math.sin(angle + Math.PI / 6)
+        );
+        ctx.closePath();
+        ctx.fill();
+    }
+
     angleInput.addEventListener("input", () => {
         const angle = Number(angleInput.value);
         angleValue.textContent = angle;
         drawScene(angle);
     });
 
-    // Initiale Zeichnung
     drawScene(Number(angleInput.value));
 });
