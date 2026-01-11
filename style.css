@@ -219,16 +219,34 @@ article {
 }
 
 .licht-reflexion-flex h2 {
-    /*clear: both; RAUS DAMIT; DA ES KEINE AUSWIRKUNGEN HAT       /* Überschrift geht über die ganze Breite */
     margin-bottom: 1rem;
     text-align: initial;
 }
 
 .licht-reflexion-flex .sonne {
-    float: right;      /* Bild rechts vom Text */
-    margin: 0 0 1rem 1rem;  /* Abstand oben & rechts 0, unten & links 1rem */
-    width: 200px;      /* feste Breite */
+    float: right;             /* Bild rechts vom Text */
+    margin: 0 0 1rem 1rem;    /* Abstand oben & rechts 0, unten & links 1rem */
+    width: 200px;             /* feste Breite */
     height: auto;
+}
+
+.sonne-figure {
+    float: right;
+    width: 200px;
+    margin: 0 0 1rem 1rem;
+    text-align: center;
+}
+
+.sonne-figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.sonne-figure figcaption {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 0.4rem;
 }
 
 .reflexion-layout {
@@ -293,10 +311,28 @@ article {
 }
 
 .licht-brechung-flex .glas {
-    float: right;               /* Bild rechts vom Text */
     margin: 0 0 1rem 1rem;      /* Abstand oben & rechts 0, unten & links 1rem */
     width: 350px;               /* feste Breite */
     height: auto;
+}
+
+.glas-figure {
+    float: right;
+    width: 350px;
+    margin: 0 0 1rem 1rem;
+    text-align: center;
+}
+
+.glas-figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.glas-figure figcaption {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 0.4rem;
 }
 
 .brechung-demo {
