@@ -2,8 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
+const winNotification = document.getElementById("winNotification");
 
 const EPSILON = 0.001;
+let lastHitState = false;
 
 // =====================
 // Vector Math
@@ -51,8 +53,8 @@ function intersectRaySegment(o,d,a,b){
 // Mirror
 // =====================
 class Mirror{
-    constructor(x,y,len,angle){
-        this.x=x; this.y=y; this.len=len; this.angle=angle;
+    constructor(x,y,len,angle,color){
+        this.x=x; this.y=y; this.len=len; this.angle=angle; this.color=color;
     }
     get endpoints(){
         const dx=Math.cos(this.angle)*this.len/2;
@@ -64,7 +66,7 @@ class Mirror{
     }
     draw(){
         const [a,b]=this.endpoints;
-        ctx.strokeStyle="#aaaaff";
+        ctx.strokeStyle=this.color;
         ctx.lineWidth=5;
         ctx.beginPath();
         ctx.moveTo(a.x,a.y);
@@ -77,9 +79,9 @@ class Mirror{
 // Game Objects
 // =====================
 const mirrors=[
-    new Mirror(300,200,160,0),
-    new Mirror(540,510,160,0),
-    new Mirror(680,220,160,0)
+    new Mirror(300,200,160,0, "green"),
+    new Mirror(540,510,160,0, "orange"),
+    new Mirror(680,220,160,0, "purple")
 ];
 
 const source={
@@ -88,7 +90,7 @@ const source={
 };
 
 const target={
-    x:825,y:150,r:25,hit:false,
+    x:825,y:150,r:20,hit:false,
     draw(){
         ctx.fillStyle=this.hit?"lime":"red";
         ctx.beginPath();
@@ -178,7 +180,7 @@ function drawSource(){
 // Main Loop
 // =====================
 function loop(){
-    ctx.fillStyle="#111";
+    ctx.fillStyle="#325157";
     ctx.fillRect(0,0,canvas.width,canvas.height);
 
     target.hit=false;
@@ -188,6 +190,18 @@ function loop(){
     drawSource();
     mirrors.forEach(m=>m.draw());
     target.draw();
+
+    // Show win notification when target is hit
+    if(target.hit && !lastHitState) {
+        winNotification.classList.add("show");
+        // Auto-hide after 3 seconds
+        setTimeout(() => {
+            winNotification.classList.remove("show");
+        }, 3000);
+    } else if(!target.hit && lastHitState) {
+        winNotification.classList.remove("show");
+    }
+    lastHitState = target.hit;
 
     requestAnimationFrame(loop);
 }

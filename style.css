@@ -201,6 +201,15 @@ article {
     cursor: pointer;
     font-weight: bold;
     display: block;
+    padding: 18px;
+    background-color: white;
+    border-radius: 1em;
+    transition: 0.4s;
+}
+
+#text-toggle summary:hover {
+    background-color: #b1d6f8;
+    color: white;
 }
 
 #text-toggle summary::marker {
@@ -261,25 +270,126 @@ article {
 }
 
 .reflexion-demo {
-    flex: 0 0 620px; /* feste Breite für Canvas + Controls */
+    flex: 0 0 620px;
     text-align: center;
 }
 
 .reflexion-demo canvas {
-    max-width: 100%; /* Maximale Breite des Canvas-Elements auf 100% des Containers setzen */
-    height: auto; /* Damit das Canvas-Element auf kleineren Bildschirmen skaliert */
+    max-width: 100%;
+    height: auto;
+}
+
+.reflexionGame {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.reflexionGame canvas {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+}
+
+.gameControls {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.gameControls label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-weight: bold;
+}
+
+.gameControls input[type="range"] {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Mirror Labels */
+.mirror-label {
+    font-weight: bold;
+}
+
+.mirror-label.green {
+    color: green;
+}
+
+.mirror-label.orange {
+    color: orange;
+}
+
+.mirror-label.purple {
+    color: purple;
+}
+
+/* Win Notification */
+.win-notification {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    min-width: 300px;
+}
+
+.win-notification h3 {
+    color: white;
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+.win-notification p {
+    color: white;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+}
+
+.win-notification.show {
+    display: block;
+    animation: slideDown 0.5s ease-in-out;
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
 }
 
 @media (max-width: 1140px) {
   section.normalBox,
   section.data_acc {
-    padding: 2rem 2rem;       /* Innenabstand oben/unten sowie links/rechts*/
-    margin: 0.5rem 1rem;     /* top and bottom margin 0.5rem, left and right auto */
+    padding: 2rem 2rem;
+    margin: 0.5rem 1rem;
   }    
   
   .reflexion-layout {
     flex-direction: column;
   }
+
 
   .reflexion-demo {
     flex: none; /* Entfernt die feste Breite */
