@@ -359,6 +359,65 @@ article {
     }
 }
 
+/* RAUM 3 */
+/* RAUM 3 */
+/* RAUM 3 */
+
+.farben-flex {
+    /*max-width: 900px;*/
+    margin: 0.5rem 1rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.farben-flex h2 {
+    margin-bottom: 1rem;
+    text-align: initial;
+}
+
+.farben-flex .wellenlänge {
+    margin: 0 0 1rem 1rem;      /* Abstand oben & rechts 0, unten & links 1rem */
+    width: 350px;               /* feste Breite */
+    height: auto;
+}
+
+.wellenlänge-figure {
+    float: right;
+    width: 350px;
+    margin: 0 0 1rem 1rem;
+    text-align: center;
+}
+
+.wellenlänge-figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.wellenlänge-figure figcaption {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 0.4rem;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+canvas {
+  border: 1px solid #333;
+}
+
 
 
 /* Datenschutz */
