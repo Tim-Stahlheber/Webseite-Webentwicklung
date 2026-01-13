@@ -18,6 +18,7 @@
         <!-- JavaScript -->
         <script src="NavitgationSkript/navigation.js" defer></script>
         <script src="RoomTwoSkript/InteraktiveBrechung.js" defer></script>
+        <script src="RoomTwoSkript/BrechungGame.js" defer></script>
 
     </head>
 
@@ -77,10 +78,14 @@
 
         <main>
             <section class="normalBox licht-brechung-flex">
-                <h1> 
-                    Lichtbrechung <br> <br>
-                </h1>
-                <h2>Wie wird Licht gebrochen?</h2>
+                <h1>Lichtbrechung</h1>
+            </section>
+
+            <section class="normalBox licht-brechung-flex">
+            <details id="text-toggle" open>
+                <summary>
+                    <h2>Wie wird Licht gebrochen?</h2>
+                </summary>
                 <figure class="glas-figure">
                     <img 
                         src="imgs/Glas.png" 
@@ -116,8 +121,14 @@
                     Sie erklärt zum Beispiel, warum ein Aquarium tiefer wirkt, als es wirklich ist 
                     oder warum Linsen in Brillen und Kameras das Licht bündeln oder zerstreuen können. <br>
                 </p>
+            </details>
+            </section>
 
-                <h2>Brechungsindex</h2>
+            <section class="normalBox licht-brechung-flex">
+            <details id="text-toggle" open>
+                <summary>
+                    <h2>Brechungsindex</h2>
+                </summary>
                 <p>
                     Wie stark ein Lichtstrahl beim Übergang von einem Stoff in einen anderen gebrochen wird,
                     hängt vom sogenannten <strong>Brechungsindex</strong> des Materials ab.
@@ -142,8 +153,7 @@
                     desto stärker wird der Lichtstrahl an der Grenzfläche zwischen den verschiedenen Materialien gebrochen.
                 </p>
 
-
-                <h2>Totalreflexion</h2>
+                <h3>Totalreflexion</h3>
                 <p>
                     Eine besondere Form der Lichtbrechung ist die Totalreflexion.
                     Sie tritt auf, wenn Licht von einem optisch dichteren Material, zum Beispiel von Wasser oder Glas,
@@ -156,9 +166,14 @@
                     und nur dann, wenn der Einfallswinkel größer ist als ein bestimmter Grenzwert, der sogenannte <strong>kritische Winkel</strong>.
                     Bei kleineren Winkeln wird das Licht noch gebrochen, bei größeren Winkeln wird es vollständig reflektiert. <br>
                 </p>
+            </details>
+            </section>
 
-
-                <h2>Definition des Brechungsgesetzes</h2>
+            <section class="normalBox licht-brechung-flex">
+            <details id="text-toggle" open>
+                <summary>
+                    <h2>Definition des Brechungsgesetzes</h2>
+                </summary>
                 <div class="reflexion-layout">
                     <div class="reflexion-text">
                         <p>
@@ -237,12 +252,46 @@
                     </div>
                 
                 </div>
-
+            </details>
             </section>
-        
-            <section class="normalBox">
-                <h2>Escape-Spiel</h2>
-                <p>game shit</p>
+
+            <section class="normalBox" style="text-align: center;">
+                <h1>Durch das Wasser</h1>
+                
+                <p style="text-align: left; margin-bottom: 30px; line-height: 1.6;">
+                    Der Flur ist dunkel und leer. Die Notlichter werfen rote Schatten an die Wände. Nach eurer erfolgreichen Flucht aus der Brücke müsst ihr nun 
+                    durch den beschädigten Flur zum Maschinenraum gelangen. Der Bordcomputer warnt euch: Der nächste Kontrollpunkt ist unter Wasser - ein Überschwemmungsgebiet 
+                    entstanden durch das beschädigte Kühlsystem der Raumstation. <br>
+                    
+                    Auf dem Flur befindet sich ein alter Steg, gebaut für Inspektionen bei Wartungsarbeiten. Der Weg über den Steg ist blockiert - zu gefährlich, zu instabil. 
+                    Eure einzige Hoffnung: Der Lichtstrahl vom Notlichtsystem muss durch das Wasser zum Steuerungsmodul auf der anderen Seite gelangen, um die letzte Tür zum 
+                    Maschinenraum freizuschalten. <br>
+                    
+                    Ihr erinnert euch an die Brechung von Licht - das Phänomen, das ihr gerade noch studiert habt. Nutzt euer Wissen, um den Lichtstrahl in die richtige Richtung 
+                    zu lenken. Passt den Winkel des Lichts an und bewegt das Ziel auf die richtige Position. Der Steg blockiert einen Teil des direkten Weges - findet einen Weg, 
+                    das Licht um ihn herum oder über ihn hinweg zum Ziel zu bringen.
+                </p>
+                
+                <div style="display: flex; justify-content: center;">
+                    <canvas id="gameCanvas" width="1000" height="600" style="border: 1px solid #ccc;"></canvas>
+                </div>
+                <div id="winNotification" class="win-notification">
+                    <h3>🎉 Geschafft! 🎉</h3>
+                    <p>Ziel getroffen!</p>
+                </div>
+                <div class="gameControls" style="margin-top: 20px; display: flex; justify-content: center; gap: 10px; align-items: center; width: 100%; max-width: 900px; flex-direction: row;">
+                    <label for="angleSlider" style="margin: 0; white-space: nowrap; font-weight: bold;">
+                        Licht-Winkel:
+                    </label>
+                    <input type="range" id="angleSlider" min="-89" max="89" value="-30" style="flex: 1; min-width: 300px;">
+                </div>
+                
+                <div class="gameControls" style="margin-top: 15px; display: flex; justify-content: center; gap: 10px; align-items: center; width: 100%; max-width: 900px; flex-direction: row;">
+                    <label for="targetSlider" style="margin: 0; white-space: nowrap; font-weight: bold;">
+                        Ziel Position:
+                    </label>
+                    <input type="range" id="targetSlider" min="200" max="900" value="200" style="flex: 1; min-width: 300px;">
+                </div>
             </section>
         </main>
 

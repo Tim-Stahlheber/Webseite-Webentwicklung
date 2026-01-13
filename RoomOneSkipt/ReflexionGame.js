@@ -194,10 +194,10 @@ function loop(){
     // Show win notification when target is hit
     if(target.hit && !lastHitState) {
         winNotification.classList.add("show");
-        // Auto-hide after 3 seconds
+        // Auto-hide after 5 seconds 
         setTimeout(() => {
             winNotification.classList.remove("show");
-        }, 3000);
+        }, 5000);
     } else if(!target.hit && lastHitState) {
         winNotification.classList.remove("show");
     }
