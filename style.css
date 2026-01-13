@@ -390,17 +390,38 @@ article {
     flex-direction: column;
   }
 
-
   .reflexion-demo {
-    flex: none; /* Entfernt die feste Breite */
-    width: 100%; /* Volle Breite des Containers */
-    max-width: 700px; /* Maximale Breite auf 100% setzen */
+    flex: none;
+    width: 100%;
+    max-width: 700px;
     margin: 0 auto;
   }
 
   #reflexionCanvas {
-    width: 100%; /* Canvas-Element nimmt die volle Breite des Containers ein */
-    height: auto; /* Höhe wird automatisch angepasst, um das Seitenverhältnis beizubehalten */
+    width: 100%;
+    height: auto;
+  }
+
+  /* Tablet Anpassung für Spiele */
+  #gameCanvas {
+    width: 100%;
+    height: auto;
+    max-width: 90vw;
+  }
+
+  .gameControls {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .gameControls input[type="range"] {
+    min-width: 150px;
+  }
+
+  .brechung-demo {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
   }
 }
 
@@ -601,11 +622,63 @@ section.data_acc {
   }
 
   .licht-reflexion-flex .sonne {
-    float: inline-end;  /* Bild zentriert */
-    margin: 0rem 0rem  1rem 1rem;  /* rem oben, rem rechts, 1rem unten, 1rem links  */ /* Abstand oben & unten 1rem, links & rechts auto */
-    width: 100%;        /* feste Breite */
-    height: auto;       /* automatische Höhe */
-    max-width: 150px;   /* Maximale Breite = 200px */
+    float: inline-end;
+    margin: 0rem 0rem 1rem 1rem;
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+  }
+
+  /* Mobile Anpassung für Spiele */
+  #gameCanvas {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100%;
+  }
+
+  .gameControls {
+    flex-direction: column !important;
+    gap: 15px !important;
+    width: 100% !important;
+    padding: 0 1rem;
+  }
+
+  .gameControls label {
+    white-space: normal !important;
+    font-size: 0.95rem;
+  }
+
+  .gameControls input[type="range"] {
+    width: 100% !important;
+    min-width: 100px !important;
+  }
+
+  /* Win Notification Mobile */
+  .win-notification {
+    min-width: 90vw;
+    max-width: 90vw;
+    padding: 1.5rem;
+  }
+
+  .win-notification h3 {
+    font-size: 1.4rem;
+  }
+
+  .win-notification p {
+    font-size: 0.95rem;
+  }
+
+  /* Text-Größen für Mobile */
+  p {
+    font-size: 0.95rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
   }
 }
 
