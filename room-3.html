@@ -18,6 +18,7 @@
         <!-- JavaScript -->
         <script src="NavitgationSkript/navigation.js" defer></script>
         <script src="RoomThreeeSkript/InteraktiveFarben.js" defer></script>
+        <script src="RoomThreeeSkript/FarbenGame.js" defer></script>
 
     </head>
 
@@ -78,10 +79,15 @@
         <main>
             <section class="normalBox farben-flex">
                 <h1>
-                    Licht und Farbe <br> <br>
+                    Licht und Farbe
                 </h1>
+            </section>
 
-                <h2>Das Farbspektrum</h2>
+            <section class="normalBox farben-flex">
+            <details id="text-toggle" open>
+                <summary>
+                    <h2>Das Farbspektrum</h2>
+                </summary>
                 <figure class="wellenlänge-figure">
                     <img 
                         src="imgs/Wellenlänge.png" 
@@ -112,8 +118,14 @@
                     Dadurch werden die einzelnen Farben räumlich voneinander getrennt. 
                     Auf der Austrittsseite des Prismas entsteht so ein farbiges Band, das sichtbare Spektrum.
                 </p>
+            </details>
+            </section>
 
-                <h2>Grundfarben und Spektralfarben</h2>
+            <section class="normalBox farben-flex">
+            <details id="text-toggle" open>
+                <summary>
+                    <h2>Grundfarben und Spektralfarben</h2>
+                </summary>
                 <p>
                     Die Farben, die im Farbspektrum sichtbar werden, nennt man <strong>Spektralfarben</strong>.
                     Sie entstehen, wenn weißes Licht in seine einzelnen Farbanteile zerlegt wird, wie
@@ -148,9 +160,14 @@
                     Grundfarben sind ein <strong>technisches Hilfsmittel zum Mischen von Farben</strong>,
                     während Spektralfarben die <strong>natürlichen Bestandteile des weißen Lichts</strong> darstellen.
                 </p>
+            </details>
+            </section>
 
-
-                <h2>Die Farbmischung</h2>
+            <section class="normalBox farben-flex">
+            <details id="text-toggle" open>
+                <summary>
+                    <h2>Die Farbmischung</h2>
+                </summary>
                 <h3>Addaptive Farbmischung</h3>
                 <p>
                     Die additive Farbmischung tritt auf, wenn mit Lichtquellen gearbeitet wird, zum Beispiel bei Bildschirmen, Beamern oder LEDs.
@@ -215,12 +232,64 @@
                     <label>Gelb: <input type="range" id="ySlider" min="0" max="100" value="100"></label>
                   </div>
                 </div>
-
+            </details>
             </section>
 
             <section class="normalBox">
-                <h2>Escape-Spiel</h2>
-                <p>game shit</p>
+                <h1>Die Licht- und Farbkontrolle</h1>
+                <p>
+                    Ihr kämpft euch durch die zentrale Licht- und Farbkontrolle der Raumstation. 
+                    Hier werden alle Systeme durch verschiedenfarbige Lichtstrahlen gesteuert. Die Energieverteilung ist völlig durcheinander geraten - 
+                    vier kritische Lichter müssen auf ihre korrekte Farbe eingestellt werden, um die Notfallsysteme wiederherzustellen. <br><br>
+
+                    Ihr seht vier Lichter vor euch: Zwei davon nutzen das RGB-System (Rot, Grün, Blau), wie ihr es von den Bildschirmen kennt, 
+                    und zwei verwenden das CMY-System (Cyan, Magenta, Gelb), wie es in den Druckersystemen der Station funktioniert. 
+                    Mit den Schiebereglern müsst ihr die Lichter präzise justieren, um die vorgegebenen Zielfarben zu treffen. <br><br>
+                    
+                    Nutzt euer Verständnis von additiver und subtraktiver Farbmischung - nur die korrekte Farbkombination wird die Energiequelle freigeben!
+                </p>
+            
+                <div id="gameContainer">
+                    <canvas id="gameCanvas" width="1000" height="500"></canvas>
+                    <div class="gameControls">
+                        <div class="control-group">
+                            <h3>RGB Licht 1</h3>
+                            <div class="color-boxes">
+                                <button class="color-box" id="rgb1R" data-light="rgb1" data-color="r">R</button>
+                                <button class="color-box" id="rgb1G" data-light="rgb1" data-color="g">G</button>
+                                <button class="color-box" id="rgb1B" data-light="rgb1" data-color="b">B</button>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <h3>RGB Licht 2</h3>
+                            <div class="color-boxes">
+                                <button class="color-box" id="rgb2R" data-light="rgb2" data-color="r">R</button>
+                                <button class="color-box" id="rgb2G" data-light="rgb2" data-color="g">G</button>
+                                <button class="color-box" id="rgb2B" data-light="rgb2" data-color="b">B</button>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <h3>CMY Licht 3</h3>
+                            <div class="color-boxes">
+                                <button class="color-box" id="cmy1C" data-light="cmy1" data-color="c">C</button>
+                                <button class="color-box" id="cmy1M" data-light="cmy1" data-color="m">M</button>
+                                <button class="color-box" id="cmy1Y" data-light="cmy1" data-color="y">Y</button>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <h3>CMY Licht 4</h3>
+                            <div class="color-boxes">
+                                <button class="color-box" id="cmy2C" data-light="cmy2" data-color="c">C</button>
+                                <button class="color-box" id="cmy2M" data-light="cmy2" data-color="m">M</button>
+                                <button class="color-box" id="cmy2Y" data-light="cmy2" data-color="y">Y</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="winNotification" class="notification">🎉 Alle Lichter kalibriert! Notfallsysteme aktiviert!</div>
+                </div>
             </section>
         </main>
 
