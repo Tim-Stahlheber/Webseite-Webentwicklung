@@ -58,7 +58,7 @@ const source={
 
 const target={
     x:parseInt(document.getElementById("targetSlider").value),
-    y:550,
+    y:500,
     r:25,
     hit:false,
     draw(){
