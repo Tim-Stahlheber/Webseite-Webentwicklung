@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ctx.fillText(indicator, x, y + 110);
 
         // Target Name
-        ctx.fillStyle = "#333";
+        ctx.fillStyle = "#ffffff";
         ctx.font = "14px Arial";
         ctx.fillText(targetName, x, y + 150);
     }
@@ -149,7 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // =====================
     function draw() {
         // Hintergrund
-        ctx.fillStyle = "#f0f0f0";
+        ctx.fillStyle = "#325157";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         // Zeichne alle Lichter und Indikatoren
@@ -208,8 +208,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // =====================
     // Event Listeners für Color Boxes
     // =====================
+    // Event Listeners für Color Boxes
+    // =====================
     const colorBoxes = document.querySelectorAll(".color-box");
     colorBoxes.forEach(box => {
+        // Initial fade out (inaktiv)
+        box.style.opacity = "0.4";
+        
         box.addEventListener("click", () => {
             const light = box.dataset.light;
             const color = box.dataset.color;
@@ -218,9 +223,13 @@ document.addEventListener("DOMContentLoaded", () => {
             if (lightValues[light][color] === 0) {
                 lightValues[light][color] = 100;
                 box.classList.add("active");
+                box.style.opacity = "1";
+                box.style.boxShadow = "0 0 15px rgba(255, 255, 255, 1)";
             } else {
                 lightValues[light][color] = 0;
                 box.classList.remove("active");
+                box.style.opacity = "0.4";
+                box.style.boxShadow = "none";
             }
         });
     });

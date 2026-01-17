@@ -184,6 +184,12 @@ section.normalBox {
     border-radius: 2em;
 }
 
+#finalGameSection {
+    display: flex !important;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 aside {
   background: grey;
 }
@@ -193,8 +199,6 @@ article {
 }
 
 
-/* RAUM 1 */
-/* RAUM 1 */
 /* RAUM 1 */
 
 #text-toggle summary {
@@ -303,12 +307,16 @@ article {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
+    position: relative;
 }
 
 #gameContainer canvas {
+    display: block;
     width: 100%;
     max-width: 1000px;
+    min-width: 350px;
     height: auto;
+    aspect-ratio: 16/9;
     border: 1px solid #333;
     border-radius: 0;
     background-color: #e8e8e8;
@@ -371,10 +379,8 @@ article {
 }
 
 .color-box.active::after {
-    content: " ✓";
-    color: #0073cc;
-    font-weight: bold;
-    margin-left: 0.3rem;
+    content: "";
+    display: none;
 }
 
 /* Mirror Labels */
@@ -382,12 +388,12 @@ article {
     font-weight: bold;
 }
 
-.mirror-label.green {
-    color: green;
-}
-
 .mirror-label.orange {
     color: orange;
+}
+
+.mirror-label.cyan {
+    color: rgb(0, 204, 255);
 }
 
 .mirror-label.purple {
@@ -465,8 +471,9 @@ article {
   /* Tablet Anpassung für Spiele */
   #gameCanvas {
     width: 100%;
+    min-width: 350px;
     height: auto;
-    max-width: 90vw;
+    aspect-ratio: 16/9;
   }
 
   .gameControls {
@@ -690,9 +697,10 @@ section.data_acc {
 
   /* Mobile Anpassung für Spiele */
   #gameCanvas {
-    width: 100% !important;
-    height: auto !important;
-    max-width: 100%;
+    width: 100%;
+    min-width: 300px;
+    height: auto;
+    aspect-ratio: 16/9;
   }
 
   .gameControls {

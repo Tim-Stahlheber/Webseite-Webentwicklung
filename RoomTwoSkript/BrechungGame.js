@@ -162,7 +162,7 @@ function checkTarget(a,b){
 // Rendering
 // =====================
 function drawRay(segs){
-    ctx.strokeStyle="#ffff00";
+    ctx.strokeStyle="lime";
     ctx.lineWidth=3;
     segs.forEach(s=>{
         ctx.beginPath();
@@ -181,7 +181,7 @@ function drawSource(){
 
 function drawEnvironment(){
     // Luft n
-    ctx.fillStyle="rgba(100, 180, 255, 0.3)";
+    ctx.fillStyle="#325157";
     ctx.fillRect(0, 0, canvas.width, WATER_SURFACE);
     
     // Wasser (dunkelblau) unten
