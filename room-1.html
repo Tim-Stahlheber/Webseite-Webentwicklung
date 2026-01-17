@@ -96,7 +96,10 @@
             </section>    
 
             <section class="normalBox licht-reflexion-flex">
-                <h2>Was ist Licht?</h2>
+            <details id="text-toggle" open>
+                <summary>
+                    <h2>Was ist Licht?</h2>
+                </summary>
                 <figure class="sonne-figure">
                     <img 
                     src="imgs/Sonne.png" 
@@ -139,10 +142,14 @@
                     was mit dem Licht passiert. In Wirklichkeit gibt es sehr viele solcher Lichtstrahlen, die zusammen das ausmachen, was wir als Licht wahrnehmen. 
                     Dieses Verständnis ist wichtig, um später zu erklären, wie Spiegel das Licht umlenken und warum bestimmte Dinge sichtbar werden oder im Schatten liegen.
                 </p>
+            </details>
             </section>
 
             <section class="normalBox licht-reflexion-flex">
-                <h2>Wie wird Licht reflektiert?</h2> 
+            <details id="text-toggle" open>
+                <summary>
+                    <h2>Wie wird Licht reflektiert?</h2>
+                </summary> 
                 <p>
                     Licht breitet sich geradlinig aus, doch wenn es auf eine Oberfläche trifft, kann es nicht einfach hindurchgehen oder verschwinden. 
                     Stattdessen wird ein Teil des Lichts <strong>zurückgeworfen</strong>, man nennt das <strong>Reflexion</strong>. Wenn das Licht auf eine glatte, 
@@ -154,14 +161,14 @@
                     Man nennt das <strong>diffuse Reflexion</strong>. Dank dieser gestreuten Reflexion können wir Gegenstände auch dann sehen, 
                     wenn sie selbst kein Licht aussenden. Das Licht wird von ihrer Oberfläche zurückgeworfen und erreicht unsere Augen. <br> <br> 
 
-                    Reflexion ist überall um uns herum: Sie erklärt, warum wir uns im Spiegel sehen, warum Wasseroberflächen glänzen und warum glänzende Wände Licht 
-                    in einem Raum verteilen. Treffen die Lichtstrahlen auf eine glatte Oberfläche, fliegen sie in einer geordneten Richtung zurück. 
-                    Treffen sie auf eine raue Oberfläche, fliegen sie in viele Richtungen auseinander.
-                </p>
+                </details>
             </section>
 
             <section class="normalBox licht-reflexion-flex">
+            <details id="text-toggle" open>
+                <summary>
                     <h2>Definition des Reflexionsgesetz</h2>
+                </summary>
 
                     <div class="reflexion-layout">
                     <div class="reflexion-text">
@@ -205,7 +212,8 @@
                                 Einfallswinkel: <span id="angleValue">45</span>°
                             </label>
                             <input type="range" id="angleInput" min="0" max="90" value="45">
-                        </div>
+                        </details>
+                    </div>
                     </div>
                 
                 </div>
@@ -231,14 +239,13 @@
                             <canvas id="gameCanvas" width="900" height="600"></canvas>
 
                             <div class="gameControls">
-                                <label class="mirror-label green">Spiegel <input type="range" id="m1" min="-180" max="180" step ="0.2" value="-180"></label>
-                                <label class="mirror-label orange">Spiegel <input type="range" id="m2" min="-180" max="180" step ="0.2" value="-180"></label>
+                                <label class="mirror-label orange">Spiegel <input type="range" id="m1" min="-180" max="180" step ="0.2" value="-180"></label>
+                                <label class="mirror-label cyan">Spiegel <input type="range" id="m2" min="-180" max="180" step ="0.2" value="-180"></label>
                                 <label class="mirror-label purple">Spiegel <input type="range" id="m3" min="-180" max="180" step ="0.2" value="-180"></label>
                             </div>
 
                             <div id="winNotification" class="win-notification">
-                                <h3>🎉 Geschafft! 🎉</h3>
-                                <p>Sicherheitsmechanismus deaktiviert!</p>
+                                <p>Code: 2</p>
                             </div>
                         </div>
                     </div>

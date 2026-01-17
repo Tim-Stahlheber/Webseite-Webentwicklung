@@ -17,6 +17,8 @@
 
          <!-- JavaScript -->
         <script src="NavitgationSkript/navigation.js" defer></script>
+        <script src="FinalRoomSkript/FinalGame.js" defer></script>
+        <script src="FinalRoomSkript/CodeEingabe.js" defer></script>
 
     </head>
 
@@ -74,17 +76,52 @@
             </nav>
         </div>
         
-        <h1>Finaler Raum</h1>
 
         <main>
-            <section class="normalBox">
-                <h2>Übersicht</h2>
-                <p>kleine story zum thema und raum</p>
+            <section class="normalBox finaler-raum-flex">
+                <h1>Finaler Raum</h1>
             </section>
 
-            <section class="normalBox">
-                <h2>Escape-Spiel</h2>
-                <p>kein lernthema mehr is nur ein großer finaler raum für den escaper room</p>
+            <section class="normalBox finaler-raum-flex">
+                <h2>Vor geschlossener Tür</h2>
+                <p>Ihr habt es geschafft! Nach der erfolgreichen Lösung der optischen Rätsel in den vorherigen Räumen seid ihr endlich im Maschinenraum des Schiffes angekommen. 
+                Das Schiff befindet sich in großer Gefahr - die optischen Kommunikationssysteme sind zerstört und die kritischen Navigationslasersysteme sind außer Betrieb. 
+                <strong>Es ist eure letzte Chance!</strong> Nur wenn ihr die Reparaturen richtig durchführt und die optischen Systeme wieder zum Leben erweckt, 
+                könnt ihr das Schiff und die gesamte Besatzung retten. 
+                Der Zugang zum Raum wird jedoch durch einen Sicherheitscode geschützt, den ihr aus den vorherigen Räumen zusammensetzen müsst.</p> <br>
+
+                <h3>Code eingabe:</h3>
+                <input type="password" id="accessCode" maxlength="3" placeholder="Code" inputmode="numeric">
+                <button id="accessButton">Bestätigen</button>
+                <p id="codeError" style="display: none; color: red; margin-top: 10px;">Falscher Code!</p>
+            </section>
+
+            <section class="normalBox" id="finalGameSection" style="display: none;">
+                <h1>Letzte Hürde</h1>
+                <p style="margin-bottom: 2rem;">Nachdem Ihr endlich im Maschinenraum angekommen seid, müsst ihr die letzten Reparaturen durchführen, um das Schiff zu retten.
+                Jedoch ist der Raum überflutet mit derselben Kühlflüssigkeit, die schon vorher das Schiff geplagt hat.
+                Außerdem ist der Laserstrahl defekt, mit dem das Schiff kalibriert werden muss. Wendet euer gelerntes Wissen über Lichtreflexion, Lichtbrechung und Farbmischung
+                an, um den grünen Laserstrahl in die Maschine zu lenken und das Schiff zu retten! Viel Erfolg! 
+                </p>
+                
+                <div id="gameContainer">
+                    <canvas id="gameCanvas" width="1000" height="562"></canvas>
+                    <div id="winNotification" class="win-notification">
+                        <h3>Geschafft!</h3>
+                        <p>Schiff gerettet!</p>
+                    </div>
+                    <div class="gameControls" style="margin-top: 20px; display: flex; justify-content: center; gap: 10px; align-items: center;">
+                        <label for="sliderMirror" style="margin: 0; white-space: nowrap; font-weight: bold;">
+                            Spiegel drehen:
+                        </label>
+                        <input type="range" id="sliderMirror" min="-85" max="-20" value="-85" step="0.25" style="flex: 1;">
+                    </div>
+                    <div class="gameControls" style="margin-top: 15px; display: flex; justify-content: center; gap: 15px; align-items: center;">
+                        <div class="color-box" data-light="lightRay" data-color="c" style="width: 40px; height: 40px; background-color: #00ffff; border: 2px solid #000; cursor: pointer; border-radius: 4px;" title="Cyan"></div>
+                        <div class="color-box" data-light="lightRay" data-color="m" style="width: 40px; height: 40px; background-color: #ff00ff; border: 2px solid #000; cursor: pointer; border-radius: 4px;" title="Magenta"></div>
+                        <div class="color-box" data-light="lightRay" data-color="y" style="width: 40px; height: 40px; background-color: #ffff00; border: 2px solid #000; cursor: pointer; border-radius: 4px;" title="Yellow"></div>
+                    </div>
+                </div>
             </section>
         </main>
 

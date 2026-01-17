@@ -269,10 +269,10 @@
             </details>
             </section>
 
-            <section class="normalBox" style="text-align: center;">
+            <section class="normalBox">
                 <h1>Durch das Wasser</h1>
                 
-                <p style="text-align: left; margin-bottom: 30px; line-height: 1.6;">
+                <p>
                     Der Flur ist dunkel und leer. Die Notlichter werfen rote Schatten an die Wände. Nach eurer erfolgreichen Flucht aus der Brücke müsst ihr nun 
                     durch den beschädigten Flur zum Maschinenraum gelangen. Der Bordcomputer warnt euch: Der nächste Kontrollpunkt ist unter Wasser - ein Überschwemmungsgebiet 
                     entstanden durch das beschädigte Kühlsystem der Raumstation. <br>
@@ -286,12 +286,11 @@
                     das Licht um ihn herum oder über ihn hinweg zum Ziel zu bringen.
                 </p>
                 
-                <div style="display: flex; justify-content: center;">
-                    <canvas id="gameCanvas" width="1000" height="600" style="border: 1px solid #ccc;"></canvas>
+                <div id="gameContainer">
+                    <canvas id="gameCanvas" width="1000" height="600"></canvas>
                 </div>
                 <div id="winNotification" class="win-notification">
-                    <h3>🎉 Geschafft! 🎉</h3>
-                    <p>Ziel getroffen!</p>
+                    <p>Code: 6</p>
                 </div>
                 <div class="gameControls" style="margin-top: 20px; display: flex; justify-content: center; gap: 10px; align-items: center; width: 100%; max-width: 900px; flex-direction: row;">
                     <label for="angleSlider" style="margin: 0; white-space: nowrap; font-weight: bold;">

@@ -79,8 +79,8 @@ class Mirror{
 // Game Objects
 // =====================
 const mirrors=[
-    new Mirror(300,200,160,0, "green"),
-    new Mirror(540,510,160,0, "orange"),
+    new Mirror(300,200,160,0, "orange"),
+    new Mirror(540,510,160,0, "cyan"),
     new Mirror(680,220,160,0, "purple")
 ];
 
@@ -159,7 +159,7 @@ function checkTarget(a,b){
 // Rendering
 // =====================
 function drawRay(segs){
-    ctx.strokeStyle="#00aaff";
+    ctx.strokeStyle="lime";
     ctx.lineWidth=2;
     segs.forEach(s=>{
         ctx.beginPath();
