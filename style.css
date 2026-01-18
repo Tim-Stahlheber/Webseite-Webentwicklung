@@ -502,6 +502,28 @@ article {
     max-width: 700px;
     margin: 0 auto;
   }
+
+  /* Raum 3 - Container für Farbmischungs-Tutorial responsive */
+  .container {
+    flex-direction: column;    /* Vertikal stapeln auf Tablets/kleineren Bildschirmen */
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .controls {
+    width: 100%;
+  }
+
+  .controls input[type="range"] {
+    width: 100%;
+  }
+
+  #colorCanvas {
+    width: 100% ;
+    max-width: 100%;
+    height: auto ;
+    aspect-ratio: 2/1;
+  }
 }
 
 /* RAUM 2 */
@@ -548,6 +570,14 @@ article {
 
 canvas {
   border: 1px solid #333;
+}
+
+/* Responsive iframe für Google Maps */
+.responsive-iframe {
+  width: 100%;
+  max-width: 600px;
+  height: 450px;
+  border: 0;
 }
 
 
@@ -605,6 +635,26 @@ section.data_acc {
    ========================================= */
 @media (max-width: 500px) {
 
+  /* Navigation für kleine Bildschirme anpassen */
+  #navlist {
+    flex-wrap: wrap;           /* Erlaubt Umbruch der Navigationsitems */
+    justify-content: center;   /* Zentriert die Items */
+    padding: 0.25rem;          /* Kleiner Innenabstand */
+  }
+
+  .navitem a {
+    padding: 0.3rem 0.4rem;    /* Reduziertes Padding */
+    font-size: 0.7rem;         /* Kleinere Schriftgröße */
+    gap: 0.2rem;               /* Kleinerer Abstand zwischen Icon und Text */
+  }
+
+  .navIcon {
+    width: 30px;               /* Kleinere Icons */
+    height: 30px;
+    margin-bottom: 0.3vh;      /* Reduzierte Margins */
+    margin-top: 0.3vh;
+  }
+
   section.normalBox,
   section.data_acc {
     padding: 2rem;           /* Innenabstand oben/unten sowie links/rechts*/
@@ -646,6 +696,46 @@ section.data_acc {
   .licht-brechung-flex .glas,
   .farben-flex .wellenlaenge {
     width: 250px;
+  }
+
+  /* Responsive iframe für kleine Bildschirme */
+  .responsive-iframe {
+    width: 100%;
+    max-width: 100%;
+    height: 300px;
+  }
+
+  /* Raum 3 - Container für Farbmischungs-Tutorial responsive */
+  .container {
+    flex-direction: column;    /* Vertikal stapeln auf kleinen Bildschirmen */
+    padding: 10px;             /* Reduziertes Padding */
+    gap: 15px;                 /* Kleinerer Abstand */
+  }
+
+  .controls {
+    width: 100%;               /* Volle Breite nutzen */
+    padding: 0;
+  }
+
+  .controls h2 {
+    font-size: 1.1rem;         /* Kleinere Überschrift */
+    margin-bottom: 0.5rem;
+  }
+
+  .controls label {
+    font-size: 0.85rem;        /* Kleinere Labels */
+  }
+
+  .controls input[type="range"] {
+    width: 100%;               /* Slider auf volle Breite */
+    max-width: 100%;
+  }
+
+  #colorCanvas {
+    width: 100% ;    /* Responsive Canvas-Breite */
+    max-width: 100%;
+    height: auto ;   /* Automatische Höhe */
+    aspect-ratio: 2/1;         /* Verhältnis 2:1 beibehalten (wie 800x400) */
   }
 
   /* Mobile Anpassung für Spiele */
