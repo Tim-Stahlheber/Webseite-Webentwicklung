@@ -224,20 +224,23 @@ article {
   display: none;                  /* Blendet das standardmäßige Dreieck des <summary>-Elements im Browser aus */
 }
 
-.licht-reflexion-flex {
+.licht-reflexion-flex,
+.licht-brechung-flex,
+.farben-flex {
     /*max-width: 900px;*/
     margin: 0.5rem 1rem;
     line-height: 1.6;
     text-align: justify;
 }
 
-.licht-reflexion-flex h2 {
+.licht-reflexion-flex h2,
+.licht-brechung-flex h2,
+.farben-flex h2 {
     margin-bottom: 1rem;
     text-align: initial;
 }
 
 .licht-reflexion-flex .sonne {
-    float: right;             /* Bild rechts vom Text */
     margin: 0 0 1rem 1rem;    /* Abstand oben & rechts 0, unten & links 1rem */
     width: 200px;             /* feste Breite */
     height: auto;
@@ -250,13 +253,17 @@ article {
     text-align: center;
 }
 
-.sonne-figure img {
+.sonne-figure img,
+.glas-figure img,
+.wellenlaenge-figure img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-.sonne-figure figcaption {
+.sonne-figure figcaption,
+.glas-figure figcaption,
+.wellenlaenge-figure figcaption {
     font-size: 0.85rem;
     color: #555;
     margin-top: 0.4rem;
@@ -496,6 +503,10 @@ article {
     flex-direction: column;
   }
 
+  .reflexion-text {
+    width: 100%;
+  }
+
   .reflexion-demo {
     flex: none;
     width: 100%;
@@ -535,41 +546,19 @@ article {
 /* RAUM 2 */
 /* RAUM 2 */
 
-.licht-brechung-flex {
-    /*max-width: 900px;*/
-    margin: 0.5rem 1rem;
-    line-height: 1.6;
-    text-align: justify;
-}
-
-.licht-brechung-flex h2 {
-    margin-bottom: 1rem;
-    text-align: initial;
-}
-
-.licht-brechung-flex .glas {
+.licht-brechung-flex .glas,
+.farben-flex .wellenlaenge {
     margin: 0 0 1rem 1rem;      /* Abstand oben & rechts 0, unten & links 1rem */
     width: 350px;               /* feste Breite */
     height: auto;
 }
 
-.glas-figure {
+.glas-figure,
+.wellenlaenge-figure {
     float: right;
     width: 350px;
     margin: 0 0 1rem 1rem;
     text-align: center;
-}
-
-.glas-figure img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.glas-figure figcaption {
-    font-size: 0.85rem;
-    color: #555;
-    margin-top: 0.4rem;
 }
 
 .brechung-demo {
@@ -600,43 +589,6 @@ article {
 /* RAUM 3 */
 /* RAUM 3 */
 
-.farben-flex {
-    /*max-width: 900px;*/
-    margin: 0.5rem 1rem;
-    line-height: 1.6;
-    text-align: justify;
-}
-
-.farben-flex h2 {
-    margin-bottom: 1rem;
-    text-align: initial;
-}
-
-.farben-flex .wellenlänge {
-    margin: 0 0 1rem 1rem;      /* Abstand oben & rechts 0, unten & links 1rem */
-    width: 350px;               /* feste Breite */
-    height: auto;
-}
-
-.wellenlänge-figure {
-    float: right;
-    width: 350px;
-    margin: 0 0 1rem 1rem;
-    text-align: center;
-}
-
-.wellenlänge-figure img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.wellenlänge-figure figcaption {
-    font-size: 0.85rem;
-    color: #555;
-    margin-top: 0.4rem;
-}
-
 .container {
   display: flex;
   align-items: flex-start;
@@ -654,7 +606,6 @@ article {
 canvas {
   border: 1px solid #333;
 }
-
 
 
 /* Datenschutz */
@@ -714,25 +665,52 @@ section.data_acc {
 
   section.normalBox,
   section.data_acc {
-    padding: 2rem;       /* Innenabstand oben/unten sowie links/rechts*/
+    padding: 2rem;           /* Innenabstand oben/unten sowie links/rechts*/
     margin: 0.5rem 1rem;     /* top and bottom margin 0.5rem, left and right auto */
   }
 
-  .small-screen-warning {
-    display: block;
-    padding: 1rem;
-    text-align: center;
-    background-color: gold;
-    color: black;
-    font-weight: bold;
+  /* Room 1 Anpassung für Mobile */
+  .licht-reflexion-flex,
+  .licht-brechung-flex,
+  .farben-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .licht-reflexion-flex .sonne {
-    float: inline-end;
-    margin: 0rem 0rem 1rem 1rem;
+  /* Figure + Bild + Caption kompakt */
+  .sonne-figure,
+  .glas-figure,
+  .wellenlaenge-figutre {
+    float: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    height: auto;
-    max-width: 150px;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+ .sonne-figure img,
+ .glas-figure img,
+ .wellenlaenge-figure img {
+   width: 100%;
+ }
+
+ .sonne-figure figcaption,
+ .glas-figure figcaption,
+ .wellenlaenge-figure figcaption {
+   text-align: center;
+ }
+ 
+ .sonne-figure figcaption {
+    margin-top: -3rem;
+ }
+
+  /* Romm 2 & 3 Anpassung Bild */
+  .licht-brechung-flex .glas,
+  .farben-flex .wellenlaenge {
+    width: 250px;
   }
 
   /* Mobile Anpassung für Spiele */
@@ -743,19 +721,21 @@ section.data_acc {
     aspect-ratio: 16/9;
   }
 
-  .gameControls {
+  .gameControls,
+  .game2controls {
     flex-direction: column;
     gap: 15px;
     width: 100%;
-    padding: 0 1rem;
   }
 
-  .gameControls label {
+  .gameControls label,
+  .game2controls label {
     white-space: normal;
     font-size: 0.95rem;
   }
 
-  .gameControls input[type="range"] {
+  .gameControls input[type="range"],
+  .game2controls input[type="range"] {
     width: 100%;
     min-width: 100px;
   }
