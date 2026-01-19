@@ -221,21 +221,23 @@
                 Je mehr Farben gemischt werden, desto weniger Licht wird reflektiert und desto dunkler erscheint das
                 Ergebnis.
                 </p>
-                    <div class="controls">
-                        <h2>RGB Additive</h2>
-                        <label id="colorRed">Rot: <input type="range" id="rSlider" min="0" max="100" value="100"></label>
-                        <label id="colorGreen">Grün: <input type="range" id="gSlider" min="0" max="100" value="100"></label>
-                        <label id="colorBlue">Blau: <input type="range" id="bSlider" min="0" max="100" value="100"></label>
-                    </div>
+                
+                <div class="controls">
+                    <h2>RGB Additive</h2>
+                    <label id="colorRed">Rot: <input type="range" id="rSlider" min="0" max="100" value="100"></label>           <!-- Slider für Rotanteil -->
+                    <label id="colorGreen">Grün: <input type="range" id="gSlider" min="0" max="100" value="100"></label>        <!-- Slider für Grünanteil -->
+                    <label id="colorBlue">Blau: <input type="range" id="bSlider" min="0" max="100" value="100"></label>         <!-- Slider für Blauanteil -->
+                </div>
 
-                    <canvas id="colorCanvas" width="800" height="400"></canvas>
+                <canvas id="colorCanvas" width="800" height="400"></canvas> <!-- Canvas zur Darstellung der aktuellen Farbmischung -->
 
-                    <div class="controls">
-                        <h2>CMY Subtraktive</h2>
-                        <label id="colorCyan">Cyan: <input type="range" id="cSlider" min="0" max="100" value="100"></label>
-                        <label id="colorMagenta">Magenta: <input type="range" id="mSlider" min="0" max="100" value="100"></label>
-                        <label id="colorGelb">Gelb: <input type="range" id="ySlider" min="0" max="100" value="100"></label>
-                    </div>
+                <div class="controls">
+                    <h2>CMY Subtraktive</h2> 
+                    <label id="colorCyan">Cyan: <input type="range" id="cSlider" min="0" max="100" value="100"></label>         <!-- Slider für Cyananteil -->
+                    <label id="colorMagenta">Magenta: <input type="range" id="mSlider" min="0" max="100" value="100"></label>   <!-- Slider für Magentaanteil -->
+                    <label id="colorGelb">Gelb: <input type="range" id="ySlider" min="0" max="100" value="100"></label>         <!-- Slider für Gelbanteil -->
+                </div>
+
             </details>
         </section>
 
@@ -267,72 +269,80 @@
             </p>
 
             <div class="reflexionGame">
-                <canvas id="gameCanvas" width="1000" height="500"></canvas>
+                <!-- Canvas für das Farbmisch-Spiel / Simulation -->
+                <canvas id="gameCanvas" width="1000" height="500"></canvas> 
+
                 <div class="game3controls">
+                    <!-- Steuerung für RGB Licht 1 -->
                     <div class="control-group">
-                        <h3>RGB Licht 1</h3>
+                        <h3>RGB Licht 1</h3> 
                         <div class="color-boxes">
                             <button class="color-box" id="rgb1R" data-light="rgb1" data-color="r"
                                 style="width: 40px; height: 40px; background-color: #ff0000; border: 2px solid #000; cursor: pointer; border-radius: 4px;"
-                                title="Red"></button>
+                                title="Red"></button>   <!-- Rot-Taste für Licht 1 -->
                             <button class="color-box" id="rgb1G" data-light="rgb1" data-color="g"
                                 style="width: 40px; height: 40px; background-color: #00ff00; border: 2px solid #000; cursor: pointer; border-radius: 4px;"
-                                title="Green"></button>
+                                title="Green"></button> <!-- Grün-Taste für Licht 1 -->
                             <button class="color-box" id="rgb1B" data-light="rgb1" data-color="b"
                                 style="width: 40px; height: 40px; background-color: #0000ff; border: 2px solid #000; cursor: pointer; border-radius: 4px;"
-                                title="Blue"></button>
+                                title="Blue"></button>  <!-- Blau-Taste für Licht 1 -->
                         </div>
                     </div>
-
+                
+                    <!-- Steuerung für RGB Licht 2 -->
                     <div class="control-group">
-                        <h3>RGB Licht 2</h3>
+                        <h3>RGB Licht 2</h3> <!-- Überschrift für Lichtquelle 2 -->
                         <div class="color-boxes">
                             <button class="color-box" id="rgb2R" data-light="rgb2" data-color="r"
                                 style="width: 40px; height: 40px; background-color: #ff0000; border: 2px solid #000; cursor: pointer; border-radius: 4px;"
-                                title="Red"></button>
+                                title="Red"></button> <!-- Rot-Taste für Licht 2 -->
                             <button class="color-box" id="rgb2G" data-light="rgb2" data-color="g"
                                 style="width: 40px; height: 40px; background-color: #00ff00; border: 2px solid #000; cursor: pointer; border-radius: 4px;"
-                                title="Green"></button>
+                                title="Green"></button> <!-- Grün-Taste für Licht 2 -->
                             <button class="color-box" id="rgb2B" data-light="rgb2" data-color="b"
                                 style="width: 40px; height: 40px; background-color: #0000ff; border: 2px solid #000; cursor: pointer; border-radius: 4px;"
-                                title="Blue"></button>
+                                title="Blue"></button> <!-- Blau-Taste für Licht 2 -->
                         </div>
                     </div>
-
+                
+                    <!-- Steuerung für CMY Licht 3 -->
                     <div class="control-group">
-                        <h3>CMY Licht 3</h3>
+                        <h3>CMY Licht 3</h3> 
                         <div class="color-boxes">
                             <button class="color-box" id="cmy1C" data-light="cmy1" data-color="c"
                                 style="width: 40px; height: 40px; background-color: #00ffff; border: 2px solid #000; cursor: pointer; border-radius: 4px;"
-                                title="Cyan"></button>
+                                title="Cyan"></button> <!-- Cyan-Taste für Licht 3 -->
                             <button class="color-box" id="cmy1M" data-light="cmy1" data-color="m"
                                 style="width: 40px; height: 40px; background-color: #ff00ff; border: 2px solid #000; cursor: pointer; border-radius: 4px;"
-                                title="Magenta"></button>
+                                title="Magenta"></button> <!-- Magenta-Taste für Licht 3 -->
                             <button class="color-box" id="cmy1Y" data-light="cmy1" data-color="y"
                                 style="width: 40px; height: 40px; background-color: #ffff00; border: 2px solid #000; cursor: pointer; border-radius: 4px;"
-                                title="Yellow"></button>
+                                title="Yellow"></button> <!-- Gelb-Taste für Licht 3 -->
                         </div>
                     </div>
-
+                
+                    <!-- Steuerung für CMY Licht 4 -->
                     <div class="control-group">
-                        <h3>CMY Licht 4</h3>
+                        <h3>CMY Licht 4</h3> 
                         <div class="color-boxes">
                             <button class="color-box" id="cmy2C" data-light="cmy2" data-color="c"
                                 style="width: 40px; height: 40px; background-color: #00ffff; border: 2px solid #000; cursor: pointer; border-radius: 4px;"
-                                title="Cyan"></button>
+                                title="Cyan"></button> <!-- Cyan-Taste für Licht 4 -->
                             <button class="color-box" id="cmy2M" data-light="cmy2" data-color="m"
                                 style="width: 40px; height: 40px; background-color: #ff00ff; border: 2px solid #000; cursor: pointer; border-radius: 4px;"
-                                title="Magenta"></button>
+                                title="Magenta"></button> <!-- Magenta-Taste für Licht 4 -->
                             <button class="color-box" id="cmy2Y" data-light="cmy2" data-color="y"
                                 style="width: 40px; height: 40px; background-color: #ffff00; border: 2px solid #000; cursor: pointer; border-radius: 4px;"
-                                title="Yellow"></button>
+                                title="Yellow"></button> <!-- Gelb-Taste für Licht 4 -->
                         </div>
                     </div>
                 </div>
+            
                 <div id="winNotification" class="notification">
-                    <p>Code: 7</p>
+                    <p>Code: 7</p> <!-- Mitteilung / Gewinnanzeige -->
                 </div>
             </div>
+
         </section>
     </main>
 

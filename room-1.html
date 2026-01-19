@@ -243,17 +243,17 @@
                             </p>
                         </div>
 
+                        <!-- Canvas-Demo für Reflexion -->
                         <div class="reflexion-demo">
-                            <canvas id="reflexionCanvas" width="600" height="400"></canvas>
+                            <canvas id="reflexionCanvas" width="600" height="400"></canvas>             <!-- Zeigt Reflexion grafisch -->
                             <div class="controls">
                                 <label for="angleInput">
-                                    Einfallswinkel: <span id="angleValue">45</span>°
+                                    Einfallswinkel: <span id="angleValue">45</span>°                    <!-- Anzeige aktueller Winkel -->
                                 </label>
-                                <input type="range" id="angleInput" min="0" max="90" value="45">
-                </details>
-                </div>
-                </div>
-
+                                <input type="range" id="angleInput" min="0" max="90" value="45">        <!-- Slider für Winkel -->
+                            </div>
+                        </div>
+                    </details>
                 </div>
             </section>
 
@@ -282,11 +282,16 @@
                             Sicherheitsmechanismus der Tür zu überwinden und den Zugang freizuschalten.
                         </p>
 
+                        <!-- Interaktives Spiel -->
                         <div class="reflexionGame">
-                            <canvas id="gameCanvas" width="900" height="600"></canvas>
+
+                            <!-- Canvas für Spielsimulation -->
+                            <canvas id="gameCanvas" width="900" height="600"></canvas>  
 
                             <div class="gameControls">
-                                <label class="mirror-label orange">Spiegel <input type="range" id="m1" min="-180" max="180"
+                                
+                                <!-- Slider zur Spiegelsteuerung -->
+                                <label class="mirror-label orange">Spiegel <input type="range" id="m1" min="-180" max="180"    
                                         step="0.2" value="-180"></label>
                                 <label class="mirror-label cyan">Spiegel <input type="range" id="m2" min="-180" max="180"
                                         step="0.2" value="-180"></label>
@@ -295,7 +300,7 @@
                             </div>
 
                             <div id="winNotification" class="win-notification">
-                                <p>Code: 2</p>
+                                <p>Code: 2</p>   <!-- Mitteilung / Gewinnanzeige -->
                             </div>
                         </div>
                     </div>
