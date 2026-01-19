@@ -102,13 +102,13 @@
         </section>
 
         <section class="normalBox">
-            <details id="text-toggle" open>
+            <details class="text-toggle" open>
                 <summary>
                     <h2>Das Farbspektrum</h2>
                 </summary>
                 <figure class="wellenlaenge-figure">
                     <img src="imgs/Wellenlaenge.png" alt="Farbspektrum mit angegebener Wellenlänge"
-                        titel="Farbspektrum mit angegebener Wellenlänge" class="wellenlaenge">
+                        title="Farbspektrum mit angegebener Wellenlänge" class="wellenlaenge">
                     <figcaption>Farbspektrum der sichtbaren Farben mit Wellenlänge</figcaption>
                 </figure>
                 <p>
@@ -141,7 +141,7 @@
         </section>
 
         <section class="normalBox">
-            <details id="text-toggle" open>
+            <details class="text-toggle" open>
                 <summary>
                     <h2>Grundfarben und Spektralfarben</h2>
                 </summary>
@@ -152,6 +152,8 @@
                     sie lassen sich nicht weiter in andere Farben zerlegen.
                     Jede Spektralfarbe entspricht genau einer bestimmten <strong>Wellenlänge</strong> des Lichts
                     und ist damit eine physikalisch eindeutig festgelegte Farbe. Zu den Spektralfarben gehören:
+                </p>
+
                 <ul>
                     <li> Rot </li>
                     <li> Orange </li>
@@ -162,7 +164,7 @@
                     <li> Violett </li>
                 </ul>
 
-
+                <p>
                 Davon zu unterscheiden sind die sogenannten <strong>Grundfarben</strong>.
                 Grundfarben sind Farben, aus denen sich andere Farben durch Mischen erzeugen lassen.
                 Welche Farben als Grundfarben gelten, hängt davon ab, ob man mit <strong>Licht</strong>
@@ -184,7 +186,7 @@
         </section>
 
         <section class="normalBox">
-            <details id="text-toggle" open>
+            <details class="text-toggle" open>
                 <summary>
                     <h2>Die Farbmischung</h2>
                 </summary>
@@ -195,12 +197,16 @@
                     Hier werden Lichtfarben addiert, also zusammengemischt. <br>
                     Die Grundfarben der additiven Farbmischung sind: <strong>Rot, Grün und Blau</strong>. <br>
                     Durch ihre Kombination entstehen neue Farben:
+                </p>
+
                 <ul>
                     <li>Rot + Grün = Gelb</li>
                     <li>Rot + Blau = Magenta</li>
                     <li>Grün + Blau = Cyan</li>
                     <li>Rot + Grün + Blau = Weiß</li>
                 </ul>
+
+                <p>
                 Je mehr Licht hinzugefügt wird, desto heller wird die Mischung.
                 </p>
 
@@ -212,12 +218,16 @@
                     Die Grundfarben der subtraktiven Farbmischung sind:
                     <strong>Cyan, Magenta und Gelb</strong>. <br>
                     Beim Mischen werden immer mehr Lichtanteile „weggenommen“:
+                </p>
+
                 <ul>
                     <li>Cyan + Gelb = Grün</li>
                     <li>Magenta + Gelb = Rot</li>
                     <li>Cyan + Magenta = Blau</li>
                     <li>Cyan + Magenta + Gelb = Schwarz</li>
                 </ul>
+
+                <p>
                 Je mehr Farben gemischt werden, desto weniger Licht wird reflektiert und desto dunkler erscheint das
                 Ergebnis.
                 </p>
@@ -257,15 +267,17 @@
                 Mit den Schiebereglern müsst ihr die Lichter präzise justieren, um die vorgegebenen Zielfarben zu
                 treffen.<br>
                 Mischt die folgenden Farben in der genauen Reihenfolge, um die Energiequelle zu aktivieren:
+            </p>
+
             <ul>
                 <li>Magenta</li>
                 <li>Cyan</li>
                 <li>Blau</li>
                 <li>Rot</li>
             </ul>
-            <br>
-            Nutzt euer Verständnis von additiver und subtraktiver Farbmischung - nur die korrekte Farbkombination wird
-            die Energiequelle freigeben!
+            <p>
+                Nutzt euer Verständnis von additiver und subtraktiver Farbmischung - nur die korrekte Farbkombination wird
+                die Energiequelle freigeben!
             </p>
 
             <div class="reflexionGame">
@@ -275,7 +287,7 @@
                 <div class="game3controls">
                     <!-- Steuerung für RGB Licht 1 -->
                     <div class="control-group">
-                        <h3>RGB Licht 1</h3> 
+                        <h2>RGB Licht 1</h2> 
                         <div class="color-boxes">
                             <button class="color-box" id="rgb1R" data-light="rgb1" data-color="r"
                                 style="width: 40px; height: 40px; background-color: #ff0000; border: 2px solid #000; cursor: pointer; border-radius: 4px;"
@@ -291,7 +303,7 @@
                 
                     <!-- Steuerung für RGB Licht 2 -->
                     <div class="control-group">
-                        <h3>RGB Licht 2</h3> <!-- Überschrift für Lichtquelle 2 -->
+                        <h2>RGB Licht 2</h2> 
                         <div class="color-boxes">
                             <button class="color-box" id="rgb2R" data-light="rgb2" data-color="r"
                                 style="width: 40px; height: 40px; background-color: #ff0000; border: 2px solid #000; cursor: pointer; border-radius: 4px;"
@@ -307,7 +319,7 @@
                 
                     <!-- Steuerung für CMY Licht 3 -->
                     <div class="control-group">
-                        <h3>CMY Licht 3</h3> 
+                        <h2>CMY Licht 3</h2> 
                         <div class="color-boxes">
                             <button class="color-box" id="cmy1C" data-light="cmy1" data-color="c"
                                 style="width: 40px; height: 40px; background-color: #00ffff; border: 2px solid #000; cursor: pointer; border-radius: 4px;"
@@ -323,7 +335,7 @@
                 
                     <!-- Steuerung für CMY Licht 4 -->
                     <div class="control-group">
-                        <h3>CMY Licht 4</h3> 
+                        <h2>CMY Licht 4</h2> 
                         <div class="color-boxes">
                             <button class="color-box" id="cmy2C" data-light="cmy2" data-color="c"
                                 style="width: 40px; height: 40px; background-color: #00ffff; border: 2px solid #000; cursor: pointer; border-radius: 4px;"
