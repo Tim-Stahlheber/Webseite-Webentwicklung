@@ -1,0 +1,11 @@
+# Diese Datei erlaubt allen Bots, alle Seiten zu crawlen, 
+# außer den drei rechtlichen Seiten (Impressum, Datenschutz, Barrierefreiheit). 
+# Zusätzlich wird der Standort der Sitemap angegeben.
+
+
+User-agent: *
+Disallow: /impressum.html
+Disallow: /datenschutz.html
+Disallow: /barrierefreiheit.html
+
+Sitemap: https://www.mint-abenteuer.de/sitemap.xml
