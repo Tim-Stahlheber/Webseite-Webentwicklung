@@ -30,6 +30,7 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
 
     <!-- JavaScript -->
     <script src="NavitgationSkript/navigation.js" defer></script>
@@ -313,23 +314,20 @@
 
             <div class="reflexionGame">
                 <canvas id="gameCanvas" width="1000" height="600"></canvas>
+                <div class="gameControls" style="margin-top: 20px;">
+                    <label for="angleSlider">Licht-Winkel:</label>
+                    <input type="range" id="angleSlider" min="-89" max="89" value="-30">
+                </div>
+
+                <div class="gameControls" style="margin-top: 15px;">
+                    <label for="targetSlider">Ziel Position:</label>
+                    <input type="range" id="targetSlider" min="100" max="900" value="100">
+                </div>
             </div>
             <div id="winNotification" class="win-notification">
                 <p>Code: 6</p>
             </div>
-            <div class="game2controls" style="margin-top: 20px;">
-                <label for="angleSlider">
-                    Licht-Winkel:
-                </label>
-                <input type="range" id="angleSlider" min="-89" max="89" value="-30">
-            </div>
 
-            <div class="game2controls" style="margin-top: 15px;">
-                <label for="targetSlider">
-                    Ziel Position:
-                </label>
-                <input type="range" id="targetSlider" min="100" max="900" value="100">
-            </div>
         </section>
     </main>
 

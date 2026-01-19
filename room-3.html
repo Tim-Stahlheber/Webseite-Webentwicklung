@@ -30,6 +30,7 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
 
     <!-- JavaScript -->
     <script src="NavitgationSkript/navigation.js" defer></script>
@@ -217,23 +218,21 @@
                 Je mehr Farben gemischt werden, desto weniger Licht wird reflektiert und desto dunkler erscheint das
                 Ergebnis.
                 </p>
-                <div class="container">
                     <div class="controls">
                         <h2>RGB Additive</h2>
-                        <label>Rot: <input type="range" id="rSlider" min="0" max="100" value="100"></label>
-                        <label>Grün: <input type="range" id="gSlider" min="0" max="100" value="100"></label>
-                        <label>Blau: <input type="range" id="bSlider" min="0" max="100" value="100"></label>
+                        <label id="colorRed">Rot: <input type="range" id="rSlider" min="0" max="100" value="100"></label>
+                        <label id="colorGreen">Grün: <input type="range" id="gSlider" min="0" max="100" value="100"></label>
+                        <label id="colorBlue">Blau: <input type="range" id="bSlider" min="0" max="100" value="100"></label>
                     </div>
 
                     <canvas id="colorCanvas" width="800" height="400"></canvas>
 
                     <div class="controls">
                         <h2>CMY Subtraktive</h2>
-                        <label>Cyan: <input type="range" id="cSlider" min="0" max="100" value="100"></label>
-                        <label>Magenta: <input type="range" id="mSlider" min="0" max="100" value="100"></label>
-                        <label>Gelb: <input type="range" id="ySlider" min="0" max="100" value="100"></label>
+                        <label id="colorCyan">Cyan: <input type="range" id="cSlider" min="0" max="100" value="100"></label>
+                        <label id="colorMagenta">Magenta: <input type="range" id="mSlider" min="0" max="100" value="100"></label>
+                        <label id="colorGelb">Gelb: <input type="range" id="ySlider" min="0" max="100" value="100"></label>
                     </div>
-                </div>
             </details>
         </section>
 
