@@ -1,200 +1,234 @@
 <!DOCTYPE html>
 <html lang="de">
-    <head>
-        <title>MINT Optik Escape Room: Lichtreflexion erleben</title>
 
-         <!-- Metadaten-->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Tim Stahlheber, Nicolas Held und Oliver Ermisch">
-        <meta name="keywords" content="MINT, Escape Room, Optik, Lichtreflexion, Reflexion, Lernen, Physik, Schule">
-        <meta name="description" content="Interaktiver MINT-Escape-Room zur Lichtreflexion: Optische Phänomene spielerisch verstehen – ideal für Schule, Unterricht und Wissenschaft!">
-        <link rel="canonical" href="https://www.mint-escape-room.de/lichtreflexion">
+<head>
+    <title>MINT Optik Escape Room: Lichtreflexion erleben</title>
 
-        <!-- Favicon Formate-->
-        <link rel="icon" href="./imgs/favicon.ico">
-        <link rel="icon" type="image/png" sizes="16x16" href="./imgs/favicon-16x16.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="./imgs/favicon-32x32.png">
-        <link rel="icon" type="image/svg+xml" href="./imgs/favicon.svg">
-        <link rel="apple-touch-icon" sizes="180x180" href="./imgs/apple-touch-icon.png">
+    <!-- Metadaten-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tim Stahlheber, Nicolas Held und Oliver Ermisch">
+    <meta name="keywords" content="MINT, Escape Room, Optik, Lichtreflexion, Reflexion, Lernen, Physik, Schule">
+    <meta name="description"
+        content="Interaktiver MINT-Escape-Room zur Lichtreflexion: Optische Phänomene spielerisch verstehen – ideal für Schule, Unterricht und Wissenschaft!">
+    <link rel="canonical" href="https://www.mint-escape-room.de/lichtreflexion">
 
-        <!-- Open Graph Tags für soziale Medien -->
-        <meta property="og:title" content="MINT Escape Room - Lichtreflexion erleben">
-        <meta property="og:description" content="Erkunde die Lichtreflexion im interaktiven MINT-Escape-Room.">
-        <meta property="og:image" content="">
-        <meta property="og:url" content="https://www.mint-escape-room.de/lichreflexion">
-        <meta property="og:type" content="website">
-        <meta property="og:locale" content="de_DE">
+    <!-- Favicon Formate-->
+    <link rel="icon" href="./imgs/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="./imgs/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./imgs/favicon-32x32.png">
+    <link rel="icon" type="image/svg+xml" href="./imgs/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="./imgs/apple-touch-icon.png">
 
-        <!-- Stylesheets -->
-        <link rel="stylesheet" href="./style.css">
+    <!-- Open Graph Tags für soziale Medien -->
+    <meta property="og:title" content="MINT Escape Room - Lichtreflexion erleben">
+    <meta property="og:description" content="Erkunde die Lichtreflexion im interaktiven MINT-Escape-Room.">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https://www.mint-escape-room.de/lichreflexion">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
 
-        <!-- JavaScript -->
-        <script src="NavitgationSkript/navigation.js" defer></script>
-        <script src="RoomOneSkipt/InteraktiveReflextion.js" defer></script>
-        <script src="RoomOneSkipt/ReflexionGame.js" defer></script>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./style.css">
 
-    </head>
+    <!-- JavaScript -->
+    <script src="NavitgationSkript/navigation.js" defer></script>
+    <script src="RoomOneSkipt/InteraktiveReflextion.js" defer></script>
+    <script src="RoomOneSkipt/ReflexionGame.js" defer></script>
 
-    <body>
-        <div id="HeadNav">
-            <header>
-                <details id="nav-toggle">
-                    <summary aria-label="Navigation ein- oder ausklappen">
-                        ☰
-                    </summary>
-                </details>
+</head>
 
-                <h1>Mint - Escape Room!</h1>
-                <h2>Der Optik Escape Room</h2>
+<body>
+    <div id="HeadNav">
+        <header>
+            <details id="nav-toggle">
+                <summary aria-label="Navigation ein- oder ausklappen">
+                    ☰
+                </summary>
+            </details>
 
-            
-            </header>
+            <h1>Mint - Escape Room!</h1>
+            <h2>Der Optik Escape Room</h2>
 
-            <!-- Navigation -->
-            <nav id="navbar" aria-label="Hauptnavigation">
-                
-                    
-                <ul id="navlist">
-                    <li class="navitem" id="navitemIndex">
-                        <a href="./index.html" aria-label="Zur Startseite">
-                            <img class="navIcon" src="imgs/Startseite.png" alt="Menü-Icon für die Startseite">
-                            Startseite
-                        </a>
-                    </li>
-                    <li class="navitem" id="navitemRoomOne">
-                        <a href="./room-1.html" aria-label="Zum Raum 1 - Lichtreflexion">
-                            <img class="navIcon" src="imgs/Lichtreflexion.png" alt="Menü-Icon für den ersten Lern & Escape Room">
-                            Raum 1 - Lichtreflexion
-                        </a>
-                    </li>
-                    <li class="navitem" id="navitemRoomTwo">
-                        <a href="./room-2.html" aria-label="Zu Raum 2 - Lichtbrechung">
-                            <img class="navIcon" src="imgs/Lichtbrechung.png" alt="Menü-Icon für den zweiten Lern & Escape Room">
-                            Raum 2 - Lichtbrechung
-                        </a>
-                    </li>
-                    <li class="navitem" id="navitemRoomThree">
-                        <a href="./room-3.html" aria-label="Zum Raum 3 - Licht und Farbe">
-                            <img class="navIcon" src="imgs/Licht_Farben.png" alt="Menü-Icon für den dritten Lern & Escape Room">
-                            Raum 3 - Licht und Farbe
-                        </a>
-                    </li>
-                    <li class="navitem" id="navitemFinalRoom">
-                        <a href="./final-room.html" aria-label="Zum Finalen Raum">
-                            <img class="navIcon" src="imgs/Finaler_Raum.png" alt="Menü-Icon für den finalen Lern & Escape Room">
-                            Finaler Raum 
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
 
-        <main>
-            <section class="normalBox">
-                <h1>Lichtreflexion</h1>
-            </section>    
+        </header>
 
-            <section class="normalBox">
+        <!-- Navigation -->
+        <nav id="navbar" aria-label="Hauptnavigation">
+
+
+            <ul id="navlist">
+                <li class="navitem" id="navitemIndex">
+                    <a href="./index.html" aria-label="Zur Startseite">
+                        <img class="navIcon" src="imgs/Startseite.png" alt="Menü-Icon für die Startseite">
+                        Startseite
+                    </a>
+                </li>
+                <li class="navitem" id="navitemRoomOne">
+                    <a href="./room-1.html" aria-label="Zum Raum 1 - Lichtreflexion">
+                        <img class="navIcon" src="imgs/Lichtreflexion.png"
+                            alt="Menü-Icon für den ersten Lern & Escape Room">
+                        Raum 1 - Lichtreflexion
+                    </a>
+                </li>
+                <li class="navitem" id="navitemRoomTwo">
+                    <a href="./room-2.html" aria-label="Zu Raum 2 - Lichtbrechung">
+                        <img class="navIcon" src="imgs/Lichtbrechung.png"
+                            alt="Menü-Icon für den zweiten Lern & Escape Room">
+                        Raum 2 - Lichtbrechung
+                    </a>
+                </li>
+                <li class="navitem" id="navitemRoomThree">
+                    <a href="./room-3.html" aria-label="Zum Raum 3 - Licht und Farbe">
+                        <img class="navIcon" src="imgs/Licht_Farben.png"
+                            alt="Menü-Icon für den dritten Lern & Escape Room">
+                        Raum 3 - Licht und Farbe
+                    </a>
+                </li>
+                <li class="navitem" id="navitemFinalRoom">
+                    <a href="./final-room.html" aria-label="Zum Finalen Raum">
+                        <img class="navIcon" src="imgs/Finaler_Raum.png"
+                            alt="Menü-Icon für den finalen Lern & Escape Room">
+                        Finaler Raum
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <section class="normalBox">
+            <h1>Lichtreflexion</h1>
+        </section>
+
+        <section class="normalBox">
             <details id="text-toggle" open>
                 <summary>
                     <h2>Was ist Licht?</h2>
                 </summary>
                 <figure class="sonne-figure">
-                    <img 
-                    src="imgs/Sonne.png" 
-                    alt="Sonne mit Lichtstrahlen, die in alle Richtungen ausstrahlen" 
-                    titel="Sonne mit Lichtstrahlen, die in alle Richtungen ausstrahlen" 
-                    class="sonne"
-                    > 
+                    <img src="imgs/Sonne.png" alt="Sonne mit Lichtstrahlen, die in alle Richtungen ausstrahlen"
+                        titel="Sonne mit Lichtstrahlen, die in alle Richtungen ausstrahlen" class="sonne">
                     <figcaption>
-                        Sonne mit Lichtstrahlen, die in alle Richtungen ausstrahlen 
+                        Sonne mit Lichtstrahlen, die in alle Richtungen ausstrahlen
                     </figcaption>
                 </figure>
-                <p>    
-                    Licht ist eine Form von Energie, die wir mit unseren Augen wahrnehmen können. Es sorgt dafür, 
-                    dass wir unsere Umgebung sehen und Gegenstände erkennen können. 
-                    Licht entsteht an sogenannten Lichtquellen und breitet sich von dort aus in den Raum aus, 
+                <p>
+                    Licht ist eine Form von Energie, die wir mit unseren Augen wahrnehmen können. Es sorgt dafür,
+                    dass wir unsere Umgebung sehen und Gegenstände erkennen können.
+                    Licht entsteht an sogenannten Lichtquellen und breitet sich von dort aus in den Raum aus,
                     bis es auf ein Hindernis trifft oder von etwas aufgenommen wird. <br> <br>
 
-                    Es gibt verschiedene Arten von Lichtquellen. Eine der bekanntesten und wichtigsten ist die Sonne. Sie ist eine <strong>natürliche Lichtquelle</strong> 
-                    und sendet ihr Licht in alle Richtungen aus. Dadurch kann sie große Bereiche gleichzeitig beleuchten, sogar ganze Planeten. 
-                    Das Licht der Sonne besteht aus unzähligen einzelnen Lichtstrahlen, die sich von der Sonne weg in den Raum ausbreiten. <br> <br>
+                    Es gibt verschiedene Arten von Lichtquellen. Eine der bekanntesten und wichtigsten ist die Sonne.
+                    Sie ist eine <strong>natürliche Lichtquelle</strong>
+                    und sendet ihr Licht in alle Richtungen aus. Dadurch kann sie große Bereiche gleichzeitig
+                    beleuchten, sogar ganze Planeten.
+                    Das Licht der Sonne besteht aus unzähligen einzelnen Lichtstrahlen, die sich von der Sonne weg in
+                    den Raum ausbreiten. <br> <br>
 
-                    Neben der Sonne gibt es auch <strong>künstliche Lichtquelle</strong>, zum Beispiel Lampen. Auch eine Lampe sendet Licht in viele Richtungen aus. 
-                    Je nach Bauform wird das Licht stärker gestreut oder etwas gebündelt, doch grundsätzlich breitet es sich immer von der Lampe weg aus. 
-                    Deshalb kann eine einzelne Lampe einen ganzen Raum erhellen, auch wenn sie deutlich schwächer ist als die Sonne. <br> <br>
+                    Neben der Sonne gibt es auch <strong>künstliche Lichtquelle</strong>, zum Beispiel Lampen. Auch eine
+                    Lampe sendet Licht in viele Richtungen aus.
+                    Je nach Bauform wird das Licht stärker gestreut oder etwas gebündelt, doch grundsätzlich breitet es
+                    sich immer von der Lampe weg aus.
+                    Deshalb kann eine einzelne Lampe einen ganzen Raum erhellen, auch wenn sie deutlich schwächer ist
+                    als die Sonne. <br> <br>
 
-                    Eine besondere Lichtquelle ist der <strong>Laser</strong>. Im Gegensatz zu Sonne oder Lampe ist das Licht eines Lasers sehr stark gebündelt. 
-                    Es breitet sich fast nur in eine Richtung aus. Dadurch erscheint der Laser oft wie eine <strong>einzelne, klare Linie</strong>. 
-                    Diese Eigenschaft macht den Laser besonders geeignet, um den Weg des Lichts sichtbar zu machen und einzelne Lichtstrahlen zu untersuchen. <br> <br>
+                    Eine besondere Lichtquelle ist der <strong>Laser</strong>. Im Gegensatz zu Sonne oder Lampe ist das
+                    Licht eines Lasers sehr stark gebündelt.
+                    Es breitet sich fast nur in eine Richtung aus. Dadurch erscheint der Laser oft wie eine
+                    <strong>einzelne, klare Linie</strong>.
+                    Diese Eigenschaft macht den Laser besonders geeignet, um den Weg des Lichts sichtbar zu machen und
+                    einzelne Lichtstrahlen zu untersuchen. <br> <br>
 
-                    Ob von Sonne, Lampe oder Laser Licht breitet sich grundsätzlich immer <strong>geradlinig</strong> aus. Das bedeutet, dass sich jeder einzelne Lichtstrahl 
-                    auf einem geraden Weg bewegt, solange ihm nichts im Weg steht. Licht kann nicht um Ecken gehen und seine Richtung nicht von selbst ändern. 
-                    Erst wenn ein Lichtstrahl auf ein Objekt trifft, zum Beispiel auf eine Wand, einen Spiegel oder ein anderes Material, kann er gestoppt, 
+                    Ob von Sonne, Lampe oder Laser Licht breitet sich grundsätzlich immer <strong>geradlinig</strong>
+                    aus. Das bedeutet, dass sich jeder einzelne Lichtstrahl
+                    auf einem geraden Weg bewegt, solange ihm nichts im Weg steht. Licht kann nicht um Ecken gehen und
+                    seine Richtung nicht von selbst ändern.
+                    Erst wenn ein Lichtstrahl auf ein Objekt trifft, zum Beispiel auf eine Wand, einen Spiegel oder ein
+                    anderes Material, kann er gestoppt,
                     reflektiert oder weitergeleitet werden. <br> <br>
-                    
-                    Obwohl sich Licht von einer Quelle in alle Richtungen ausbreitet, bewegen sich die einzelnen Lichtstrahlen immer <strong>geradeaus</strong>. 
-                    Man kann sich das vorstellen wie viele Pfeile, die gleichzeitig von einer Lichtquelle wegfliegen. Jeder Pfeil steht für einen Lichtstrahl. 
-                    In Zeichnungen und Experimenten zeigen wir oft nur einen oder wenige dieser Strahlen, damit der Weg des Lichts einfacher zu verstehen ist. <br> <br>
 
-                    Ein Lichtstrahl ist dabei kein echtes Objekt, sondern ein Hilfsmittel. Er hilft uns, den Weg des Lichts sichtbar zu machen und zu erklären, 
-                    was mit dem Licht passiert. In Wirklichkeit gibt es sehr viele solcher Lichtstrahlen, die zusammen das ausmachen, was wir als Licht wahrnehmen. 
-                    Dieses Verständnis ist wichtig, um später zu erklären, wie Spiegel das Licht umlenken und warum bestimmte Dinge sichtbar werden oder im Schatten liegen.
+                    Obwohl sich Licht von einer Quelle in alle Richtungen ausbreitet, bewegen sich die einzelnen
+                    Lichtstrahlen immer <strong>geradeaus</strong>.
+                    Man kann sich das vorstellen wie viele Pfeile, die gleichzeitig von einer Lichtquelle wegfliegen.
+                    Jeder Pfeil steht für einen Lichtstrahl.
+                    In Zeichnungen und Experimenten zeigen wir oft nur einen oder wenige dieser Strahlen, damit der Weg
+                    des Lichts einfacher zu verstehen ist. <br> <br>
+
+                    Ein Lichtstrahl ist dabei kein echtes Objekt, sondern ein Hilfsmittel. Er hilft uns, den Weg des
+                    Lichts sichtbar zu machen und zu erklären,
+                    was mit dem Licht passiert. In Wirklichkeit gibt es sehr viele solcher Lichtstrahlen, die zusammen
+                    das ausmachen, was wir als Licht wahrnehmen.
+                    Dieses Verständnis ist wichtig, um später zu erklären, wie Spiegel das Licht umlenken und warum
+                    bestimmte Dinge sichtbar werden oder im Schatten liegen.
                 </p>
             </details>
-            </section>
+        </section>
 
-            <section class="normalBox">
+        <section class="normalBox">
             <details id="text-toggle" open>
                 <summary>
                     <h2>Wie wird Licht reflektiert?</h2>
-                </summary> 
+                </summary>
                 <p>
-                    Licht breitet sich geradlinig aus, doch wenn es auf eine Oberfläche trifft, kann es nicht einfach hindurchgehen oder verschwinden. 
-                    Stattdessen wird ein Teil des Lichts <strong>zurückgeworfen</strong>, man nennt das <strong>Reflexion</strong>. Wenn das Licht auf eine glatte, 
-                    spiegelnde Oberfläche trifft, wie zum Beispiel einen Spiegel oder eine ruhige Wasseroberfläche, wird der Lichtstrahl fast vollständig zurückgeworfen.
-                    Dabei gilt ein wichtiges Prinzip, das Reflexionsgesetz: <strong>Der Einfallswinkel ist immer gleich dem Ausfallswinkel.</strong> 
-                    Das bedeutet, dass der Winkel, in dem das Licht auf die Oberfläche trifft, genau so groß ist wie der Winkel, in dem es wieder reflektiert wird. <br> <br>
+                    Licht breitet sich geradlinig aus, doch wenn es auf eine Oberfläche trifft, kann es nicht einfach
+                    hindurchgehen oder verschwinden.
+                    Stattdessen wird ein Teil des Lichts <strong>zurückgeworfen</strong>, man nennt das
+                    <strong>Reflexion</strong>. Wenn das Licht auf eine glatte,
+                    spiegelnde Oberfläche trifft, wie zum Beispiel einen Spiegel oder eine ruhige Wasseroberfläche, wird
+                    der Lichtstrahl fast vollständig zurückgeworfen.
+                    Dabei gilt ein wichtiges Prinzip, das Reflexionsgesetz: <strong>Der Einfallswinkel ist immer gleich
+                        dem Ausfallswinkel.</strong>
+                    Das bedeutet, dass der Winkel, in dem das Licht auf die Oberfläche trifft, genau so groß ist wie der
+                    Winkel, in dem es wieder reflektiert wird. <br> <br>
 
-                    Wenn die Oberfläche dagegen uneben oder rau ist, wie zum Beispiel Papier, Holz oder Sand, wird das Licht in viele verschiedene Richtungen gestreut. 
-                    Man nennt das <strong>diffuse Reflexion</strong>. Dank dieser gestreuten Reflexion können wir Gegenstände auch dann sehen, 
-                    wenn sie selbst kein Licht aussenden. Das Licht wird von ihrer Oberfläche zurückgeworfen und erreicht unsere Augen. <br> <br> 
+                    Wenn die Oberfläche dagegen uneben oder rau ist, wie zum Beispiel Papier, Holz oder Sand, wird das
+                    Licht in viele verschiedene Richtungen gestreut.
+                    Man nennt das <strong>diffuse Reflexion</strong>. Dank dieser gestreuten Reflexion können wir
+                    Gegenstände auch dann sehen,
+                    wenn sie selbst kein Licht aussenden. Das Licht wird von ihrer Oberfläche zurückgeworfen und
+                    erreicht unsere Augen. <br> <br>
 
-                </details>
-            </section>
+            </details>
+        </section>
 
-            <section class="normalBox">
+        <section class="normalBox">
             <details id="text-toggle" open>
                 <summary>
                     <h2>Definition des Reflexionsgesetz</h2>
                 </summary>
 
-                    <div class="reflexion-layout">
+                <div class="reflexion-layout">
                     <div class="reflexion-text">
                         <p>
-                            Um zu verstehen, wie Licht an einem Spiegel reflektiert wird, verwendet man verschiedene Fachbegriffe.
+                            Um zu verstehen, wie Licht an einem Spiegel reflektiert wird, verwendet man verschiedene
+                            Fachbegriffe.
                             Diese helfen dabei, den Weg des Lichts genau zu beschreiben und grafisch darzustellen.
                         </p>
-                    
+
                         <ul>
                             <li>
-                                Als <span style="color: blue">Einfallender Strahl</span> bezeichnet man den Lichtstrahl, der von der Lichtquelle kommt und auf die Oberfläche des Spiegels trifft.
+                                Als <span style="color: blue">Einfallender Strahl</span> bezeichnet man den Lichtstrahl,
+                                der von der Lichtquelle kommt und auf die Oberfläche des Spiegels trifft.
                             </li>
                             <li>
-                                Als <span style="color: green">ausfallenden oder reflektierten Strahl</span> bezeichnet man den Lichtstrahl, der vom Spiegel zurückgeworfen wird.
+                                Als <span style="color: green">ausfallenden oder reflektierten Strahl</span> bezeichnet
+                                man den Lichtstrahl, der vom Spiegel zurückgeworfen wird.
                             </li>
                             <li>
-                                Als <span style="color: red">Einfallslot</span> bezeichnet man eine gedachte Linie, die senkrecht auf der Oberfläche des Spiegels steht.
+                                Als <span style="color: red">Einfallslot</span> bezeichnet man eine gedachte Linie, die
+                                senkrecht auf der Oberfläche des Spiegels steht.
                             </li>
                             <li>
-                                Der <span style="color: blue">Einfallswinkel</span> ist der Winkel zwischen dem einfallenden Strahl und dem Einfallslot.
+                                Der <span style="color: blue">Einfallswinkel</span> ist der Winkel zwischen dem
+                                einfallenden Strahl und dem Einfallslot.
                             </li>
                             <li>
-                                Der <span style="color: green">Ausfallswinkel</span> ist der Winkel zwischen dem Einfallslot und dem reflektierten Strahl.
+                                Der <span style="color: green">Ausfallswinkel</span> ist der Winkel zwischen dem
+                                Einfallslot und dem reflektierten Strahl.
                             </li>
                         </ul>
-                    
+
 
                         <p>
                             Wie schon oben besprochen lautet Das Reflexionsgesetz:
@@ -204,7 +238,7 @@
                             Dieses Gesetz ist ein wichtiger teil der Optik und gilt für alle ebenen Spiegel.
                         </p>
                     </div>
-            
+
                     <div class="reflexion-demo">
                         <canvas id="reflexionCanvas" width="600" height="400"></canvas>
                         <div class="controls">
@@ -212,54 +246,67 @@
                                 Einfallswinkel: <span id="angleValue">45</span>°
                             </label>
                             <input type="range" id="angleInput" min="0" max="90" value="45">
-                        </details>
-                    </div>
-                    </div>
-                
-                </div>
-            </section>
+            </details>
+            </div>
+            </div>
 
-            <section class="normalBox">
-                <h1>Gefangen in der Leere</h1>
-                <div class="reflexion-layout">
-                    <div class="reflexion-text">
-                        <p>  
-                            Alarmlichter blinken rot, während die Raumstation langsam rotiert. Auf den Bildschirmen der Brücke flackern Fehlermeldungen auf, 
-                            der Asteroideneinschlag hat mehrere Systeme gleichzeitig beschädigt. Die Hauptenergie ist ausgefallen, automatische Notfallprotokolle wurden aktiviert. 
-                            Ein kurzer Blick aus dem Panoramafenster zeigt die Erde weit unter euch, doch Hilfe ist nicht in Sicht. <br>
-                            Der Bordcomputer meldet sich mit einer verzerrten Stimme und warnt vor beschädigten optischen Steuersystemen auf der Brücke. Um die Raumstation zu retten, 
-                            müsst ihr den Maschinenraum erreichen, doch der Weg dorthin ist blockiert. Die schwere Sicherheitstür, die von der Brücke in den Flur führt, 
-                            hat sich nach dem Einschlag verriegelt, ein integrierter Sicherheitsmechanismus verhindert das Öffnen. Auf dem Kontrollpanel neben der Tür 
-                            erscheint ein Hinweis: „Zugang nur bei korrekt ausgerichtetem Lichtsignal.“ Offenbar wird die Tür durch ein optisches System gesteuert, 
-                            nur wenn ihr den Lichtstrahl richtig lenkt, erkennt die Steuerung das Signal und gibt den Weg in den Flur frei. <br>
-                            Eure Aufgabe ist es nun, euer Wissen über Licht und Spiegel zu nutzen, um den Sicherheitsmechanismus der Tür zu überwinden und den Zugang freizuschalten. 
-                        </p>
+            </div>
+        </section>
 
-                        <div class="reflexionGame">
-                                <canvas id="gameCanvas" width="900" height="600"></canvas>
+        <section class="normalBox">
+            <h1>Gefangen in der Leere</h1>
+            <div class="reflexion-layout">
+                <div class="reflexion-text">
+                    <p>
+                        Alarmlichter blinken rot, während die Raumstation langsam rotiert. Auf den Bildschirmen der
+                        Brücke flackern Fehlermeldungen auf,
+                        der Asteroideneinschlag hat mehrere Systeme gleichzeitig beschädigt. Die Hauptenergie ist
+                        ausgefallen, automatische Notfallprotokolle wurden aktiviert.
+                        Ein kurzer Blick aus dem Panoramafenster zeigt die Erde weit unter euch, doch Hilfe ist nicht in
+                        Sicht. <br>
+                        Der Bordcomputer meldet sich mit einer verzerrten Stimme und warnt vor beschädigten optischen
+                        Steuersystemen auf der Brücke. Um die Raumstation zu retten,
+                        müsst ihr den Maschinenraum erreichen, doch der Weg dorthin ist blockiert. Die schwere
+                        Sicherheitstür, die von der Brücke in den Flur führt,
+                        hat sich nach dem Einschlag verriegelt, ein integrierter Sicherheitsmechanismus verhindert das
+                        Öffnen. Auf dem Kontrollpanel neben der Tür
+                        erscheint ein Hinweis: „Zugang nur bei korrekt ausgerichtetem Lichtsignal.“ Offenbar wird die
+                        Tür durch ein optisches System gesteuert,
+                        nur wenn ihr den Lichtstrahl richtig lenkt, erkennt die Steuerung das Signal und gibt den Weg in
+                        den Flur frei. <br>
+                        Eure Aufgabe ist es nun, euer Wissen über Licht und Spiegel zu nutzen, um den
+                        Sicherheitsmechanismus der Tür zu überwinden und den Zugang freizuschalten.
+                    </p>
 
-                            <div class="gameControls">
-                                <label class="mirror-label orange">Spiegel <input type="range" id="m1" min="-180" max="180" step ="0.2" value="-180"></label>
-                                <label class="mirror-label cyan">Spiegel <input type="range" id="m2" min="-180" max="180" step ="0.2" value="-180"></label>
-                                <label class="mirror-label purple">Spiegel <input type="range" id="m3" min="-180" max="180" step ="0.2" value="-180"></label>
-                            </div>
+                    <div class="reflexionGame">
+                        <canvas id="gameCanvas" width="900" height="600"></canvas>
 
-                            <div id="winNotification" class="win-notification">
-                                <p>Code: 2</p>
-                            </div>
+                        <div class="gameControls">
+                            <label class="mirror-label orange">Spiegel <input type="range" id="m1" min="-180" max="180"
+                                    step="0.2" value="-180"></label>
+                            <label class="mirror-label cyan">Spiegel <input type="range" id="m2" min="-180" max="180"
+                                    step="0.2" value="-180"></label>
+                            <label class="mirror-label purple">Spiegel <input type="range" id="m3" min="-180" max="180"
+                                    step="0.2" value="-180"></label>
+                        </div>
+
+                        <div id="winNotification" class="win-notification">
+                            <p>Code: 2</p>
                         </div>
                     </div>
                 </div>
-            </section>
-        </main>
-
-        <footer>
-            <div class="footer-links">
-                <a href="./impressum.html">Impressum</a>
-                <a href="./datenschutz.html">Datenschutz</a>
-                <a href="./barrierefreiheit.html">Barrierefreiheit</a>
             </div>
-        </footer>
+        </section>
+    </main>
 
-    </body>
+    <footer>
+        <div class="footer-links">
+            <a href="./impressum.html">Impressum</a>
+            <a href="./datenschutz.html">Datenschutz</a>
+            <a href="./barrierefreiheit.html">Barrierefreiheit</a>
+        </div>
+    </footer>
+
+</body>
+
 </html>

@@ -1,143 +1,149 @@
 <!DOCTYPE html>
 <html lang="de">
-    <head>
-        <title>MINT Optik Escape Room: Lichtbrechung verstehen</title>
-    
-        <!-- Metadaten -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Tim Stahlheber, Nicolas Held und Oliver Ermisch">
-        <meta name="keywords" content="MINT, Escape Room, Optik, Lichtbrechung, Brechung, Lernen, Physik, Schule">
-        <meta name="description" content="Interaktiver MINT-Escape-Room zur Lichtbrechung: Optische Effekte spielerisch begreifen – ideal für Schule und Unterricht!">
-        <link rel="canonical" href="https://www.mint-escape-room.de/lichtbrechung">
 
-        <!-- Favicon Formate-->
-        <link rel="icon" href="./imgs/favicon.ico">
-        <link rel="icon" type="image/png" sizes="16x16" href="./imgs/favicon-16x16.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="./imgs/favicon-32x32.png">
-        <link rel="icon" type="image/svg+xml" href="./imgs/favicon.svg">
-        <link rel="apple-touch-icon" sizes="180x180" href="./imgs/apple-touch-icon.png">
+<head>
+    <title>MINT Optik Escape Room: Lichtbrechung verstehen</title>
 
-        <!-- Open Graph Tags für soziale Medien -->
-        <meta property="og:title" content="MINT Escape Room - Lichtbrechung erleben">
-        <meta property="og:description" content="Erlebe Lichtbrechung im interaktiven MINT-Escape-Room.">
-        <meta property="og:image" content="">
-        <meta property="og:url" content="https://www.mint-escape-room.de/lichtbrechung">
-        <meta property="og:type" content="website">
-        <meta property="og:locale" content="de_DE">
+    <!-- Metadaten -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tim Stahlheber, Nicolas Held und Oliver Ermisch">
+    <meta name="keywords" content="MINT, Escape Room, Optik, Lichtbrechung, Brechung, Lernen, Physik, Schule">
+    <meta name="description"
+        content="Interaktiver MINT-Escape-Room zur Lichtbrechung: Optische Effekte spielerisch begreifen – ideal für Schule und Unterricht!">
+    <link rel="canonical" href="https://www.mint-escape-room.de/lichtbrechung">
 
-        <!-- Stylesheets -->
-        <link rel="stylesheet" href="./style.css">
+    <!-- Favicon Formate-->
+    <link rel="icon" href="./imgs/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="./imgs/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./imgs/favicon-32x32.png">
+    <link rel="icon" type="image/svg+xml" href="./imgs/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="./imgs/apple-touch-icon.png">
 
-        <!-- JavaScript -->
-        <script src="NavitgationSkript/navigation.js" defer></script>
-        <script src="RoomTwoSkript/InteraktiveBrechung.js" defer></script>
-        <script src="RoomTwoSkript/BrechungGame.js" defer></script>
+    <!-- Open Graph Tags für soziale Medien -->
+    <meta property="og:title" content="MINT Escape Room - Lichtbrechung erleben">
+    <meta property="og:description" content="Erlebe Lichtbrechung im interaktiven MINT-Escape-Room.">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https://www.mint-escape-room.de/lichtbrechung">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
 
-    </head>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./style.css">
 
-    <body>
-         <div id="HeadNav">
-            <header>
-                <details id="nav-toggle">
-                    <summary aria-label="Navigation ein- oder ausklappen">
-                        ☰
-                    </summary>
-                </details>
+    <!-- JavaScript -->
+    <script src="NavitgationSkript/navigation.js" defer></script>
+    <script src="RoomTwoSkript/InteraktiveBrechung.js" defer></script>
+    <script src="RoomTwoSkript/BrechungGame.js" defer></script>
 
-                <h1>Mint - Escape Room!</h1>
-                <h2>Der Optik Escape Room</h2>
+</head>
 
-            
-            </header>
+<body>
+    <div id="HeadNav">
+        <header>
+            <details id="nav-toggle">
+                <summary aria-label="Navigation ein- oder ausklappen">
+                    ☰
+                </summary>
+            </details>
 
-            <!-- Navigation -->
-            <nav id="navbar" aria-label="Hauptnavigation">
-                
-                    
-                <ul id="navlist">
-                    <li class="navitem" id="navitemIndex">
-                        <a href="./index.html" aria-label="Zur Startseite">
-                            <img class="navIcon" src="imgs/Startseite.png" alt="Menü-Icon für die Startseite">
-                            Startseite
-                        </a>
-                    </li>
-                    <li class="navitem" id="navitemRoomOne">
-                        <a href="./room-1.html" aria-label="Zum Raum 1 - Lichtreflexion">
-                            <img class="navIcon" src="imgs/Lichtreflexion.png" alt="Menü-Icon für den ersten Raum">
-                            Raum 1 - Lichtreflexion
-                        </a>
-                    </li>
-                    <li class="navitem" id="navitemRoomTwo">
-                        <a href="./room-2.html" aria-label="Zu Raum 2 - Lichtbrechung">
-                            <img class="navIcon" src="imgs/Lichtbrechung.png" alt="Menü-Icon für den zweiten Raum">
-                            Raum 2 - Lichtbrechung
-                        </a>
-                    </li>
-                    <li class="navitem" id="navitemRoomThree">
-                        <a href="./room-3.html" aria-label="Zum Raum 3 - Licht und Farbe">
-                            <img class="navIcon" src="imgs/Licht_Farben.png" alt="Menü-Icon für den dritten Raum">
-                            Raum 3 - Licht und Farbe
-                        </a>
-                    </li>
-                    <li class="navitem" id="navitemFinalRoom">
-                        <a href="./final-room.html" aria-label="Zum Finalen Raum">
-                            <img class="navIcon" src="imgs/Finaler_Raum.png" alt="Menü-Icon für den finalen Raum">
-                            Finaler Raum 
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+            <h1>Mint - Escape Room!</h1>
+            <h2>Der Optik Escape Room</h2>
 
-        <main>
-            <section class="normalBox">
-                <h1>Lichtbrechung</h1>
-            </section>
 
-            <section class="normalBox">
-                <details id="text-toggle" open>
-                    <summary>
-                        <h2>Wie wird Licht gebrochen?</h2>
-                    </summary>
+        </header>
+
+        <!-- Navigation -->
+        <nav id="navbar" aria-label="Hauptnavigation">
+
+
+            <ul id="navlist">
+                <li class="navitem" id="navitemIndex">
+                    <a href="./index.html" aria-label="Zur Startseite">
+                        <img class="navIcon" src="imgs/Startseite.png" alt="Menü-Icon für die Startseite">
+                        Startseite
+                    </a>
+                </li>
+                <li class="navitem" id="navitemRoomOne">
+                    <a href="./room-1.html" aria-label="Zum Raum 1 - Lichtreflexion">
+                        <img class="navIcon" src="imgs/Lichtreflexion.png" alt="Menü-Icon für den ersten Raum">
+                        Raum 1 - Lichtreflexion
+                    </a>
+                </li>
+                <li class="navitem" id="navitemRoomTwo">
+                    <a href="./room-2.html" aria-label="Zu Raum 2 - Lichtbrechung">
+                        <img class="navIcon" src="imgs/Lichtbrechung.png" alt="Menü-Icon für den zweiten Raum">
+                        Raum 2 - Lichtbrechung
+                    </a>
+                </li>
+                <li class="navitem" id="navitemRoomThree">
+                    <a href="./room-3.html" aria-label="Zum Raum 3 - Licht und Farbe">
+                        <img class="navIcon" src="imgs/Licht_Farben.png" alt="Menü-Icon für den dritten Raum">
+                        Raum 3 - Licht und Farbe
+                    </a>
+                </li>
+                <li class="navitem" id="navitemFinalRoom">
+                    <a href="./final-room.html" aria-label="Zum Finalen Raum">
+                        <img class="navIcon" src="imgs/Finaler_Raum.png" alt="Menü-Icon für den finalen Raum">
+                        Finaler Raum
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <section class="normalBox">
+            <h1>Lichtbrechung</h1>
+        </section>
+
+        <section class="normalBox">
+            <details id="text-toggle" open>
+                <summary>
+                    <h2>Wie wird Licht gebrochen?</h2>
+                </summary>
                 <figure class="glas-figure">
-                    <img 
-                        src="imgs/Glas.png" 
-                        alt="Strohhalm im Glas, einmal mit Wasser und einmal ohne Wasser" 
-                        titel="Strohhalm im Glas, einmal mit Wasser und einmal ohne Wasser" 
-                        class="glas">  
+                    <img src="imgs/Glas.png" alt="Strohhalm im Glas, einmal mit Wasser und einmal ohne Wasser"
+                        titel="Strohhalm im Glas, einmal mit Wasser und einmal ohne Wasser" class="glas">
                     <figcaption>Strohalm in 2 Gläser, einmal gefüllt mit Wasser und einmal ohne Wasser</figcaption>
                 </figure>
                 <p>
-                    Licht breitet sich normalerweise geradlinig aus. Trifft ein Lichtstrahl jedoch auf die Grenze zwischen zwei verschiedenen Materialien, 
-                    zum Beispiel von Luft in Wasser oder von Luft in Glas, ändert sich seine <strong>Geschwindigkeit</strong>. 
+                    Licht breitet sich normalerweise geradlinig aus. Trifft ein Lichtstrahl jedoch auf die Grenze
+                    zwischen zwei verschiedenen Materialien,
+                    zum Beispiel von Luft in Wasser oder von Luft in Glas, ändert sich seine
+                    <strong>Geschwindigkeit</strong>.
                     Dadurch wird der Lichtstrahl an dieser Grenze abgelenkt. <br>
 
                     Diese Richtungsänderung des Lichts nennt man <strong>Lichtbrechung</strong>. <br> <br>
-                
-                    Ein bekanntes Beispiel für Lichtbrechung ist ein Strohhalm in einem Glas Wasser. 
-                    Der Strohhalm wirkt an der Wasseroberfläche geknickt oder verschoben, obwohl er in Wirklichkeit gerade ist. 
-                    Dieser Effekt entsteht, weil das Licht aus dem Wasser beim Übergang in die Luft seine Richtung ändert. <br> <br>
-                
-                    Licht bewegt sich in unterschiedlichen Materialien unterschiedlich schnell. 
-                    In Luft ist Licht sehr schnell, in Wasser oder Glas ist es langsamer. 
-                    Wenn ein Lichtstrahl schräg auf die Grenze zwischen zwei Materialien trifft, wird er deshalb beim Eintritt in das neue Material gebrochen. <br>
 
-                    Genau wie bei der Reflexion folgt auch die Brechung festen Regeln. 
-                    Der Lichtstrahl ändert seine Richtung nicht zufällig, sondern immer nach bestimmten Gesetzmäßigkeiten, 
+                    Ein bekanntes Beispiel für Lichtbrechung ist ein Strohhalm in einem Glas Wasser.
+                    Der Strohhalm wirkt an der Wasseroberfläche geknickt oder verschoben, obwohl er in Wirklichkeit
+                    gerade ist.
+                    Dieser Effekt entsteht, weil das Licht aus dem Wasser beim Übergang in die Luft seine Richtung
+                    ändert. <br> <br>
+
+                    Licht bewegt sich in unterschiedlichen Materialien unterschiedlich schnell.
+                    In Luft ist Licht sehr schnell, in Wasser oder Glas ist es langsamer.
+                    Wenn ein Lichtstrahl schräg auf die Grenze zwischen zwei Materialien trifft, wird er deshalb beim
+                    Eintritt in das neue Material gebrochen. <br>
+
+                    Genau wie bei der Reflexion folgt auch die Brechung festen Regeln.
+                    Der Lichtstrahl ändert seine Richtung nicht zufällig, sondern immer nach bestimmten
+                    Gesetzmäßigkeiten,
                     die von den beteiligten Materialien abhängen. <br>
 
-                    Trifft das Licht zb. <strong>senkrecht</strong> auf die Oberfläche, ändert sich <strong>nur</strong> seine Geschwindigkeit, 
+                    Trifft das Licht zb. <strong>senkrecht</strong> auf die Oberfläche, ändert sich <strong>nur</strong>
+                    seine Geschwindigkeit,
                     nicht aber seine Richtung. <br> <br>
-                
+
                     Die Lichtbrechung sorgt dafür, dass viele optische Phänomene entstehen. <br>
-                    Sie erklärt zum Beispiel, warum ein Aquarium tiefer wirkt, als es wirklich ist 
+                    Sie erklärt zum Beispiel, warum ein Aquarium tiefer wirkt, als es wirklich ist
                     oder warum Linsen in Brillen und Kameras das Licht bündeln oder zerstreuen können. <br>
                 </p>
             </details>
-            </section>
+        </section>
 
-            <section class="normalBox">
+        <section class="normalBox">
             <details id="text-toggle" open>
                 <summary>
                     <h2>Brechungsindex</h2>
@@ -146,24 +152,29 @@
                     Wie stark ein Lichtstrahl beim Übergang von einem Stoff in einen anderen gebrochen wird,
                     hängt vom sogenannten <strong>Brechungsindex</strong> des Materials ab.
                     Der Brechungsindex ist eine Maßzahl dafür, wie schnell sich Licht in einem Stoff im Vergleich
-                    zum Vakuum ausbreitet. Er setzt sich aus dem Verhältnis der Lichtgeschwindigkeit im Vakuum zur Lichtgeschwindigkeit
+                    zum Vakuum ausbreitet. Er setzt sich aus dem Verhältnis der Lichtgeschwindigkeit im Vakuum zur
+                    Lichtgeschwindigkeit
                     im jeweiligen Material zusammen. <br>
-                    
 
-                    <ul>
-                        <li>Luft: Brechungsindex n = 1,00</li>
-                        <li>Wasser: Brechungsindex n = 1,33</li>
-                        <li>Glas: Brechungsindex n = 1,50</li>
-                        <li>Kunststoff (z. B. Plexiglas): Brechungsindex n = 1,49</li>
-                        <li>Diamant: Brechungsindex n = 2,42</li>
-                    </ul>
-                    
-                    Der Brechungsindex von Wasser beträgt etwa 1,33. Das bedeutet, dass Licht im Wasser 1,33-mal langsamer ist als im Vakuum. Während im Vakuum 
-                    das Licht eine Geschwindigkeit von 299.700 km/s hat, hat es im Wasser nur noch eine Geschwindigkeit von 225.00 km/s<br>
-                    Materialien mit einem <strong>kleinen</strong> Brechungsindex, wie Luft, lassen Licht sehr schnell hindurch.
-                    Materialien mit einem <strong>großem</strong> Brechungsindex, zum Beispiel Glas oder Diamanten, verlangsamen das Licht stärker.
-                    Je größer der Unterschied der Brechungsindizes zweier Materialien ist,
-                    desto stärker wird der Lichtstrahl an der Grenzfläche zwischen den verschiedenen Materialien gebrochen.
+
+                <ul>
+                    <li>Luft: Brechungsindex n = 1,00</li>
+                    <li>Wasser: Brechungsindex n = 1,33</li>
+                    <li>Glas: Brechungsindex n = 1,50</li>
+                    <li>Kunststoff (z. B. Plexiglas): Brechungsindex n = 1,49</li>
+                    <li>Diamant: Brechungsindex n = 2,42</li>
+                </ul>
+
+                Der Brechungsindex von Wasser beträgt etwa 1,33. Das bedeutet, dass Licht im Wasser 1,33-mal langsamer
+                ist als im Vakuum. Während im Vakuum
+                das Licht eine Geschwindigkeit von 299.700 km/s hat, hat es im Wasser nur noch eine Geschwindigkeit von
+                225.00 km/s<br>
+                Materialien mit einem <strong>kleinen</strong> Brechungsindex, wie Luft, lassen Licht sehr schnell
+                hindurch.
+                Materialien mit einem <strong>großem</strong> Brechungsindex, zum Beispiel Glas oder Diamanten,
+                verlangsamen das Licht stärker.
+                Je größer der Unterschied der Brechungsindizes zweier Materialien ist,
+                desto stärker wird der Lichtstrahl an der Grenzfläche zwischen den verschiedenen Materialien gebrochen.
                 </p>
 
                 <h3>Totalreflexion</h3>
@@ -171,18 +182,22 @@
                     Eine besondere Form der Lichtbrechung ist die Totalreflexion.
                     Sie tritt auf, wenn Licht von einem optisch dichteren Material, zum Beispiel von Wasser oder Glas,
                     in ein optisch dünneres Material wie Luft übergehen soll.
-                    Trifft der Lichtstrahl dabei in einem zu großen Winkel auf die Grenzfläche, kann er nicht mehr in das zweite Material eintreten.
+                    Trifft der Lichtstrahl dabei in einem zu großen Winkel auf die Grenzfläche, kann er nicht mehr in
+                    das zweite Material eintreten.
                     Stattdessen wird das Licht vollständig an der Grenzfläche zurückgeworfen.
                     Man spricht dann von <strong>Totalreflexion</strong>. <br>
 
-                    Wichtig ist: Totalreflexion kann <strong>nur</strong> beim Übergang von einem dichteren Material in ein dünneres auftreten
-                    und nur dann, wenn der Einfallswinkel größer ist als ein bestimmter Grenzwert, der sogenannte <strong>kritische Winkel</strong>.
-                    Bei kleineren Winkeln wird das Licht noch gebrochen, bei größeren Winkeln wird es vollständig reflektiert. <br>
+                    Wichtig ist: Totalreflexion kann <strong>nur</strong> beim Übergang von einem dichteren Material in
+                    ein dünneres auftreten
+                    und nur dann, wenn der Einfallswinkel größer ist als ein bestimmter Grenzwert, der sogenannte
+                    <strong>kritische Winkel</strong>.
+                    Bei kleineren Winkeln wird das Licht noch gebrochen, bei größeren Winkeln wird es vollständig
+                    reflektiert. <br>
                 </p>
             </details>
-            </section>
+        </section>
 
-            <section class="normalBox">
+        <section class="normalBox">
             <details id="text-toggle" open>
                 <summary>
                     <h2>Definition des Brechungsgesetzes</h2>
@@ -190,22 +205,24 @@
                 <div class="reflexion-layout">
                     <div class="reflexion-text">
                         <p>
-                            Um zu verstehen, wie Licht beim Übergang von einem Material in ein anderes gebrochen wird, 
-                            verwendet man ebenfalls bestimmte Fachbegriffe. 
+                            Um zu verstehen, wie Licht beim Übergang von einem Material in ein anderes gebrochen wird,
+                            verwendet man ebenfalls bestimmte Fachbegriffe.
                             Diese helfen dabei, den Verlauf des Lichtstrahls genau zu beschreiben.
                         </p>
-                    
+
                         <ul>
                             <li>
-                                Als <span style="color: blue">einfallenden Strahl</span> bezeichnet man den Lichtstrahl, 
+                                Als <span style="color: blue">einfallenden Strahl</span> bezeichnet man den Lichtstrahl,
                                 der aus dem ersten Medium kommt und auf die Grenzfläche trifft.
                             </li>
                             <li>
-                                Als <span style="color: orange">gebrochenen Strahl</span> bezeichnet man den Lichtstrahl, 
+                                Als <span style="color: orange">gebrochenen Strahl</span> bezeichnet man den
+                                Lichtstrahl,
                                 der nach dem Übergang in das zweite Medium weiterläuft.
                             </li>
                             <li>
-                                Als <span style="color: lightblue">reflektierten Strahl</span> bezeichnet man den Lichtstrahl, 
+                                Als <span style="color: lightblue">reflektierten Strahl</span> bezeichnet man den
+                                Lichtstrahl,
                                 der von der Grenzfläche zurückgeworfen wird.
                             </li>
                             <li>
@@ -213,23 +230,26 @@
                                 die senkrecht auf der Grenzfläche zwischen den beiden Stoffen steht.
                             </li>
                             <li>
-                                Die <strong>Grenzfläche</strong> ist die Oberfläche, die zwei unterschiedliche Materialien trennt und
+                                Die <strong>Grenzfläche</strong> ist die Oberfläche, die zwei unterschiedliche
+                                Materialien trennt und
                                 an der die Lichtstrahlen gebrochen oder reflektiert werden.
                             </li>
                             <li>
-                                Der <span style="color: blue">Einfallswinkel</span> ist der Winkel zwischen dem einfallenden Strahl und dem Einfallslot.
+                                Der <span style="color: blue">Einfallswinkel</span> ist der Winkel zwischen dem
+                                einfallenden Strahl und dem Einfallslot.
                             </li>
                             <li>
-                                Der <span style="color: orange">Brechungswinkel</span> ist der Winkel zwischen dem gebrochenen Strahl und dem Einfallslot.
+                                Der <span style="color: orange">Brechungswinkel</span> ist der Winkel zwischen dem
+                                gebrochenen Strahl und dem Einfallslot.
                             </li>
                         </ul>
-                    
+
                         <p>
                             Das Brechungsgesetz beschreibt den Zusammenhang zwischen Einfallswinkel und Brechungswinkel:
                             <br><br>
                             <strong>
-                                Wenn Licht von einem optisch dünneren in ein optisch dichteres Material übergeht, 
-                                wird es zum Lot hin gebrochen.  <br>
+                                Wenn Licht von einem optisch dünneren in ein optisch dichteres Material übergeht,
+                                wird es zum Lot hin gebrochen. <br>
                                 Beim Übergang vom einem dichteren in ein dünnere Material wird es vom Lot weg gebrochen.
                             </strong>
                             <br><br>
@@ -239,7 +259,7 @@
                 </div>
 
                 <div class="reflexion-layout">
-                
+
                     <!-- Luft → Wasser -->
                     <div class="brechung-demo">
                         <canvas id="brechungCanvasLeft" width="500" height="400"></canvas>
@@ -251,7 +271,7 @@
                         </div>
                         <p><strong>Luft (n = 1,00) → Wasser (n = 1,33)</strong></p>
                     </div>
-                
+
                     <!-- Wasser → Luft -->
                     <div class="brechung-demo">
                         <canvas id="brechungCanvasRight" width="500" height="400"></canvas>
@@ -263,57 +283,64 @@
                         </div>
                         <p><strong>Wasser (n = 1,33) → Luft (n = 1,00)</strong></p>
                     </div>
-                
+
                 </div>
             </details>
-            </section>
+        </section>
 
-            <section class="normalBox">
-                <h1>Durch das Wasser</h1>
-                
-                <p>
-                    Der Flur ist dunkel und leer. Die Notlichter werfen rote Schatten an die Wände. Nach eurer erfolgreichen Flucht aus der Brücke müsst ihr nun 
-                    durch den beschädigten Flur zum Maschinenraum gelangen. Der Bordcomputer warnt euch: Der nächste Kontrollpunkt ist unter Wasser - ein Überschwemmungsgebiet 
-                    entstanden durch das beschädigte Kühlsystem der Raumstation. <br>
-                    
-                    Auf dem Flur befindet sich ein alter Steg, gebaut für Inspektionen bei Wartungsarbeiten. Der Weg über den Steg ist blockiert - zu gefährlich, zu instabil. 
-                    Eure einzige Hoffnung: Der Lichtstrahl vom Notlichtsystem muss durch das Wasser zum Steuerungsmodul auf der anderen Seite gelangen, um die letzte Tür zum 
-                    Maschinenraum freizuschalten. <br>
-                    
-                    Ihr erinnert euch an die Brechung von Licht - das Phänomen, das ihr gerade noch studiert habt. Nutzt euer Wissen, um den Lichtstrahl in die richtige Richtung 
-                    zu lenken. Passt den Winkel des Lichts an und bewegt das Ziel auf die richtige Position. Der Steg blockiert einen Teil des direkten Weges - findet einen Weg, 
-                    das Licht um ihn herum oder über ihn hinweg zum Ziel zu bringen.
-                </p>
-                
-                <div class="reflexionGame">
-                    <canvas id="gameCanvas" width="1000" height="600"></canvas>
-                </div>
-                <div id="winNotification" class="win-notification">
-                    <p>Code: 6</p>
-                </div>
-                <div class="game2controls" style="margin-top: 20px;">
-                    <label for="angleSlider">
-                        Licht-Winkel:
-                    </label>
-                    <input type="range" id="angleSlider" min="-89" max="89" value="-30">
-                </div>
-                
-                <div class="game2controls" style="margin-top: 15px;">
-                    <label for="targetSlider">
-                        Ziel Position:
-                    </label>
-                    <input type="range" id="targetSlider" min="100" max="900" value="100">
-                </div>
-            </section>
-        </main>
+        <section class="normalBox">
+            <h1>Durch das Wasser</h1>
 
-        <footer>
-            <div class="footer-links">
-                <a href="./impressum.html">Impressum</a>
-                <a href="./datenschutz.html">Datenschutz</a>
-                <a href="./barrierefreiheit.html">Barrierefreiheit</a>
+            <p>
+                Der Flur ist dunkel und leer. Die Notlichter werfen rote Schatten an die Wände. Nach eurer erfolgreichen
+                Flucht aus der Brücke müsst ihr nun
+                durch den beschädigten Flur zum Maschinenraum gelangen. Der Bordcomputer warnt euch: Der nächste
+                Kontrollpunkt ist unter Wasser - ein Überschwemmungsgebiet
+                entstanden durch das beschädigte Kühlsystem der Raumstation. <br>
+
+                Auf dem Flur befindet sich ein alter Steg, gebaut für Inspektionen bei Wartungsarbeiten. Der Weg über
+                den Steg ist blockiert - zu gefährlich, zu instabil.
+                Eure einzige Hoffnung: Der Lichtstrahl vom Notlichtsystem muss durch das Wasser zum Steuerungsmodul auf
+                der anderen Seite gelangen, um die letzte Tür zum
+                Maschinenraum freizuschalten. <br>
+
+                Ihr erinnert euch an die Brechung von Licht - das Phänomen, das ihr gerade noch studiert habt. Nutzt
+                euer Wissen, um den Lichtstrahl in die richtige Richtung
+                zu lenken. Passt den Winkel des Lichts an und bewegt das Ziel auf die richtige Position. Der Steg
+                blockiert einen Teil des direkten Weges - findet einen Weg,
+                das Licht um ihn herum oder über ihn hinweg zum Ziel zu bringen.
+            </p>
+
+            <div class="reflexionGame">
+                <canvas id="gameCanvas" width="1000" height="600"></canvas>
             </div>
-        </footer>
+            <div id="winNotification" class="win-notification">
+                <p>Code: 6</p>
+            </div>
+            <div class="game2controls" style="margin-top: 20px;">
+                <label for="angleSlider">
+                    Licht-Winkel:
+                </label>
+                <input type="range" id="angleSlider" min="-89" max="89" value="-30">
+            </div>
 
-    </body>
+            <div class="game2controls" style="margin-top: 15px;">
+                <label for="targetSlider">
+                    Ziel Position:
+                </label>
+                <input type="range" id="targetSlider" min="100" max="900" value="100">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="./impressum.html">Impressum</a>
+            <a href="./datenschutz.html">Datenschutz</a>
+            <a href="./barrierefreiheit.html">Barrierefreiheit</a>
+        </div>
+    </footer>
+
+</body>
+
 </html>
