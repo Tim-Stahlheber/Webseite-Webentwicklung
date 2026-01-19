@@ -415,13 +415,6 @@ section.normalBox.banner {
 
 
 /* ------------------------ FINAL ROOM ------------------------ */
-
-  #finalGameSection {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  }
-
 /* ------------------------ GAMES ------------------------ */
 
  #finalGameSection {
