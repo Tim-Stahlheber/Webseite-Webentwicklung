@@ -1,15 +1,8 @@
-/* HTML */
-/* HTML */
-/* HTML */
+/* ------------------------ GLOBAL STYLES (Mobile First) ------------------------ */
 
 html {
-  background-color: rgb(7, 60, 96);           /* Hochschulblau */
+  background-color: rgb(7, 60, 96);            /* Hochschulblau */
 }
-
-
-/* BODY */
-/* BODY */
-/* BODY */
 
 body {
   background-color: rgb(198, 234, 255);       /* bläulicher Hintergrund */
@@ -20,14 +13,9 @@ body {
   flex-direction: column;                       /* Header, main, Footer vertikal */
   min-height: 100vh;                            /* Minimalhöhe */
   max-width: 1400px;                            /* Maximalbreite */
-  margin-left: auto;                            /* Horizontale Zentrierung */
-  margin-right: auto;                           /* Horizontale Zentrierung */
 }
 
-
-/* HEADER */
-/* HEADER */
-/* HEADER */
+/* ------------------------ HEADER (Mobile First) ------------------------ */
 
 header {
   position: relative;                           /* Setzt den Header als Bezugspunkt für absolute Positionierung von Kind-Elementen (z. B. Hamburger) */
@@ -37,65 +25,55 @@ header {
 
 
 #nav-toggle {
-  position: absolute;             /* Positioniert das <details>-Element absolut innerhalb des Headers */
-  left: 1rem;                     /* Abstand vom linken Rand des Headers */
-  top: 50%;                       /* Vertikal in der Mitte des Headers */
-  transform: translateY(-50%);    /* Korrigiert die Position, damit das Symbol wirklich mittig ausgerichtet ist */
+  position: absolute;                           /* Positioniert das <details>-Element absolut innerhalb des Headers */
+  left: 1rem;                                   /* Abstand vom linken Rand des Headers */
+  top: 50%;                                     /* Vertikal in der Mitte des Headers */
+  transform: translateY(-50%);                  /* Korrigiert die Position, damit das Symbol wirklich mittig ausgerichtet ist */
 }
 
 
 #nav-toggle summary {
-  cursor: pointer;                /* Zeigt den Mauszeiger als Hand beim Hover über das Summary-Symbol */
-  font-size: 1.6rem;              /* Größe des Symbols (z.B. Hamburger ☰) */
-  font-weight: bold;              /* Macht das Symbol fett */
-  list-style: none;               /* Entfernt eventuell vorhandene Standard-Stilpunkte */
+  cursor: pointer;                              /* Zeigt den Mauszeiger als Hand beim Hover über das Summary-Symbol */
+  font-size: 1.6rem;                            /* Größe des Symbols (z.B. Hamburger ☰) */
+  font-weight: bold;                            /* Macht das Symbol fett */
+  list-style: none;                             /* Entfernt eventuell vorhandene Standard-Stilpunkte */
 }
 
 
 #nav-toggle summary::-webkit-details-marker {
-  display: none;                  /* Blendet das standardmäßige Dreieck des <summary>-Elements im Browser aus */
+  display: none;                                /* Blendet das standardmäßige Dreieck des <summary>-Elements im Browser aus */
 }
 
 
 #HeadNav {
-  position: sticky;              /* Bleibt am oberen Rand beim Scrollen kleben */
-  top: 0;                        /* Abstand vom oberen Rand */
-  z-index: 100;                  /* Stellt sicher, dass es über den anderen Elementen liegt */
+  position: sticky;                             /* Bleibt am oberen Rand beim Scrollen kleben */
+  top: 0;                                       /* Abstand vom oberen Rand */
+  z-index: 100;                                 /* Stellt sicher, dass es über den anderen Elementen liegt */
 }
 
-
-/* NAVIGATION */
-/* NAVIGATION */
-/* NAVIGATION */
+/* ------------------------ NAVIGATION ------------------------ */
 
 #navbar {
-  background-color: rgb(101, 199, 255);       /* bläulicher Hintergrund */
+  background-color: rgba(101, 199, 255, 0.90);/* bläulicher Hintergrund */
   width: 100%;                                  /* Volle Breite der Seite */
 }
 
 
 #navlist {
-  list-style: none;               /* Entfernt die Standard-Aufzählungszeichen (Punkte) */
-  margin: 0;                      /* Entfernt den äußeren Abstand um die Liste */
-  padding: 0;                     /* Entfernt den inneren Abstand innerhalb der Liste */
-
-  display: flex;                  /* Macht die Liste zu einem Flex-Container */
-  justify-content: space-around;  /* Verteilt die Listenelemente gleichmäßig horizontal mit Abstand dazwischen */
-  align-items: center;            /* Richtet die Listenelemente vertikal mittig aus */
+  list-style: none;                             /* Entfernt die Standard-Aufzählungszeichen (Punkte) */
+  margin: 0;                                    /* Entfernt den äußeren Abstand um die Liste */
+  padding: 0;                                   /* Entfernt den inneren Abstand innerhalb der Liste */
+  
+  display: flex;                                /* Macht die Liste zu einem Flex-Container */
+  flex-direction: column;                       /* Listenelemente untereinander */
+  align-items: center;                          /* Richtet die Listenelemente vertikal mittig aus */
 }
-
-
-.navitem {
-  margin: 0;                      /* Entfernt den äußeren Abstand für die einzelnen Listenelemente */
-}
-
 
 .navitem a {
   display: flex;
-  flex-direction: column;         /* Icon oben, Text unten */
-  align-items: center;            /* horizontal zentriert */
+  flex-direction: row;                       /* Icon oben, Text unten */
+  align-items: center;                          /* horizontal zentriert */
   gap: 0.4rem;
-
   padding: 0.5rem 1rem;
   text-decoration: none;
   color: black;
@@ -104,30 +82,35 @@ header {
 }
 
 .navIcon {
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    margin-bottom: 1vh;
-    margin-top: 1vh;
-    transition: transform 0.3s ease;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  margin: 1vh 0;
+  transition: transform 0.3s ease;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* FOOTER */
-/* FOOTER */
-/* FOOTER */
+/* ------------------------ FOOTER (Mobile First) ------------------------ */
 
 footer {
   background-color: black;
-  text-align: center;        /* Zentrierter Text */
+  text-align: center;                        /* Zentrierter Text */
+  border-radius: 1em;
+  padding: 1rem;
+  margin: 1rem;
 }
 
 footer .footer-links {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
   width: 100%;
   padding: 0.5rem 0;
+  gap: 1rem;
+}
+
+footer  .footer-links a:hover {
+  color:rgba(101, 199, 255);
 }
 
 footer .footer-links a {
@@ -136,230 +119,208 @@ footer .footer-links a {
   font-weight: bold;
 }
 
-
-/* MAIN */
-/* MAIN */
-/* MAIN */
+/* ------------------------ MAIN ------------------------ */
 
 main {
-  flex: 1;                  /* main füllt den freien Raum zwischen Header und Footer */
-  display: flex;            /* main als Flex-Container */
-  flex-direction: column;   /* sections untereinander */
+  flex: 1;                                  /* main füllt den freien Raum zwischen Header und Footer */
+  display: flex;                            /* main als Flex-Container */
+  flex-direction: column;                   /* sections untereinander */
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-weight: bold;
   color: #000000;
-  hyphens: auto;            /* Aktiviert die Silbentrennung https://www.mediaevent.de/css3-silbentrennung-hyphens/ */
+  hyphens: auto;                            /* Aktiviert die Silbentrennung https://www.mediaevent.de/css3-silbentrennung-hyphens/ */
   margin: 0;
   padding: 0.2rem 0;
 }
- h1 {
+
+h1 {
   text-align: center;
- }
+}
 
 p {
   line-height: 1.5;
-  text-align: justify;      /* Blocksatz */
-  hyphens: auto;            /* Aktiviert die Silbentrennung https://www.mediaevent.de/css3-silbentrennung-hyphens/ */
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
+  text-align: justify;                      /* Blocksatz */
+  hyphens: auto;                            /* Aktiviert die Silbentrennung https://www.mediaevent.de/css3-silbentrennung-hyphens/ */
+  margin-top: 0.5rem 1rem 0;                /* Abstand oben 0.5rem, unten 0, links/rechts 1rem */
 }
 
 a {
-  hyphens: auto;            /* Aktiviert die Silbentrennung https://www.mediaevent.de/css3-silbentrennung-hyphens/ */
-
+  hyphens: auto;                            /* Aktiviert die Silbentrennung https://www.mediaevent.de/css3-silbentrennung-hyphens/ */
 }
 
-li {
-  line-height: 1.5;
+canvas {
+  border: 1px solid #333;
 }
 
 section.normalBox {
-    padding: 4rem;
-    margin: 1rem 2rem;     /* oben/unten 1rem, links/rechts 2rem */
-    max-width: 1400px;     /* optional: maximale Breite */
-    background: white;
-    border-radius: 2em;
-    line-height: 1.6;
-    text-align: justify;
+  padding: 2rem;
+  margin: 0.5rem 1rem;                        /* oben/unten 1rem, links/rechts 2rem */
+  max-width: 1400px;                        /* optional: maximale Breite */
+  background: white;
+  border-radius: 2em;
+  line-height: 1.6;
 }
 
-#finalGameSection {
+/* ------------------------ Graphics Figures ------------------------ */
+
+  .sonne-figure,
+  .glas-figure,
+  .wellenlaenge-figure {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-}
-
-aside {
-  background: grey;
-}
-
-article {
-  background: lightgreen;
-}
-
-/* RAUM 1 */
-/* RAUM 1 */
-/* RAUM 1 */
-
-#text-toggle summary {
-    cursor: pointer;
-    font-weight: bold;
-    display: block;
-    padding: 18px;
-    background-color: white;
-    border-radius: 1em;
-    transition: 0.4s;
-}
-
-#text-toggle summary:hover {
-    background-color: #b1d6f8;
-    color: white;
-}
-
-#text-toggle summary::marker {
-  display: none;                  /* Blendet das standardmäßige Dreieck des <summary>-Elements im Browser aus */
-}
-
-#text-toggle summary::-webkit-details-marker {
-  display: none;                  /* Blendet das standardmäßige Dreieck des <summary>-Elements im Browser aus */
-}
-
-.normalBox h2, h3 {
-    margin-bottom: 1rem;
-    text-align: initial;
-}
-
-.sonne-figure {
-    float: right;
-    width: 200px;
-    margin: 0 0 1rem 1rem;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 250px;
+    min-width: 250px;
     text-align: center;
-}
+  }
 
-.sonne-figure img,
-.glas-figure img,
-.wellenlaenge-figure img {
+  .sonne-figure img,
+  .glas-figure img,
+  .wellenlaenge-figure img {
     width: 100%;
     height: auto;
-    display: block;
-}
+  }
 
-.sonne-figure figcaption,
-.glas-figure figcaption,
-.wellenlaenge-figure figcaption {
+  .sonne-figure figcaption,
+  .glas-figure figcaption,
+  .wellenlaenge-figure figcaption {
     font-size: 0.85rem;
     color: #555;
     margin-top: 0.4rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .sonne-figure figcaption {
+    margin-top: -3rem;
+  }
+
+/* ------------------------ Text Toggle ------------------------ */
+
+#text-toggle summary {
+  cursor: pointer;
+  font-weight: bold;
+  display: block;
+  padding: 18px;
+  background-color: white;
+  border-radius: 1em;
+  transition: 0.4s;
 }
 
+#text-toggle summary:hover {
+  background-color: #b1d6f8;
+  color: white;
+}
+
+#text-toggle summary::marker {
+  display: none;                             /* Blendet das standardmäßige Dreieck des <summary>-Elements im Browser aus */
+}
+
+#text-toggle summary::-webkit-details-marker {
+  display: none;                             /* Blendet das standardmäßige Dreieck des <summary>-Elements im Browser aus */
+}
+
+.normalBox h2,
+h3 {
+  margin-bottom: 1rem;
+  text-align: initial;
+}
+
+/* ------------------------ ROOM 1: REFLEXIONSSPIEL ------------------------ */
 .reflexion-layout {
-    display: flex;
-    gap: 2rem;
-    align-items: flex-start;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
 }
 
 .reflexion-text {
-    flex: 1;
-    text-align: justify;
+  text-align: justify;
 }
 
 .reflexion-demo {
-    flex: 0 0 620px;
-    text-align: center;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .reflexion-demo canvas {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .reflexionGame {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: center;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .reflexionGame canvas {
-    width: 100%;
-    max-width: 900px;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
-.gameControls {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 900px;
-    max-width: 100%;
-    margin: 0 auto;
+/* Mirror Labels */
+.mirror-label {
+  font-weight: bold;
 }
 
-.gameControls label {
-    display: block;
-    width: 100%;
+.mirror-label.orange {
+  color: orange;
 }
 
-.gameControls input[type="range"] {
-    width: 100%;
+.mirror-label.cyan {
+  color: rgb(0, 204, 255);
 }
 
-.game2controls {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
-    align-items: center;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
+.mirror-label.purple {
+  color: purple;
 }
 
-.game2controls label {
-    margin: 0;
-    white-space: nowrap;
-    font-weight: bold;
+/* ------------------------ ROOM 2: BRECHUNGSSPIEL ------------------------ */
+
+.brechung-demo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.game2controls input[type="range"] {
-    flex: 1;
-    min-width: 300px;
+.brechung-demo canvas {
+  max-width: 100%;
+  height: auto;
 }
 
-.game3controls {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.control-group {
+/* ------------------------ ROOM 3: FARBEN & LICHT ------------------------ */
+  .control-group {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
-}
+  }
 
-.control-group h3 {
+  .control-group h3 {
     margin: 0 0 0.5rem 0;
     font-size: 1rem;
     border-bottom: 2px solid #0073cc;
     padding-bottom: 0.5rem;
-}
+  }
 
-.color-boxes {
+  .color-boxes {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-}
+  }
 
-.color-box {
+  .color-box {
     width: 100%;
     height: 50px;
     border: 2px solid #333;
@@ -374,331 +335,35 @@ article {
     display: flex;
     align-items: center;
     justify-content: center;
-}
+  }
 
-.color-box:hover {
+  .color-box:hover {
     background-color: #f5f5f5;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-}
+  }
 
-.color-box.active {
+  .color-box.active {
     background-color: #e3f2fd;
     border-color: #0073cc;
     font-weight: bold;
-}
+  }
 
-.color-box.active::after {
+  .color-box.active::after {
     content: "";
     display: none;
-}
-
-/* Mirror Labels */
-.mirror-label {
-    font-weight: bold;
-}
-
-.mirror-label.orange {
-    color: orange;
-}
-
-.mirror-label.cyan {
-    color: rgb(0, 204, 255);
-}
-
-.mirror-label.purple {
-    color: purple;
-}
-
-/* Win Notification */
-.win-notification, .notification {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #4CAF50;
-    color: white;
-    padding: 2rem;
-    border-radius: 1rem;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    min-width: 300px;
-}
-
-.win-notification h3, .notification h3 {
-    color: white;
-    margin-top: 0;
-    font-size: 1.8rem;
-}
-
-.win-notification p, .notification p {
-    color: white;
-    margin-bottom: 0;
-    font-size: 1.1rem;
-}
-
-.win-notification.show, .notification.show {
-    display: block;
-    animation: slideDown 0.5s ease-in-out;
-}
-
-@keyframes slideDown {
-    0% {
-        opacity: 0;
-        transform: translate(-50%, -100%);
-    }
-    100% {
-        opacity: 1;
-        transform: translate(-50%, -50%);
-    }
-}
-
-@media (max-width: 1140px) {
-  section.normalBox,
-  section.data_acc {
-    padding: 2rem 2rem;
-    margin: 0.5rem 1rem;
-  }    
-  
-  .reflexion-layout {
-    flex-direction: column;
   }
 
-  .reflexion-text {
-    width: 100%;
-  }
+/* ------------------------ FINAL ROOM ------------------------ */
 
-  .reflexion-demo {
-    flex: none;
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
-  }
-
-  #reflexionCanvas {
-    width: 100%;
-    height: auto;
-  }
-
-  /* Tablet Anpassung für Spiele */
-  #gameCanvas {
-    width: 100%;
-    min-width: 350px;
-    height: auto;
-    aspect-ratio: 16/9;
-  }
-
-  .gameControls {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .control-group input[type="range"] {
-    min-width: 60px;
-  }
-
-  .brechung-demo {
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
-  }
-
-  /* Raum 3 - Container für Farbmischungs-Tutorial responsive */
-  .container {
-    flex-direction: column;    /* Vertikal stapeln auf Tablets/kleineren Bildschirmen */
-    padding: 15px;
-    gap: 20px;
-  }
-
-  .controls {
-    width: 100%;
-  }
-
-  .controls input[type="range"] {
-    width: 100%;
-  }
-
-  #colorCanvas {
-    width: 100% ;
-    max-width: 100%;
-    height: auto ;
-    aspect-ratio: 2/1;
-  }
-}
-
-/* RAUM 2 */
-/* RAUM 2 */
-/* RAUM 2 */
-
-.glas-figure,
-.wellenlaenge-figure {
-    float: right;
-    width: 350px;
-    margin: 0 0 1rem 1rem;
-    text-align: center;
-}
-
-.brechung-demo {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.brechung-demo canvas {
-    max-width: 100%;
-    height: auto;
-}
-
-/* RAUM 3 */
-/* RAUM 3 */
-/* RAUM 3 */
-
-.container {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 20px;
-  font-family: sans-serif;
-}
-
-.controls {
+  #finalGameSection {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-}
-
-canvas {
-  border: 1px solid #333;
-}
-
-/* Responsive iframe für Google Maps */
-.responsive-iframe {
-  width: 100%;
-  max-width: 600px;
-  height: 450px;
-  border: 0;
-}
-
-
-/* Datenschutz */
-/* Datenschutz */
-/* Datenschutz */
-
-li .index-link {
-  text-decoration: underline none;
-  color: black;
-}
-
-section.data_acc {
-  flex: 1;
-  margin: 1rem 2rem;        /* top and bottom margin 0.5rem, left and right auto */
-  border-radius: 1em;
-  background: none;
-}
-
-.accordion {
-  background-color: white;
-  color: #000;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  border-radius: 1em;
-  text-align: justify;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-}
-
-.active,
-.accordion:hover {
-  background-color: #555;
-  color: white;
-}
-
-.panel {
-  padding: 0 18px;
-  display: none;
-  background-color: white;
-  overflow: hidden;
-  border-radius: 1em;
-
-}
-
-.panel.open {
-  display: block;
-}
-
-/* =========================================
-   Sehr kleine Displays (z. B. < 500px)
-   ========================================= */
-@media (max-width: 500px) {
-
-  /* Navigation für kleine Bildschirme anpassen */
-  #navlist {
-    flex-wrap: wrap;           /* Erlaubt Umbruch der Navigationsitems */
-    justify-content: center;   /* Zentriert die Items */
-    padding: 0.25rem;          /* Kleiner Innenabstand */
+  gap: 2rem;
   }
 
-  .navitem a {
-    padding: 0.3rem 0.4rem;    /* Reduziertes Padding */
-    font-size: 0.7rem;         /* Kleinere Schriftgröße */
-    gap: 0.2rem;               /* Kleinerer Abstand zwischen Icon und Text */
-  }
+/* ------------------------ GAMES ------------------------ */
 
-  .navIcon {
-    width: 30px;               /* Kleinere Icons */
-    height: 30px;
-    margin-bottom: 0.3vh;      /* Reduzierte Margins */
-    margin-top: 0.3vh;
-  }
-
-  section.normalBox,
-  section.data_acc {
-    padding: 2rem;           /* Innenabstand oben/unten sowie links/rechts*/
-    margin: 0.5rem 1rem;     /* top and bottom margin 0.5rem, left and right auto */
-  }
-
-  /* Room 1 Anpassung für Mobile */
-  /* Figure + Bild + Caption kompakt */
-  .sonne-figure,
-  .glas-figure,
-  .wellenlaenge-figure {
-    float: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 250px;
-    margin: 0 auto;
-  }
-
- .sonne-figure img,
- .glas-figure img,
- .wellenlaenge-figure img {
-   width: 100%;
- }
-
- .sonne-figure figcaption,
- .glas-figure figcaption,
- .wellenlaenge-figure figcaption {
-    text-align: center;
-    margin-bottom: 1rem;
- }
- 
- .sonne-figure figcaption {
-    margin-top: -3rem;
- }
-
-  /* Romm 2 & 3 Anpassung Bild */
-  .licht-brechung-flex .glas,
-  .farben-flex .wellenlaenge {
-    width: 250px;
-  }
-
-  /* Responsive iframe für kleine Bildschirme */
+ /* Responsive iframe für kleine Bildschirme */
   .responsive-iframe {
     width: 100%;
     max-width: 100%;
@@ -712,6 +377,7 @@ section.data_acc {
     gap: 15px;                 /* Kleinerer Abstand */
   }
 
+/* ------------------------ Controls ------------------------ */
   .controls {
     width: 100%;               /* Volle Breite nutzen */
     padding: 0;
@@ -732,10 +398,233 @@ section.data_acc {
   }
 
   #colorCanvas {
-    width: 100% ;    /* Responsive Canvas-Breite */
+    width: 100% ;              /* Responsive Canvas-Breite */
     max-width: 100%;
-    height: auto ;   /* Automatische Höhe */
+    height: auto ;             /* Automatische Höhe */
     aspect-ratio: 2/1;         /* Verhältnis 2:1 beibehalten (wie 800x400) */
+  }
+
+  .gameControls {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .gameControls input[type="range"] {
+    width: 100%;
+  }
+
+  .game3controls {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+
+
+/* ------------------------ Win Notification ------------------------ */
+  .win-notification,
+  .notification {
+    display: none;
+    position: fixed;
+      top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    min-width: 300px;
+  }
+
+  .win-notification h3,
+  .notification h3 {
+    color: white;
+    margin-top: 0;
+    font-size: 1.8rem;
+  }
+
+  .win-notification p,
+  .notification p {
+    color: white;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+  }
+
+  .win-notification.show,
+  .notification.show {
+    display: block;
+    animation: slideDown 0.5s ease-in-out;
+  }
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* ------------------------ Datenschutz ------------------------ */
+
+  li .index-link {
+    text-decoration: underline none;
+    color: black;
+  }
+
+  section.data_acc {
+    flex: 1;
+    margin: 1rem 2rem;              /* top and bottom margin 0.5rem, left and right auto */
+    border-radius: 1em;
+    background: none;
+  }
+
+  .accordion {
+    background-color: white;
+    color: #000;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    border-radius: 1em;
+    text-align: justify;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+  }
+
+  .active,
+  .accordion:hover {
+    background-color: #555;
+    color: white;
+  }
+
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 1em;
+  }
+
+  .panel.open {
+    display: block;
+  }
+
+/* =========================================
+   Für mittlere Displays (z. B. < 500px)
+   ========================================= */
+@media (min-width: 500px) {
+  #navlist {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .navitem a {
+    flex-direction: column;
+  }
+
+  .navIcon{
+    width: 50px;
+    height: 50px;
+  }
+
+  footer .footer-links {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  section.normalBox,
+  section.data_acc {
+    padding: 4rem;
+    /* Innenabstand oben/unten sowie links/rechts*/
+    margin: 1rem 2rem;
+    /* top and bottom margin 0.5rem, left and right auto */
+  }
+
+  /* Figure + Bild + Caption kompakt */
+
+  .sonne-figure,
+  .glas-figure,
+  .wellenlaenge-figure {
+    float: right;
+    max-width: 350px;
+    margin: 0 0 1rem 1rem;
+    text-align: center;
+  }
+  .sonne-figure img,
+  .glas-figure img,
+  .wellenlaenge-figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+
+
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+  /* Mobile Anpassung für Spiele */
+  #gameCanvas {
+    width: 100%;
+    min-width: 300px;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
+
+  .gameControls {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .gameControls label {
+    white-space: normal;
+    font-size: 0.95rem;
+  }
+
+  .gameControls input[type="range"] {
+    width: 100%;
+    min-width: 100px;
+  }
+
+  /* Win Notification Mobile */
+  .win-notification {
+    min-width: 90vw;
+    max-width: 90vw;
+    padding: 1.5rem;
+  }
+
+  .win-notification h3 {
+    font-size: 1.4rem;
+  }
+
+  .win-notification p {
+    font-size: 0.95rem;
   }
 
   /* Mobile Anpassung für Spiele */
@@ -746,21 +635,18 @@ section.data_acc {
     aspect-ratio: 16/9;
   }
 
-  .gameControls,
-  .game2controls {
+  .gameControls {
     flex-direction: column;
     gap: 15px;
     width: 100%;
   }
 
-  .gameControls label,
-  .game2controls label {
+  .gameControls label {
     white-space: normal;
     font-size: 0.95rem;
   }
 
-  .gameControls input[type="range"],
-  .game2controls input[type="range"] {
+  .gameControls input[type="range"] {
     width: 100%;
     min-width: 100px;
   }
@@ -794,6 +680,13 @@ section.data_acc {
   }
 }
 
+@media (min-width: 1200px) {
+    .reflexion-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
 
 /* =========================================
    Große Displays (ab 1400px)
@@ -808,5 +701,70 @@ section.data_acc {
     margin-left: auto;      /*Horizontale Zentrierung 
     margin-right: auto;     /* Horizontale Zentrierung
   }
-}*/
+}
+  
 
+   /* Mobile Anpassung für Spiele 
+  #gameCanvas {
+    width: 100%;
+    min-width: 300px;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
+
+
+.reflexion-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.reflexion-text {
+  flex: 1;
+  text-align: justify;
+}
+
+.reflexion-demo {
+  flex: 0 0 620px;
+  text-align: center;
+}
+
+.reflexion-demo canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+.reflexionGame {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.reflexionGame canvas {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+}
+
+.gameControls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 900px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.gameControls label {
+  display: block;
+  width: 100%;
+}
+
+.gameControls input[type="range"] {
+  width: 100%;
+
+*/
