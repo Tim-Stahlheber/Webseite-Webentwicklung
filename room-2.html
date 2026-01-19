@@ -264,31 +264,36 @@
 
                 <div class="reflexion-layout">
 
-                    <!-- Luft → Wasser -->
+                    <!-- Simulation: Lichtbrechung von Luft in Wasser -->
                     <div class="brechung-demo">
-                        <canvas id="brechungCanvasLeft" width="500" height="400"></canvas>
+
+                        <!-- Canvas zur Darstellung der Brechung -->
+                        <canvas id="brechungCanvasLeft" width="500" height="400"></canvas> 
                         <div class="controls">
                             <label for="angleInputLeft">
-                                Einfallswinkel: <span id="angleValueLeft">45</span>°
-                            </label>
-                            <input type="range" id="angleInputLeft" min="0" max="89" value="45">
-                        </div>
-                        <p><strong>Luft (n = 1,00) → Wasser (n = 1,33)</strong></p>
-                    </div>
 
-                    <!-- Wasser → Luft -->
+                                Einfallswinkel: <span id="angleValueLeft">45</span>                 <!-- Anzeige des aktuellen Winkels -->
+                            </label>
+                            <input type="range" id="angleInputLeft" min="0" max="89" value="45">    <!-- Slider zur Einstellung des Einfallswinkels -->
+                        </div>
+                        <p><strong>Luft (n = 1,00) → Wasser (n = 1,33)</strong></p>                 <!-- Info über die Brechungsindizes der Materialien -->
+                    </div>
+                
+                    <!-- Simulation: Lichtbrechung von Wasser in Luft -->
                     <div class="brechung-demo">
-                        <canvas id="brechungCanvasRight" width="500" height="400"></canvas>
+
+                        <!-- Canvas zur Darstellung der Brechung -->
+                        <canvas id="brechungCanvasRight" width="500" height="400"></canvas> 
                         <div class="controls">
                             <label for="angleInputRight">
-                                Einfallswinkel: <span id="angleValueRight">45</span>°
+                                Einfallswinkel: <span id="angleValueRight">45</span>°               <!-- Anzeige des aktuellen Winkels -->
                             </label>
-                            <input type="range" id="angleInputRight" min="0" max="89" value="45">
+                            <input type="range" id="angleInputRight" min="0" max="89" value="45">   <!-- Slider zur Einstellung des Einfallswinkels -->
                         </div>
-                        <p><strong>Wasser (n = 1,33) → Luft (n = 1,00)</strong></p>
+                        <p><strong>Wasser (n = 1,33) → Luft (n = 1,00)</strong></p>                 <!-- Info über die Brechungsindizes der Materialien -->
                     </div>
-
                 </div>
+
             </details>
         </section>
 
@@ -316,20 +321,27 @@
             </p>
 
             <div class="reflexionGame">
-                <canvas id="gameCanvas" width="1000" height="600"></canvas>
-                <div class="gameControls" style="margin-top: 20px;">
-                    <label for="angleSlider">Licht-Winkel:</label>
-                    <input type="range" id="angleSlider" min="-89" max="89" value="-30">
-                </div>
 
+                <!-- Canvas für die interaktive Lichtspiel-Simulation -->
+                <canvas id="gameCanvas" width="1000" height="600"></canvas> 
+
+                <!-- Steuerung: Winkel des Lichtstrahls einstellen -->
+                <div class="gameControls" style="margin-top: 20px;">
+                    <label for="angleSlider">Licht-Winkel:</label>                          <!-- Beschriftung für Slider -->
+                    <input type="range" id="angleSlider" min="-89" max="89" value="-30">    <!-- Slider zur Anpassung des Lichtwinkels -->
+                </div>
+            
+                <!-- Steuerung: Zielposition des Lichtstrahls einstellen -->
                 <div class="gameControls" style="margin-top: 15px;">
-                    <label for="targetSlider">Ziel Position:</label>
-                    <input type="range" id="targetSlider" min="100" max="900" value="100">
+                    <label for="targetSlider">Ziel Position:</label>                        <!-- Beschriftung für Slider -->
+                    <input type="range" id="targetSlider" min="100" max="900" value="100">  <!-- Slider zur Anpassung der Zielposition -->
                 </div>
             </div>
+
             <div id="winNotification" class="win-notification">
-                <p>Code: 6</p>
+                <p>Code: 6</p> <!-- Mitteilung / Gewinnanzeige -->
             </div>
+
 
         </section>
     </main>
