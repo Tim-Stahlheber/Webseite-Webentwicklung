@@ -219,6 +219,15 @@ h3 {
     margin-top: -3rem;
   }
 
+section.normalBox.banner {
+    background-image: url('./imgs/banner.png');
+    background-size: cover;
+    background-position: center; /* zentriert das Bild */
+    background-color: transparent;
+    background-repeat: no-repeat;
+    font-size: clamp(16px, 2vw, 24px);
+  }
+
 /* ------------------------ Text Toggle ------------------------ */
 
 #text-toggle summary {
@@ -366,6 +375,7 @@ h3 {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    align-items: center;
   }
 
   .color-box {
@@ -440,6 +450,13 @@ h3 {
     max-width: 100%;
     height: auto ;             /* Automatische Höhe */
     aspect-ratio: 2/1;         /* Verhältnis 2:1 beibehalten (wie 800x400) */
+  }
+
+   /* Mobile Anpassung für Spiele */
+  #gameCanvas {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
   }
 
   .gameControls {
@@ -608,38 +625,6 @@ h3 {
     display: block;
   }
 
-/* ANSCHAUEN ELEMMENTE UND GGFS: ENTFERNEN */
-.container {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 20px;
-  font-family: sans-serif;
-}
-
-  /* Mobile Anpassung für Spiele */
-  #gameCanvas {
-    width: 100%;
-    min-width: 300px;
-    height: auto;
-    aspect-ratio: 16/9;
-  }
-
-  .gameControls {
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-  }
-
-  .gameControls label {
-    white-space: normal;
-  }
-
-  .gameControls input[type="range"] {
-    width: 100%;
-    min-width: 100px;
-  }
-
   /* Win Notification Mobile */
   .win-notification {
     width: 80%;
@@ -656,85 +641,3 @@ h3 {
     align-items: flex-start;
   }
 }
-
-
-/* =========================================
-   Große Displays (ab 1400px)
-   =========================================
-/*@media (min-width: 1400px) {
-
-  html {
-    background-color: rgb(237, 248, 255);
-  }
-
-  body {
-    margin-left: auto;      /*Horizontale Zentrierung 
-    margin-right: auto;     /* Horizontale Zentrierung
-  }
-}
-  
-
-   /* Mobile Anpassung für Spiele 
-  #gameCanvas {
-    width: 100%;
-    min-width: 300px;
-    height: auto;
-    aspect-ratio: 16/9;
-  }
-
-
-.reflexion-layout {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
-}
-
-.reflexion-text {
-  flex: 1;
-  text-align: justify;
-}
-
-.reflexion-demo {
-  flex: 0 0 620px;
-  text-align: center;
-}
-
-.reflexion-demo canvas {
-  max-width: 100%;
-  height: auto;
-}
-
-.reflexionGame {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  align-items: center;
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.reflexionGame canvas {
-  width: 100%;
-  max-width: 900px;
-  height: auto;
-}
-
-.gameControls {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 900px;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.gameControls label {
-  display: block;
-  width: 100%;
-}
-
-.gameControls input[type="range"] {
-  width: 100%;
-
-*/
