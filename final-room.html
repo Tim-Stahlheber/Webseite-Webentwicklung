@@ -5,6 +5,7 @@
         <title>MINT Escape Room Optik - Könnt ihr das finale Rätsel lösen?</title>
 
         <!-- Metadaten-->
+        <!-- Geben Informationen über die Seite, z. B. Titel, Beschreibung, Autor oder Sprache, und helfen Browsern und Suchmaschinen, die Seite richtig darzustellen und einzuordnen -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Tim Stahlheber, Nicolas Held und Oliver Ermisch">
@@ -13,6 +14,7 @@
         <link rel="canonical" href="https://www.mint-escape-room.de/">
 
         <!-- Favicon Formate-->
+        <!-- Kleine Symbole, die im Browser-Tab, in Lesezeichen oder auf Mobilgeräten angezeigt werden, damit die Seite leichter erkennbar ist -->
         <link rel="icon" href="./imgs/favicon.ico">
         <link rel="icon" type="image/png" sizes="16x16" href="./imgs/favicon-16x16.png">
         <link rel="icon" type="image/png" sizes="32x32" href="./imgs/favicon-32x32.png">
@@ -20,10 +22,11 @@
         <link rel="apple-touch-icon" sizes="180x180" href="./imgs/apple-touch-icon.png">
 
         <!-- Open Graph Tags für soziale Medien -->
+        <!-- Sie steuern, wie die Seite aussieht, wenn sie in sozialen Medien (z. B. Facebook, LinkedIn, WhatsApp) geteilt wird – z. B. Titel, Beschreibung, Bild und URL -->
         <meta property="og:title" content="MINT Escape Room Optik - Licht, Farben & interaktive Rätsel">
         <meta property="og:description" content="Entdecke spannende Rätsel und Lichtphänomene im interaktiven MINT-Escape-Room.">
         <meta property="og:image" content="imgs/mint-escape-room-logo.png">
-        <meta property="og:url" content="https://www.mint-escape-room.de/">
+        <meta property="og:url" content="https://www.mint-escape-room.de/finaler-raum">
         <meta property="og:type" content="website">
         <meta property="og:locale" content="de_DE">
 
@@ -94,23 +97,25 @@
 
         <main>
             <section class="normalBox banner">
-                <h1>Finaler Raum</h1>
+                <h1>Finaler Raum</h1> 
             </section>
 
             <section class="normalBox">
-                <h2>Vor geschlossener Tür</h2>
+                <h2>Vor geschlossener Tür</h2> 
                 <p>Ihr habt es geschafft! Nach der erfolgreichen Lösung der optischen Rätsel in den vorherigen Räumen seid ihr endlich im Maschinenraum des Schiffes angekommen. 
                 Das Schiff befindet sich in großer Gefahr - die optischen Kommunikationssysteme sind zerstört und die kritischen Navigationslasersysteme sind außer Betrieb. 
                 <strong>Es ist eure letzte Chance!</strong> Nur wenn ihr die Reparaturen richtig durchführt und die optischen Systeme wieder zum Leben erweckt, 
                 könnt ihr das Schiff und die gesamte Besatzung retten. 
                 Der Zugang zum Raum wird jedoch durch einen Sicherheitscode geschützt, den ihr aus den vorherigen Räumen zusammensetzen müsst.</p> <br>
 
+                <!-- Eingabefeld für den Sicherheitscode -->
                 <h3>Code eingabe:</h3>
-                <input type="password" id="accessCode" maxlength="3" placeholder="Code" inputmode="numeric">
-                <button id="accessButton">Bestätigen</button>
-                <p id="codeError" style="display: none; color: red; margin-top: 10px;">Falscher Code!</p>
+                <input type="password" id="accessCode" maxlength="3" placeholder="Code" inputmode="numeric">     <!-- Passwortfeld, nur 3 Zeichen, numerisch -->
+                <button id="accessButton">Bestätigen</button>                                                    <!-- Button zum Prüfen des Codes -->
+                <p id="codeError" style="display: none; color: red; margin-top: 10px;">Falscher Code!</p>      <!-- Fehlermeldung, zunächst versteckt -->
             </section>
 
+            <!-- Abschnitt für das eigentliche Spiel, wird erst nach korrektem Code angezeigt -->
             <section class="normalBox" id="finalGameSection" style="display: none;">
                 <h1>Letzte Hürde</h1>
                 <p style="margin-bottom: 2rem;">Nachdem Ihr endlich im Maschinenraum angekommen seid, müsst ihr die letzten Reparaturen durchführen, um das Schiff zu retten.
@@ -119,26 +124,34 @@
                 an, um den grünen Laserstrahl in die Maschine zu lenken und das Schiff zu retten! Viel Erfolg! 
                 </p>
                 
+                <!-- Container für das Spiel / Canvas -->
                 <div id="gameContainer">
-                    <canvas id="gameCanvas" width="1000" height="562"></canvas>
+                    <canvas id="gameCanvas" width="1000" height="562"></canvas> <!-- Canvas für das Spiel / Laser-Animation -->
+
+                    <!-- Mitteilung bei erfolgreichem Abschluss -->
                     <div id="winNotification" class="win-notification">
                         <h3>Geschafft!</h3>
                         <p>Schiff gerettet!</p>
                     </div>
+
+                    <!-- Steuerung für Spiegel -->
                     <div class="gameControls" style="margin-top: 20px; display: flex; justify-content: center; gap: 10px; align-items: center;">
                         <label for="sliderMirror" style="margin: 0; white-space: nowrap; font-weight: bold;">
                             Spiegel drehen:
                         </label>
-                        <input type="range" id="sliderMirror" min="-85" max="-20" value="-85" step="0.25" style="flex: 1;">
+                        <input type="range" id="sliderMirror" min="-85" max="-20" value="-85" step="0.25" style="flex: 1;"> <!-- Slider zum Spiegel drehen -->
                     </div>
+
+                    <!-- Farbsteuerung für den Laserstrahl -->
                     <div class="gameControls" style="margin-top: 15px; display: flex; justify-content: center; gap: 15px; align-items: center;">
-                        <div class="color-box" data-light="lightRay" data-color="c" style="width: 40px; height: 40px; background-color: #00ffff; border: 2px solid #000; cursor: pointer; border-radius: 4px;" title="Cyan"></div>
-                        <div class="color-box" data-light="lightRay" data-color="m" style="width: 40px; height: 40px; background-color: #ff00ff; border: 2px solid #000; cursor: pointer; border-radius: 4px;" title="Magenta"></div>
-                        <div class="color-box" data-light="lightRay" data-color="y" style="width: 40px; height: 40px; background-color: #ffff00; border: 2px solid #000; cursor: pointer; border-radius: 4px;" title="Yellow"></div>
+                        <div class="color-box" data-light="lightRay" data-color="c" style="width: 40px; height: 40px; background-color: #00ffff; border: 2px solid #000; cursor: pointer; border-radius: 4px;" title="Cyan"></div> <!-- Cyan-Farbwahl -->
+                        <div class="color-box" data-light="lightRay" data-color="m" style="width: 40px; height: 40px; background-color: #ff00ff; border: 2px solid #000; cursor: pointer; border-radius: 4px;" title="Magenta"></div> <!-- Magenta-Farbwahl -->
+                        <div class="color-box" data-light="lightRay" data-color="y" style="width: 40px; height: 40px; background-color: #ffff00; border: 2px solid #000; cursor: pointer; border-radius: 4px;" title="Yellow"></div> <!-- Yellow-Farbwahl -->
                     </div>
                 </div>
             </section>
         </main>
+
 
         <footer>
             <div class="footer-links">
