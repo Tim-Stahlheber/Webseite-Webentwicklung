@@ -1,0 +1,34 @@
+<!-- 
+Diese Sitemap listet alle wichtigen Seiten der Website auf, damit Suchmaschinen sie leicht finden und indexieren können.
+Die Startseite hat die höchste Priorität, die Räume sind mittlere Priorität, und der finale Raum ist etwas wichtiger.
+Alle `<lastmod>`-Angaben geben an, wann die Inhalte zuletzt geändert wurden.
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.mint-escape-room.de/index.html</loc>
+    <lastmod>2025-01-19</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.mint-escape-room.de/room-1.html</loc>
+    <lastmod>2025-01-19</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.mint-escape-room.de/room-2.html</loc>
+    <lastmod>2025-01-19</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.mint-escape-room.de/room-3.html</loc>
+    <lastmod>2025-01-19</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.mint-escape-room.de/final-room.html</loc>
+    <lastmod>2025-01-19</lastmod>
+    <priority>0.7</priority>
+  </url>
+</urlset>
