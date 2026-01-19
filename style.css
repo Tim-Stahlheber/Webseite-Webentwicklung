@@ -230,7 +230,7 @@ section.normalBox.banner {
 
 /* ------------------------ Text Toggle ------------------------ */
 
-#text-toggle summary {
+.text-toggle summary {
   cursor: pointer;                                /* Mauszeiger als Hand */
   font-weight: bold;                              /* Fett */
   display: block;                                 /* Block-Element */
@@ -240,16 +240,16 @@ section.normalBox.banner {
   transition: 0.4s;                               /* Sanfter Übergang bei Hover/Focus */
 }
 
-#text-toggle summary:hover {
+.text-toggle summary:hover {
   background-color: #b1d6f8;                    /* Hintergrundfarbe beim Hover */
   color: white;                                 /* Textfarbe beim Hover */
 }
 
-#text-toggle summary::marker {
+.text-toggle summary::marker {
   display: none;                                  /* Blendet das standardmäßige Dreieck des <summary>-Elements aus */
 }
 
-#text-toggle summary::-webkit-details-marker {
+.text-toggle summary::-webkit-details-marker {
   display: none;                                  /* Blendet das standardmäßige Dreieck für Webkit-Browser aus */
 }
 
@@ -513,8 +513,8 @@ section.normalBox.banner {
   max-width: 300px;                            /* Maximalbreite 300px */
 }
 
-.win-notification h3,
-.notification h3 {
+.win-notification h2,
+.notification h2 {
   color: white;                              /* Überschrift weiß */
   margin-top: 0;                               /* Kein Abstand oben */
 }
